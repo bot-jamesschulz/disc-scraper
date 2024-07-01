@@ -1,0 +1,25 @@
+{
+  "name": "disc-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.14.0",
+    "@sparticuz/chromium": "^123.0.1",
+    "dotenv": "^16.4.5",
+    "openai": "^4.0.0",
+    "puppeteer": "^22.12.1",
+    "puppeteer-core": "^22.12.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  }
+}

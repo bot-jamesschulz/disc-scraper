@@ -1,0 +1,16 @@
+{
+    "include": ["src/**/*.ts", "src/scrollPage.js"],
+    "compilerOptions": {
+        "outDir": "./dist",
+        "paths": {
+            "@/*": ["./*"]
+        },
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "target": "es2018",
+        "module": "nodenext",
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": ["node_modules"],
+    "baseUrl": "./"
+}
