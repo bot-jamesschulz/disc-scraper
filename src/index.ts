@@ -63,35 +63,25 @@ async function scrape() {
 
     await inputElement?.type("mvp");
     await inputElement?.press("Enter");
-
     await waitForStaticPage(page)
 
     const listingData: ListingData[] = [];
-
-    const pageListings = await getPageListings(page);
-
-    console.log(pageListings)
-
-    if (pageListings) {
-        listingData.push();
-    }
-
-    await scrollPage(page);
-
-    let newListingData = await getPageListings(page);
-
-    while (isNewListings(listingData.map(data => data.listings).flat(), newListingData?.listings)) {
-        await scrollPage(page);
-        await waitForStaticPage(page);
+    let newListingData
+    
+    do {
         const pageListings = await getPageListings(page);
 
         if (pageListings) {
-            listingData.push();
+            listingData.push(pageListings);
         }
 
         await scrollPage(page);
+        await waitForStaticPage(page)
+
         newListingData = await getPageListings(page);
-    }
+    } while (isNewListings(listingData.map(data => data.listings).flat(), newListingData?.listings))
+
+
 
     await browser.close();
 }

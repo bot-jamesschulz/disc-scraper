@@ -7,7 +7,7 @@ export default async function scrollPage(page: Page) {
         const pageHeight = await page.evaluate(() => document.body.scrollHeight);
     
         // Set the viewport size to cover the entire page height
-        await page.setViewport({ width: viewportWidth, height: pageHeight});
+        // await page.setViewport({ width: viewportWidth, height: pageHeight});
 
         await page.evaluate(async () => {
             // Scroll viewport across the entire page to make sure all content is loaded
