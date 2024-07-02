@@ -4,11 +4,20 @@ import getInputSelector from "../utils/getInputSelector";
 import delay from "../utils/delay";
 import goToNewTab from "./goToNewTab"
 import scrollPage from "./scrollPage";
-import getPageListings, { type ListingTitle, ListingData } from "./getPageListings";
+import getPageListings, { type ListingTitle, ListingData, ListingImgs, ListingPrices } from "./getPageListings";
 import isNewListings from "./isNewListings";
 import waitForStaticPage from "./waitForStaticPage";
+import validateListings, { type ValidatedListingTitles } from './validateListings';
+import groupListingData, { type Listing } from "./groupListingData";
 import "dotenv/config";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import fs from 'fs';
+
+export type ValidatedListing = {
+    listings: ValidatedListingTitles,
+    prices: ListingPrices,
+    imgs: ListingImgs
+}
 
 puppeteer.use(StealthPlugin());
 if (!process.env.GEMINI_API_KEY) {
@@ -22,7 +31,7 @@ let prompt =
 async function scrape() {
     const browser = await puppeteer.launch({ headless: false });
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
+    const manufacturer = "MVP"
 
     const page = await browser.newPage();
     await goToNewTab(
@@ -61,13 +70,13 @@ async function scrape() {
         await page.evaluate((el) => el?.outerHTML, inputElement)
     );
 
-    await inputElement?.type("mvp");
+    await inputElement?.type(manufacturer);
     await inputElement?.press("Enter");
     await waitForStaticPage(page)
 
     const listingData: ListingData[] = [];
     let newListingData
-    
+
     do {
         const pageListings = await getPageListings(page);
 
@@ -80,8 +89,41 @@ async function scrape() {
 
         newListingData = await getPageListings(page);
     } while (isNewListings(listingData.map(data => data.listings).flat(), newListingData?.listings))
+    
+    // const jsonString = fs.readFileSync('./testData.json', 'utf-8');
+    // const discs = JSON.parse(jsonString);
+    
+    const validatedListingPages: ValidatedListing[] = [];
+    const listings: Listing[] = []
+    try {
+        for (const dataPage of listingData) {
+        // Validate the anchors per page
+          const validationListings = validateListings(dataPage.listings, manufacturer, 'https://www.marshallstreetdiscgolf.com/?utm_source=trydiscs')
+          // Add valid listings with their correlated prices and imgs
+          if (validationListings.size) {
+            validatedListingPages.push({
+              listings: validationListings,
+              prices: dataPage.listingPrices,
+              imgs: dataPage.listingImgs
+            })
+          }
+        }
+      } catch (err) {
+        console.log('Error validating listings', err);
+      }
 
+      // associate listings with closest img and price
+      if (validatedListingPages.length) {
 
+        validatedListingPages.forEach(pageListings =>  {
+            const groupedListings = groupListingData(pageListings)
+
+            if (groupedListings) {
+                listings.push(...groupedListings)
+            }
+        })
+      } 
+    console.log(listings)
 
     await browser.close();
 }

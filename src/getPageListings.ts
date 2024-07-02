@@ -7,11 +7,11 @@ export type ListingTitle = {
   href: string | null;
 };
 
-type ListingImgs = {
-  [key: string]: string | undefined;
+export type ListingImgs = {
+  [key: string]: string;
 };
 
-type ListingPrices = (string | null) [];
+export type ListingPrices = (string | null) [];
 
 export type ListingData = {
     listings: ListingTitle[],
@@ -81,18 +81,18 @@ async function getListingData(page: Page): Promise<ListingData | undefined> {
           }
   
           // Looking for price
-  
           if (wholeText?.includes("$") && wholeText?.length < maxTextLength) {
-            const priceRegex = /\$[\d,]+/;
+            const priceRegex = /\$[\d.]+/;
   
             let price = trimmedText?.match(priceRegex);
+
             let currElement = element;
             while (!price && currElement.parentNode) {
               currElement = currElement.parentNode as HTMLElement;
               price = currElement?.innerText?.match(priceRegex);
             }
   
-            const trimmedPrice = price?.[0].replace(/\D/g, "");
+            const trimmedPrice = price?.[0].replace(/[^\d.]/g, ""); // Remove everything but digits and "."
             if (trimmedPrice) {
               listingPrices[index] = trimmedPrice;
             }
@@ -145,9 +145,8 @@ async function getListingData(page: Page): Promise<ListingData | undefined> {
                 let url;
                 url = element.getAttribute("srcset");
                 const endOfUrl = url?.indexOf(" ");
-                const firstUrl =
-                  endOfUrl !== -1 ? url?.substring(0, endOfUrl) : url;
-                listingImgs[index] = firstUrl || undefined; // Save the img's url with an associated element index, for use later to find closest listing element
+                const firstUrl = endOfUrl !== -1 ? url?.substring(0, endOfUrl) : url;
+                listingImgs[index] = firstUrl || ''; // Save the img's url with an associated element index, for use later to find closest listing element
                 prevImgIndex = index;
   
                 return;
