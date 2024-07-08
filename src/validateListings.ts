@@ -11,7 +11,7 @@ export type ValidatedListingTitles = Map<number, {
 
 export default function validateListings(unfilteredListings: ListingTitle[], manufacturer: string, inventoryHref: string): ValidatedListingTitles {
     console.log('validating listings')
-
+    
     const extractedData = new Map<number, { listing: string, detailsUrl: string }>();
     const rejectedListings: string[] = [];
 
