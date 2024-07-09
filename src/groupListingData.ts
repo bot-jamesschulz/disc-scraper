@@ -1,4 +1,4 @@
-import { type ListingData } from "./getPageListings";
+import { type ListingData } from "./getListingData";
 import { type ValidatedListing } from "./index"
 
 export type Listing = {
@@ -16,9 +16,9 @@ export default function groupListingData(listingData: ValidatedListing): Listing
     const listingImgs = listingData.imgs;
     const listingPrices = listingData.prices;
 
-    console.log('indices', listingIndices)
-    console.log('Imgs', listingImgs)
-    console.log('Prices', listingPrices)
+    // console.log('indices', listingIndices)
+    // console.log('Imgs', listingImgs)
+    // console.log('Prices', listingPrices)
   
     const imgIndices = Object.keys(listingImgs); // Indices of the images
     

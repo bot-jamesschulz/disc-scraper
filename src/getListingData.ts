@@ -25,7 +25,7 @@ export type ListingData = {
  * @param {Page} page - The Puppeteer page object.
  * @returns {Object} - An object containing disc listing information.
  */
-export default async function getPageListings(page: Page): Promise<ListingData | undefined> {
+export default async function getListingData(page: Page): Promise<ListingData | undefined> {
   const timeout = 10000; // ms
 
   console.log("getting listings");
@@ -33,7 +33,7 @@ export default async function getPageListings(page: Page): Promise<ListingData |
   let listingData;
 
   try {
-    listingData = await Promise.race([getListingData(page), delay(timeout)]);
+    listingData = await Promise.race([extractData(page), delay(timeout)]);
   } catch (err) {
     console.log("error waiting for listings", err);
   }
@@ -41,7 +41,7 @@ export default async function getPageListings(page: Page): Promise<ListingData |
   return listingData || undefined;
 }
 
-async function getListingData(page: Page): Promise<ListingData | undefined> {
+async function extractData(page: Page): Promise<ListingData | undefined> {
     let listingData;
   
     try {
@@ -75,13 +75,16 @@ async function getListingData(page: Page): Promise<ListingData | undefined> {
           const children = element.childNodes;
           for (const child of children) {
             if (child.nodeType === Node.TEXT_NODE) {
-              wholeText = (child as Text).wholeText;
-              break;
+                wholeText = (child as Text).wholeText;
+                // if (wholeText.includes('$')) {
+                //     console.log('price', wholeText);
+                // }
             }
-          }
+        }
   
           // Looking for price
           if (wholeText?.includes("$") && wholeText?.length < maxTextLength) {
+            
             const priceRegex = /\$[\d.]+/;
   
             let price = trimmedText?.match(priceRegex);
@@ -93,6 +96,7 @@ async function getListingData(page: Page): Promise<ListingData | undefined> {
             }
   
             const trimmedPrice = price?.[0].replace(/[^\d.]/g, ""); // Remove everything but digits and "."
+            
             if (trimmedPrice) {
               listingPrices[index] = trimmedPrice;
             }

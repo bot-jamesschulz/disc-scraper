@@ -1,4 +1,4 @@
-import { type ListingTitle, ListingData } from "./getPageListings";
+import { type ListingTitle, ListingData } from "./getListingData";
 import fs from 'fs';
 
 const jsonString = fs.readFileSync('./data/discsSorted.json', 'utf-8');

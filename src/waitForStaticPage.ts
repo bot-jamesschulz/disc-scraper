@@ -24,7 +24,7 @@ export default async function waitForStaticPage(page: Page, maxAttempts = 5) {
         // wait for new lazy loaded content triggered by scrolling
         await waitForNewContent(page, {minFulfilled: 0});
       } catch(err) {
-        console.log('Error checking loaded state:', err)
+        console.log('Error checking static state:', err)
         pageLoaded = false;
       }
   

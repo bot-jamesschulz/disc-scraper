@@ -5,7 +5,7 @@ import getSelector from "../utils/getSelector";
 import delay from "../utils/delay";
 import goToNewTab from "./goToNewTab"
 import scrollPage from "./scrollPage";
-import getPageListings, { type ListingTitle, ListingData, ListingImgs, ListingPrices } from "./getPageListings";
+import getPageListings, { type ListingTitle, ListingData, ListingImgs, ListingPrices } from "./getListingData";
 import isNewListings from "./isNewListings";
 import waitForStaticPage from "./waitForStaticPage";
 import validateListings, { type ValidatedListingTitles } from './validateListings';
@@ -13,6 +13,7 @@ import groupListingData, { type Listing } from "./groupListingData";
 import { element2selector } from 'puppeteer-element2selector';
 import "dotenv/config";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { paginationListings } from "./iterationMethods";
 import fs from 'fs';
 
 export type ValidatedListing = {
@@ -34,10 +35,9 @@ async function scrape() {
   const browser = await puppeteer.launch({ headless: false });
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
   const listingData: ListingData[] = [];
-  const manufacturer = "MVP";
-  const discStore = "https://reloaddiscs.com/search?q=mvp&options%5Bprefix%5D=last";
+  const manufacturer = "Innova";
+  const discStore = "https://discgolfunited.com/?utm_source=trydiscs";
   
-
   const page = await browser.newPage();
   await goToNewTab(
     discStore, 
@@ -48,16 +48,16 @@ async function scrape() {
     return inputs.map((i: HTMLInputElement) => i.outerHTML);
   });
 
-  console.log("inputs", inputs.toString());
-
   prompt = prompt + inputs.toString();
 
   let response = await model.generateContent(prompt);
   let result = response.response.text();
-  // const result = `<input type="search" id="woocommerce-product-search-field-0" class="search-field" placeholder="Search products…" value="" name="s">`;
+  // const result = `<input class="predictive-search__input" type="text" name="q" autocomplete="off" autocorrect="off" aria-label="Search" placeholder="What are you looking for?">`;
   console.log("result", result);
 
   const inputSelector = getSelector(result);
+
+  console.log("inputSelector", inputSelector);
 
   // Exit if there is no selector found
   if (!inputSelector) {
@@ -66,113 +66,64 @@ async function scrape() {
     return;
   }
 
-  console.log("inputSelector", inputSelector);
 
   const inputElement = await page.$(inputSelector);
 
-  console.log(
-    "input element",
-    await page.evaluate((el) => el?.outerHTML, inputElement)
-  );
-
-  await inputElement?.type(manufacturer);
-  await inputElement?.press("Enter");
-  await waitForStaticPage(page)
-
+  // If the element is hidden then try to trigger the search action manually
+  if (inputElement?.isHidden()) {
+    await page.evaluate((selector, query) => {
+      const input = document.querySelector(selector) as HTMLInputElement;
+      if (input) {
+        input.value = query;
+        input.closest('form')?.submit();
+      }
+    }, inputSelector, manufacturer);
+  } else {
+    await inputElement?.type(manufacturer);
+    await inputElement?.press("Enter");
+  }
   
-  let newListingData
-
+  await waitForStaticPage(page);
+  
+  let newListingData;
+  let scrollIterations = 0;
+  // Get infinite loaded listings
   do {
+    scrollIterations++;
     const pageListings = await getPageListings(page);
 
     if (pageListings) {
         listingData.push(pageListings);
     }
-    await waitForStaticPage(page)
-    await scrollPage(page);
-  
+    
+    await waitForStaticPage(page);
 
     newListingData = await getPageListings(page);
-  } while (isNewListings(listingData.map(data => data.listings).flat(), newListingData?.listings))
+  } while (isNewListings(listingData.map(data => data.listings).flat(), newListingData?.listings));
   
+    let infiniteScroll = false;
+  if (scrollIterations > 1) {
+    infiniteScroll = true;
+  }
   // // const jsonString = fs.readFileSync('./testData.json', 'utf-8');
   // // const discs = JSON.parse(jsonString);
   
-
-  const moreResultsXpath = "::-p-xpath(//button[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'show more')])"
-  const moreResults = await page.$(moreResultsXpath)
-
-  console.log(moreResults)
-  
-
-  if (moreResults) {
-
-    while (await page.$(moreResultsXpath)) {
-
-      await moreResults.click()
-      await waitForStaticPage(page)
-      await scrollPage(page);
-      const pageListings = await getPageListings(page);
-
-      const newListings = isNewListings(listingData.map(data => data.listings).flat(), pageListings?.listings)
-      if (pageListings && newListings) {
-        listingData.push(pageListings);
-      } else {
-        break
-      }
-    } 
+  if (!infiniteScroll) {
+    let listings;
+    try {
+      listings = await paginationListings(page);
+    } catch(e) {
+      console.log('Error extracting paginated listings', e)
+    }
+    if (listings) {
+      listingData.push(...listings);
+    }
   }
 
 
-  const buttonAnchorMap = new Map<string, string>();
-  const buttonAndAnchorHandles = await page.$$('button, a');
-  const outerHandles = await Promise.all(buttonAndAnchorHandles.map(async handle => (await page.evaluate(el => el.outerHTML, handle))));
-  const buttonAndAnchorSelectors = outerHandles.map(outerHtml => getSelector(outerHtml));
-  const navigationProspects = [];
-  for (const handle of buttonAndAnchorHandles) {
-
-    const outer = await page.evaluate(el => el.outerHTML.replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim(), handle) // Clean extra space and returns from element html
-    const selector = await element2selector(handle); // Element handle to css selector
-
-    if (!selector) {
-      continue;
-    };
-
-    if (outer.toLowerCase().includes('next')) {
-      navigationProspects.push(outer);
-    };
-
-    buttonAnchorMap.set(`${outer}`, selector);
-
-  };
-
-  console.log('key', `|${[...buttonAnchorMap.keys()].find(key => key.includes('Next'))}|`);
 
 
-  response = await model.generateContent(`Identify which element is most likely to be the navigation to the next page of inventory. Return the entire element but do not return any other text or information:  ${navigationProspects}`);
-  result = response.response.text().trim();
-
-  const nextElemSelector = buttonAnchorMap.get(result);
-  if (!nextElemSelector) {
-    throw new Error(`No selector found in map for ${result}`);
-  };
-  
-
-  do {
-    const pageListings = await getPageListings(page);
-
-    if (pageListings) {
-        listingData.push(pageListings);
-    }
-    const nextElem = await page.$(nextElemSelector);
-    await nextElem?.click();
-    await scrollPage(page);
-    await waitForStaticPage(page)
-
-    newListingData = await getPageListings(page);
-  } while (isNewListings(listingData.map(data => data.listings).flat(), newListingData?.listings))
-
-
+  // Validate listings and group attributes
 
   const validatedListingPages: ValidatedListing[] = [];
   const listings: Listing[] = []
@@ -204,8 +155,13 @@ async function scrape() {
         }
       })
     }
-  console.log(listings);
-
+  // console.log(listings);
+  
+   // Convert the processed data back to JSON
+   const newData = JSON.stringify(listings, null, 2);
+    
+   // Write the processed data to discs.json
+   fs.writeFile('./results/results.json', newData, () => {});
 
   await browser.close();
 }

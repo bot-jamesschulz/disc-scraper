@@ -13,16 +13,15 @@ export default async function goToNewTab(url: string, page: Page) {
         const blankImage = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAHzwGA78JN5wAAAABJRU5ErkJggg==';
         page.on('request', (request) => {
         if (request.isInterceptResolutionHandled()) return;
-        request.continue();
-        // if (request.resourceType() === "image") {
-        //     request.respond({
-        //     status: 200,
-        //     contentType: 'image/png',
-        //     body: Buffer.from(blankImage, 'base64')
-        //     });  
-        // } else {
-        //     request.continue();
-        // }
+        if (request.resourceType() === "image") {
+            request.respond({
+            status: 200,
+            contentType: 'image/png',
+            body: Buffer.from(blankImage, 'base64')
+            });  
+        } else {
+            request.continue();
+        }
         });
 
         await page.goto(url,{ waitUntil: 'load'});
