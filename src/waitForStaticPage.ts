@@ -12,15 +12,10 @@ export default async function waitForStaticPage(page: Page, maxAttempts = 5) {
       console.log('attempts', attempts)
       try { 
         await waitForNewContent(page);
-  
         if (!page) continue;
-  
         pageLoaded = await page.evaluate(() => document.readyState === 'complete');
-  
         if (!pageLoaded) continue;
-    
         await scrollPage(page);
-  
         // wait for new lazy loaded content triggered by scrolling
         await waitForNewContent(page, {minFulfilled: 0});
       } catch(err) {

@@ -1,20 +1,23 @@
 import puppeteer from "puppeteer-extra";
-import { ElementHandle } from 'puppeteer'
+import { ElementHandle } from 'puppeteer';
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
+import delay from '../utils/delay';
 import getSelector from "../utils/getSelector";
-import delay from "../utils/delay";
 import goToNewTab from "./goToNewTab"
 import scrollPage from "./scrollPage";
 import getPageListings, { type ListingTitle, ListingData, ListingImgs, ListingPrices } from "./getListingData";
-import isNewListings from "./isNewListings";
+import isNewListings from "../utils/isNewListings";
 import waitForStaticPage from "./waitForStaticPage";
-import validateListings, { type ValidatedListingTitles } from './validateListings';
-import groupListingData, { type Listing } from "./groupListingData";
+import validateListings, { type ValidatedListingTitles } from '../utils/validateListings';
+import groupListingData, { type Listing } from "../utils/groupListingData";
 import { element2selector } from 'puppeteer-element2selector';
 import "dotenv/config";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { paginationListings } from "./iterationMethods";
 import fs from 'fs';
+
+const jsonString = fs.readFileSync('./data/retailers.json', 'utf-8');
+const retailers = JSON.parse(jsonString);
 
 export type ValidatedListing = {
   listings: ValidatedListingTitles,
@@ -35,8 +38,8 @@ async function scrape() {
   const browser = await puppeteer.launch({ headless: false });
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
   const listingData: ListingData[] = [];
-  const manufacturer = "Innova";
-  const discStore = "https://discgolfunited.com/?utm_source=trydiscs";
+  const manufacturer = "Discraft";
+  const discStore = retailers[14];
   
   const page = await browser.newPage();
   await goToNewTab(
@@ -66,15 +69,15 @@ async function scrape() {
     return;
   }
 
-
   const inputElement = await page.$(inputSelector);
 
   // If the element is hidden then try to trigger the search action manually
   if (inputElement?.isHidden()) {
-    await page.evaluate((selector, query) => {
+    await page.evaluate(async (selector, query) => {
       const input = document.querySelector(selector) as HTMLInputElement;
       if (input) {
         input.value = query;
+        await new Promise(resolve => setTimeout(resolve, 500)) // Somehow this prevents a execution context error
         input.closest('form')?.submit();
       }
     }, inputSelector, manufacturer);
@@ -101,12 +104,10 @@ async function scrape() {
     newListingData = await getPageListings(page);
   } while (isNewListings(listingData.map(data => data.listings).flat(), newListingData?.listings));
   
-    let infiniteScroll = false;
+  let infiniteScroll = false;
   if (scrollIterations > 1) {
     infiniteScroll = true;
   }
-  // // const jsonString = fs.readFileSync('./testData.json', 'utf-8');
-  // // const discs = JSON.parse(jsonString);
   
   if (!infiniteScroll) {
     let listings;
@@ -120,11 +121,7 @@ async function scrape() {
     }
   }
 
-
-
-
   // Validate listings and group attributes
-
   const validatedListingPages: ValidatedListing[] = [];
   const listings: Listing[] = []
   try {
@@ -155,7 +152,6 @@ async function scrape() {
         }
       })
     }
-  // console.log(listings);
   
    // Convert the processed data back to JSON
    const newData = JSON.stringify(listings, null, 2);

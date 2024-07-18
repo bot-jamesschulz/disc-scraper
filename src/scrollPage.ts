@@ -1,25 +1,21 @@
 import { Page } from 'puppeteer';
 
 export default async function scrollPage(page: Page) {
-    const viewportWidth = 1920; // px 
-    
-    try {
-        const pageHeight = await page.evaluate(() => document.body.scrollHeight);
-    
-        // Set the viewport size to cover the entire page height
-        // await page.setViewport({ width: viewportWidth, height: pageHeight});
 
+        
+    try {
+   
         await page.evaluate(async () => {
             // Scroll viewport across the entire page to make sure all content is loaded
             await new Promise<void>((resolve) => {
                 let totalHeight = 0;
-                const distance = 400;
-                const timer = setInterval(() => {
-                    var scrollHeight = document.body.scrollHeight;
+                const distance = 300;
+                const scrollHeight = document.body.scrollHeight;
+
+                const timer = setInterval(() => {             
                     window.scrollBy(0, distance);
                     totalHeight += distance;
-
-                    if(totalHeight >= scrollHeight - window.innerHeight) {
+                    if(totalHeight >= scrollHeight) {
                         clearInterval(timer);
                         resolve();
                     }
@@ -27,6 +23,6 @@ export default async function scrollPage(page: Page) {
             });
         });
     } catch (err) {
-        console.log('error scrolling page: ', err)
+        console.log('error scrolling page: ', err);
     }
 }

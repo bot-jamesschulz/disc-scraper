@@ -1,16 +1,14 @@
 import "dotenv/config";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { element2selector } from 'puppeteer-element2selector';
-import puppeteer from "puppeteer-extra";
-import { type Page } from 'puppeteer';
+import scrollToElement from "./scrollToElement"
+import { type Page, ElementHandle } from 'puppeteer';
 import getPageListings, { type ListingTitle, ListingData, ListingImgs, ListingPrices } from "./getListingData";
-import scrollPage from "./scrollPage";
-import isNewListings from "./isNewListings";
+import isNewListings from "../utils/isNewListings";
 import waitForStaticPage from "./waitForStaticPage";
+import fs from 'fs';
 
 if (!process.env.GEMINI_API_KEY) {
-    console.error("Gemini API key is missing or empty. Exiting.");
-    process.exit(1);
+    throw new Error("Gemini API key is missing or empty. Exiting.")
 }
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
@@ -19,72 +17,74 @@ const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 export async function paginationListings(page: Page): Promise<ListingData[]> {
     const listingData: ListingData[] = [];
     const terminatingString = 'End of inventory';
-    
 
-    let newListingData: ListingData | undefined;
+    let pageNum = 1;
+    let newListings;
     do {
-        const nextElemSelector = await getNextElemSelector(page, terminatingString);
-        if (nextElemSelector === terminatingString) {
+        await waitForStaticPage(page);
+        const nextElem = await getNextElem(page, terminatingString, pageNum);
+
+        if (!nextElem) {
             return listingData;
         }
-        const pageListings = await getPageListings(page);
 
-        console.log('Prices', pageListings?.listingPrices.filter(l => l))
+        await scrollToElement(page, nextElem);
+        
+
+        const pageListings = await getPageListings(page);
+        newListings = isNewListings(listingData.map(data => data.listings).flat(), pageListings?.listings)
 
         if (pageListings) {
             listingData.push(pageListings);
         }
-        const nextElem = await page.$(nextElemSelector);
+        
         try {
+            
             await nextElem?.click();
+            console.log('clicked')
         } catch(e) {
             console.log('Error clicking element', e)
             return listingData;
         }
-        
-        await waitForStaticPage(page);
+        pageNum++;
+    } while (newListings);
 
-        newListingData = await getPageListings(page);
-    } while (isNewListings(listingData.map(data => data.listings).flat(), newListingData?.listings));
+    // Convert the processed data back to JSON
+   const newData = JSON.stringify(listingData.map(data => data.listings).flat(), null, 2);
+    
+   // Write the processed data to discs.json
+   fs.writeFile('./results/listingData.json', newData, () => {});
 
     return listingData;
 }
 
-async function getNextElemSelector(page: Page, terminatingString: string): Promise<string> {
+async function getNextElem(page: Page, terminatingString: string, pageNum: number): Promise<ElementHandle | null> {
     // Get pagination loaded listings
     const buttonAndAnchorHandles = await page.$$('button, a');
-    const navigationProspects = new Map<string, string>();
+    const navigationProspects = new Map<string, ElementHandle>();
     for (const handle of buttonAndAnchorHandles) {
-
         const outer = await page.evaluate(el => el.outerHTML.replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim(), handle) // Clean extra space and returns from element html
-        const selector = await element2selector(handle); // Element handle to css selector
-
-        if (!selector) {
-            continue;
-        };
-
-        if (outer.toLowerCase().includes('next') || outer.toLowerCase().includes('more results')) {
-            navigationProspects.set(`${outer}`, selector);
+        if (outer.toLowerCase().includes('next') 
+            || outer.toLowerCase().includes('more results')
+            || outer.toLowerCase().includes('page')
+            || outer.toLowerCase().includes('paginat')
+            ) {
+            navigationProspects.set(`${outer}`, handle);
         };
     };
-
-    console.log('keys', `|${[...navigationProspects.keys()]}|`);
-
-    const response = await model.generateContent(`Identify which element is most likely to be the navigation element to the next page of inventory. Do not return any other text or information. If there is no next page navigation element return "${terminatingString}".  ${[...navigationProspects.keys()]}`);
+    console.log('keys');
+    [...navigationProspects.keys()].forEach(el => console.log(el));
+    const response = await model.generateContent(`Identify which element is most likely to be the navigation element to the next page of inventory, given that we are on page ${pageNum} currently. Do not return any other text or information. If there is no next page navigation element return "${terminatingString}".  ${[...navigationProspects.keys()]}`);
     const result = response.response.text().trim();
 
     console.log('result', result);
 
     // Signal that the end of inventory has been reached
     if (result === terminatingString) {
-        return terminatingString
+        return null;
     }
+    const nextElem = navigationProspects.get(result) || null;
 
-    const nextElemSelector = navigationProspects.get(result);
-
-    if (!nextElemSelector) {
-        throw new Error(`No selector found in map for ${result}`);
-    };
-
-    return nextElemSelector;
+    return nextElem;
 }
+
