@@ -49,7 +49,6 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
       listingData = await page.evaluate(async () => {
         console.log("Page evaluation start");
   
-        const minImgDist = 10;
         const maxTextLength = 250;
         let prevImgIndex = 0;
         const listings: ListingTitle[] = [];
@@ -112,11 +111,6 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
           }
   
           // Get images
-          let closestImgDist = Math.abs(prevImgIndex - index);
-  
-          if (closestImgDist <= minImgDist) continue;
-  
-          // Make sure that the image isn't part of a subsection/gallery of images
           if (
             element.tagName === "IMG" ||
             (element.tagName === "INPUT" &&
