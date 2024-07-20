@@ -10,9 +10,10 @@ export default async function scrollPage(page: Page) {
             await new Promise<void>((resolve) => {
                 let totalHeight = 0;
                 const distance = 300;
-                const scrollHeight = document.body.scrollHeight;
+                
 
-                const timer = setInterval(() => {             
+                const timer = setInterval(() => {     
+                    const scrollHeight = document.body.scrollHeight;        
                     window.scrollBy(0, distance);
                     totalHeight += distance;
                     if(totalHeight >= scrollHeight) {

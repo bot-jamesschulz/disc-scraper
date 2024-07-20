@@ -15,6 +15,7 @@ import "dotenv/config";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { paginationListings } from "./iterationMethods";
 import fs from 'fs';
+import scrollToElement from "./scrollToElement";
 
 const jsonString = fs.readFileSync('./data/retailers.json', 'utf-8');
 const retailers = JSON.parse(jsonString);
@@ -32,14 +33,16 @@ if (!process.env.GEMINI_API_KEY) {
 }
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 let prompt =
-  "Return only the input element which is most likely to be a search input for the website's inventory. Do not return any other text or information: ";
+  "Return only the css selector for the input element which is most likely to be a search input for the website's inventory. Do not return anything else.";
 
 async function scrape() {
   const browser = await puppeteer.launch({ headless: false });
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
   const listingData: ListingData[] = [];
   const manufacturer = "Discraft";
-  const discStore = retailers[14];
+  const discStore = retailers[1];
+  // const discStore = 'https://chumbadiscs.com/search?type=product%2Carticle%2Cpage&options%5Bprefix%5D=last&q=Discraft';
+  
   
   const page = await browser.newPage();
   await goToNewTab(
@@ -54,11 +57,10 @@ async function scrape() {
   prompt = prompt + inputs.toString();
 
   let response = await model.generateContent(prompt);
-  let result = response.response.text();
+  const inputSelector = response.response.text();
   // const result = `<input class="predictive-search__input" type="text" name="q" autocomplete="off" autocorrect="off" aria-label="Search" placeholder="What are you looking for?">`;
-  console.log("result", result);
+  console.log("result", inputSelector);
 
-  const inputSelector = getSelector(result);
 
   console.log("inputSelector", inputSelector);
 
@@ -71,20 +73,27 @@ async function scrape() {
 
   const inputElement = await page.$(inputSelector);
 
-  // If the element is hidden then try to trigger the search action manually
-  if (inputElement?.isHidden()) {
-    await page.evaluate(async (selector, query) => {
-      const input = document.querySelector(selector) as HTMLInputElement;
-      if (input) {
-        input.value = query;
-        await new Promise(resolve => setTimeout(resolve, 500)) // Somehow this prevents a execution context error
-        input.closest('form')?.submit();
-      }
-    }, inputSelector, manufacturer);
-  } else {
-    await inputElement?.type(manufacturer);
-    await inputElement?.press("Enter");
+  if (!inputElement) {
+    throw new Error('No search input element found')
   }
+
+  await scrollToElement(page, inputElement)
+
+  console.log('is hidden', await inputElement.isHidden())
+
+  await page.evaluate(async (selector, query) => {
+    const input = document.querySelector(selector) as HTMLInputElement;
+    if (input) {
+
+      input.style.visibility = 'visible';
+      input.value = query;
+      console.log('input value', input.value)
+      await new Promise(resolve => setTimeout(resolve, 500)); // Somehow this prevents a execution context error
+
+      input.closest('form')?.submit();
+    }
+  }, inputSelector, manufacturer);
+
   
   await waitForStaticPage(page);
   

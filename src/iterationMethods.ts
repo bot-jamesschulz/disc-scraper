@@ -1,6 +1,6 @@
 import "dotenv/config";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import scrollToElement from "./scrollToElement"
+import scrollToElement from "./scrollToElement";
 import { type Page, ElementHandle } from 'puppeteer';
 import getPageListings, { type ListingTitle, ListingData, ListingImgs, ListingPrices } from "./getListingData";
 import isNewListings from "../utils/isNewListings";
@@ -66,7 +66,6 @@ async function getNextElem(page: Page, terminatingString: string, pageNum: numbe
         const outer = await page.evaluate(el => el.outerHTML.replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim(), handle) // Clean extra space and returns from element html
         if (outer.toLowerCase().includes('next') 
             || outer.toLowerCase().includes('more results')
-            || outer.toLowerCase().includes('page')
             || outer.toLowerCase().includes('paginat')
             ) {
             navigationProspects.set(`${outer}`, handle);

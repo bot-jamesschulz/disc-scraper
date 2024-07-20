@@ -1,4 +1,5 @@
 import puppeteer, { type Page, ElementHandle} from 'puppeteer'
+import delay from '../utils/delay'
 
 export default async function scrollToElement(page: Page, element: ElementHandle): Promise<void> {
     await page.evaluate((element) => {
@@ -13,4 +14,6 @@ export default async function scrollToElement(page: Page, element: ElementHandle
         const middle = absoluteElementTop - (window.innerHeight / 2) + (elementRect.height / 2);
         window.scrollTo(0, middle);
     }, element);
+
+    await delay(500)
 }

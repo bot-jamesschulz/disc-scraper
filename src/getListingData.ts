@@ -123,6 +123,19 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
   
             // Wait for src attribute to be set
             const waitForSrc = async () => {
+              
+  
+              if (element.getAttribute("srcset")) {
+                let url;
+                url = element.getAttribute("srcset");
+                const endOfUrl = url?.indexOf(" ");
+                const firstUrl = endOfUrl !== -1 ? url?.substring(0, endOfUrl) : url;
+                listingImgs[index] = firstUrl || ''; // Save the img's url with an associated element index, for use later to find closest listing element
+                prevImgIndex = index;
+  
+                return;
+              }
+
               if (element.getAttribute("src")) {
                 let url;
                 try {
@@ -138,17 +151,7 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
                   return;
                 }
               }
-  
-              if (element.getAttribute("srcset")) {
-                let url;
-                url = element.getAttribute("srcset");
-                const endOfUrl = url?.indexOf(" ");
-                const firstUrl = endOfUrl !== -1 ? url?.substring(0, endOfUrl) : url;
-                listingImgs[index] = firstUrl || ''; // Save the img's url with an associated element index, for use later to find closest listing element
-                prevImgIndex = index;
-  
-                return;
-              }
+              
               elapsedTime += waitInterval;
               ++waitCount;
               if (elapsedTime < maxWaitTime) {

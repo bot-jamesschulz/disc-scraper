@@ -12,45 +12,50 @@ export default function groupListingData(listingData: ValidatedListing): Listing
 
     if (!listingData || JSON.stringify(listingData) === '{}') return;
   
-    const listingIndices = [...listingData.listings.keys()];
+    const listingPositions = [...listingData.listings.keys()];
     const listingImgs = listingData.imgs;
     const listingPrices = listingData.prices;
 
-    // console.log('indices', listingIndices)
+    // console.log('Positions', listingPositions)
     // console.log('Imgs', listingImgs)
     // console.log('Prices', listingPrices)
   
-    const imgIndices = [...Object.keys(listingImgs)].map(index => Number(index)); // Indices of the images
+    const imgPositions = [...Object.keys(listingImgs)].map(index => Number(index)); // Positions of the images
+    // console.log('all img positions', imgPositions)
     
     const groupedListingData: Listing[] = [];
     try { 
-        listingIndices.forEach( (listingPosition, index) => {    
+        listingPositions.forEach( (listingPosition, index) => {    
          
-            const nearestListingPosition = listingIndices[index + 1] ?
-                listingIndices[index + 1] :
-                listingIndices[index - 1];
+            const nearestListingPosition = listingPositions[index + 1] ?
+                listingPositions[index + 1] :
+                listingPositions[index - 1];
             
             const defaultDistance = 250;
-            const distanceToNearestListing = listingIndices.length === 1 ? 
+            const distanceToNearestListing = listingPositions.length === 1 ? 
                 defaultDistance : 
                 Math.abs(listingPosition - nearestListingPosition);
     
             // Associate image
-            let closestImgIndex = imgIndices[imgIndices.length - 1]; // Default to last img
-            let closestImgDistance = Number(closestImgIndex) - listingPosition;
-            for (const imgPosition of imgIndices) {
-                if (imgPosition > listingPosition) {
-                    console.log('listingPos', listingPosition);
-                    console.log('chosenImgIndex', closestImgIndex);
-                    break;
-                }
+            let closestImgPosition = imgPositions[0]; // Default to first img
+            let closestImgDistance = Math.abs(Number(closestImgPosition) - listingPosition);
+            for (const imgPosition of imgPositions) {
 
                 const imgDistance = Math.abs(imgPosition - listingPosition);
+
                 if (imgDistance < closestImgDistance) {
                     closestImgDistance = imgDistance;
-                    closestImgIndex = imgPosition;
+                    closestImgPosition = imgPosition;
                 }
+                // console.log('img distance', imgDistance)
+                // console.log('closestImg distance', closestImgDistance)
+                // console.log('closestImg position', closestImgPosition)
             }
+
+            // console.log('--listingPos', listingPosition)
+            // console.log('--imgPos', closestImgPosition)
+            // console.log('--href',listingImgs[Number(closestImgPosition)])
+            // console.log('--listing',listingData.listings.get(listingPosition))
     
             // Associate price
             let closestPricePosition = listingPosition;
@@ -62,7 +67,7 @@ export default function groupListingData(listingData: ValidatedListing): Listing
                 closestPricePosition++;
             }
     
-            const closestImg = listingImgs[Number(closestImgIndex)];
+            const closestImg = listingImgs[Number(closestImgPosition)];
             const closestPrice = listingPrices[closestPricePosition];
     
             const listing = listingData.listings.get(listingPosition);
