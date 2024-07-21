@@ -40,7 +40,7 @@ async function scrape() {
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
   const listingData: ListingData[] = [];
   const manufacturer = "Discraft";
-  const discStore = retailers[20];
+  const discStore = retailers[17];
   // const discStore = 'https://chumbadiscs.com/search?type=product%2Carticle%2Cpage&options%5Bprefix%5D=last&q=Discraft';
   
   
@@ -85,6 +85,7 @@ async function scrape() {
     const input = document.querySelector(selector) as HTMLInputElement;
     if (input) {
 
+      input.removeAttribute('disabled');
       input.style.visibility = 'visible';
       input.value = query;
       console.log('input value', input.value)
