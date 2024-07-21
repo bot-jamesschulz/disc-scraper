@@ -33,56 +33,47 @@ if (!process.env.GEMINI_API_KEY) {
 }
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 let prompt =
-  "Return only the css selector for the input element which is most likely to be a search input for the website's inventory. Do not return anything else.";
+  "Identify which element is most likely to be a search input for the website's inventory, and return it. Do not return anything else.";
 
 async function scrape() {
   const browser = await puppeteer.launch({ headless: false });
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
   const listingData: ListingData[] = [];
   const manufacturer = "Discraft";
-  const discStore = retailers[17];
+  const discStore = retailers[5];
   // const discStore = 'https://chumbadiscs.com/search?type=product%2Carticle%2Cpage&options%5Bprefix%5D=last&q=Discraft';
-  
   
   const page = await browser.newPage();
   await goToNewTab(
     discStore, 
     page
   );
+  
+  const inputHandles = await page.$$("input");
+  const inputProspects = new Map<string, ElementHandle<HTMLInputElement>>();
+  for (const handle of inputHandles) {
+      const outer = await page.evaluate(el => el.outerHTML.replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim(), handle) // Clean extra space and returns from element html
+      inputProspects.set(`${outer}`, handle);
+  };
 
-  const inputs = await page.$$eval("input", (inputs: HTMLInputElement[]) => {
-    return inputs.map((i: HTMLInputElement) => i.outerHTML);
-  });
-
-  prompt = prompt + inputs.toString();
+  prompt = `${prompt} ${[...inputProspects.keys()]}`
 
   let response = await model.generateContent(prompt);
-  const inputSelector = response.response.text();
-  // const result = `<input class="predictive-search__input" type="text" name="q" autocomplete="off" autocorrect="off" aria-label="Search" placeholder="What are you looking for?">`;
-  console.log("result", inputSelector);
+  const result = response.response.text().trim();
 
-
-  console.log("inputSelector", inputSelector);
+  const inputElement = inputProspects.get(result) || null;
 
   // Exit if there is no selector found
-  if (!inputSelector) {
-    console.log("No input selector found");
-    await browser.close();
-    return;
-  }
-
-  const inputElement = await page.$(inputSelector);
-
   if (!inputElement) {
-    throw new Error('No search input element found')
+    await browser.close();
+    throw new Error('No input element found');
   }
 
   await scrollToElement(page, inputElement)
 
   console.log('is hidden', await inputElement.isHidden())
 
-  await page.evaluate(async (selector, query) => {
-    const input = document.querySelector(selector) as HTMLInputElement;
+  await page.evaluate(async (input, query) => {
     if (input) {
 
       input.removeAttribute('disabled');
@@ -93,7 +84,7 @@ async function scrape() {
 
       input.closest('form')?.submit();
     }
-  }, inputSelector, manufacturer);
+  }, inputElement, manufacturer);
 
   
   await waitForStaticPage(page);
