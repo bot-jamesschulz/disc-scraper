@@ -13,8 +13,6 @@ export default async function scrollPage(page: Page) {
                     const scrollHeight = document.body.scrollHeight;        
                     window.scrollBy(0, distance);
                     totalHeight += distance;
-                    console.log('---', scrollHeight)
-                    console.log('totalHeight', totalHeight)
                     if(totalHeight >= scrollHeight) {
                         clearInterval(timer);
                         resolve();
