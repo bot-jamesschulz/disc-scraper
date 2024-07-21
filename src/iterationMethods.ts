@@ -22,7 +22,8 @@ export async function paginationListings(page: Page): Promise<ListingData[]> {
     let newListings;
     do {
         await waitForStaticPage(page);
-        const nextElem = await getNextElem(page, terminatingString, pageNum);
+        const nextElemSelector = await getNextElem(page, terminatingString, pageNum);
+        const nextElem = await page.$('nextElemSelector');
 
         if (!nextElem) {
             return listingData;
@@ -58,22 +59,21 @@ export async function paginationListings(page: Page): Promise<ListingData[]> {
     return listingData;
 }
 
-async function getNextElem(page: Page, terminatingString: string, pageNum: number): Promise<ElementHandle | null> {
+async function getNextElem(page: Page, terminatingString: string, pageNum: number): Promise<string | null> {
     // Get pagination loaded listings
     const buttonAndAnchorHandles = await page.$$('button, a');
-    const navigationProspects = new Map<string, ElementHandle>();
+    const navigationProspects = [];
     for (const handle of buttonAndAnchorHandles) {
         const outer = await page.evaluate(el => el.outerHTML.replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim(), handle) // Clean extra space and returns from element html
         if (outer.toLowerCase().includes('next') 
             || outer.toLowerCase().includes('more results')
             || outer.toLowerCase().includes('paginat')
             ) {
-            navigationProspects.set(`${outer}`, handle);
+            navigationProspects.push(outer);
         };
     };
-    console.log('keys');
-    [...navigationProspects.keys()].forEach(el => console.log(el));
-    const response = await model.generateContent(`Identify which element is most likely to be the navigation element to the next page of inventory, given that we are on page ${pageNum} currently. Do not return any other text or information. If there is no next page navigation element return "${terminatingString}".  ${[...navigationProspects.keys()]}`);
+    console.log('keys', navigationProspects);
+    const response = await model.generateContent(`Identify which element is most likely to be the navigation element to the next page of inventory, given that we are on page ${pageNum} currently. Return only the css selector for that element.".  ${[...navigationProspects.keys()]}`);
     const result = response.response.text().trim();
 
     console.log('result', result);
@@ -82,8 +82,7 @@ async function getNextElem(page: Page, terminatingString: string, pageNum: numbe
     if (result === terminatingString) {
         return null;
     }
-    const nextElem = navigationProspects.get(result) || null;
 
-    return nextElem;
+    return result;
 }
 
