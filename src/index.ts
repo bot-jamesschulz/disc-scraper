@@ -3,7 +3,7 @@ import { ElementHandle } from 'puppeteer';
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import delay from '../utils/delay';
 import getSelector from "../utils/getSelector";
-import goToNewTab from "./goToNewTab"
+import goToNewTab from "./goToNewTab";
 import scrollPage from "./scrollPage";
 import getPageListings, { type ListingTitle, ListingData, ListingImgs, ListingPrices } from "./getListingData";
 import isNewListings from "../utils/isNewListings";
@@ -40,7 +40,7 @@ async function scrape() {
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
   const listingData: ListingData[] = [];
   const manufacturer = "Discraft";
-  const discStore = retailers[5];
+  const discStore = retailers[26];
   // const discStore = 'https://chumbadiscs.com/search?type=product%2Carticle%2Cpage&options%5Bprefix%5D=last&q=Discraft';
   
   const page = await browser.newPage();
@@ -61,6 +61,8 @@ async function scrape() {
   let response = await model.generateContent(prompt);
   const result = response.response.text().trim();
 
+  console.log('input element', result)
+
   const inputElement = inputProspects.get(result) || null;
 
   // Exit if there is no selector found
@@ -69,23 +71,56 @@ async function scrape() {
     throw new Error('No input element found');
   }
 
-  await scrollToElement(page, inputElement)
+  await scrollToElement(page, inputElement);
 
   console.log('is hidden', await inputElement.isHidden())
 
+  // await inputElement.type(manufacturer);
+  
   await page.evaluate(async (input, query) => {
     if (input) {
-
       input.removeAttribute('disabled');
       input.style.visibility = 'visible';
-      input.value = query;
-      console.log('input value', input.value)
-      await new Promise(resolve => setTimeout(resolve, 500)); // Somehow this prevents a execution context error
+      let i = 0;
+      for (const char of query) {
+        const keyDownEvent = new KeyboardEvent('keydown', { key: char, bubbles: true });
+        const keyPressEvent = new KeyboardEvent('keypress', { key: char, bubbles: true });
+        const inputEvent = new Event('input', { bubbles: true });
+        const keyUpEvent = new KeyboardEvent('keyup', { key: char, bubbles: true });
 
+        input.value += char;
+        input.dispatchEvent(keyDownEvent);
+        input.dispatchEvent(keyPressEvent);
+        input.dispatchEvent(inputEvent);
+        input.dispatchEvent(keyUpEvent);
+
+        await new Promise(resolve => setTimeout(resolve, 100));
+      }
+
+      const enterEvent = new KeyboardEvent('keydown', {
+        key: 'Enter',
+        code: 'Enter',
+        keyCode: 13,
+        which: 13,
+        bubbles: true
+      });
+      const keyDownEvent = new KeyboardEvent('keydown', { key: 'Enter', bubbles: true });
+      const keyPressEvent = new KeyboardEvent('keypress', { key: 'Enter', bubbles: true });
+      const inputEvent = new Event('input', { bubbles: true });
+      const keyUpEvent = new KeyboardEvent('keyup', { key: 'Enter', bubbles: true });
+      input.dispatchEvent(enterEvent);
+      input.dispatchEvent(keyDownEvent);
+      input.dispatchEvent(keyPressEvent);
+      input.dispatchEvent(inputEvent);
+      input.dispatchEvent(keyUpEvent);
+     
+      // input.value = query;
+      console.log('input value', input.value);
+
+      await new Promise(resolve => setTimeout(resolve, 500)); // Somehow this prevents a execution context error
       input.closest('form')?.submit();
     }
   }, inputElement, manufacturer);
-
   
   await waitForStaticPage(page);
   

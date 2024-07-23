@@ -1,1178 +1,134 @@
 [
   {
-    "listing": "Cicada",
-    "detailsUrl": "https://bangachain.com/products/cicada?_pos=2&_sid=bdb028633&_ss=r&variant=48965632491842",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2618_298x298_crop_center.jpg?v=1717792138",
-    "price": "18.00"
-  },
-  {
-    "listing": "Buzzz",
-    "detailsUrl": "https://bangachain.com/products/buzzz?_pos=3&_sid=bdb028633&_ss=r&variant=48965642191170",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2691_298x298_crop_center.jpg?v=1717798339",
-    "price": "12.00"
-  },
-  {
-    "listing": "Zeus",
-    "detailsUrl": "https://bangachain.com/products/zeus?_pos=4&_sid=bdb028633&_ss=r&variant=47817082143042",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9764_e6ccbced-49a8-4ff1-8566-5859db91aab7_298x298_crop_center.jpg?v=1708459679",
-    "price": "22.00"
-  },
-  {
-    "listing": "Avenger SS",
-    "detailsUrl": "https://bangachain.com/products/avenger-ss?_pos=5&_sid=bdb028633&_ss=r&variant=48965643141442",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9840_298x298_crop_center.jpg?v=1708467961",
-    "price": "15.00"
-  },
-  {
-    "listing": "Hades",
-    "detailsUrl": "https://bangachain.com/products/hades?_pos=6&_sid=bdb028633&_ss=r&variant=47817081422146",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9756_12e63fcb-434d-4ee2-a395-939be414da27_298x298_crop_center.jpg?v=1708456592",
-    "price": "18.00"
-  },
-  {
-    "listing": "Athena",
-    "detailsUrl": "https://bangachain.com/products/athena?_pos=7&_sid=bdb028633&_ss=r&variant=47375400304962",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9842_298x298_crop_center.jpg?v=1708468047",
-    "price": "22.00"
-  },
-  {
-    "listing": "Nuke OS",
-    "detailsUrl": "https://bangachain.com/products/nuke-os?_pos=8&_sid=bdb028633&_ss=r&variant=47817078669634",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9992_298x298_crop_center.jpg?v=1708559786",
-    "price": "18.00"
-  },
-  {
-    "listing": "Luna",
-    "detailsUrl": "https://bangachain.com/products/luna?_pos=9&_sid=bdb028633&_ss=r&variant=47817086337346",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9695_298x298_crop_center.jpg?v=1708393852",
-    "price": "22.00"
-  },
-  {
-    "listing": "Paige Pierce First Run Drive",
-    "detailsUrl": "https://bangachain.com/products/paige-pierce-first-run-drive?_pos=10&_sid=bdb028633&_ss=r&variant=49119170265410",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2833_298x298_crop_center.jpg?v=1719005735",
-    "price": "20.00"
-  },
-  {
-    "listing": "Zone",
-    "detailsUrl": "https://bangachain.com/products/zone?_pos=11&_sid=bdb028633&_ss=r&variant=48965638553922",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2660_298x298_crop_center.jpg?v=1717795462",
-    "price": "12.00"
-  },
-  {
-    "listing": "Meteor",
-    "detailsUrl": "https://bangachain.com/products/meteor?_pos=12&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2680_298x298_crop_center.jpg?v=1717796618",
-    "price": "15.00"
-  },
-  {
-    "listing": "Cicada",
-    "detailsUrl": "https://bangachain.com/products/cicada",
-    "imgSrc": "https://bangachain.com/cdn/shop/files/IMG_9702_8b5601ef-747b-494e-9cd9-1c70475f42e0_20x20_crop_center.jpg?v=1708394235",
-    "price": "18.00"
-  },
-  {
-    "listing": "Cicada",
-    "detailsUrl": "https://bangachain.com/products/cicada?_pos=2&_sid=bdb028633&_ss=r&variant=48965632491842",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2618_298x298_crop_center.jpg?v=1717792138",
-    "price": "18.00"
-  },
-  {
-    "listing": "Buzzz",
-    "detailsUrl": "https://bangachain.com/products/buzzz?_pos=3&_sid=bdb028633&_ss=r&variant=48965642191170",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2691_298x298_crop_center.jpg?v=1717798339",
-    "price": "12.00"
-  },
-  {
-    "listing": "Zeus",
-    "detailsUrl": "https://bangachain.com/products/zeus?_pos=4&_sid=bdb028633&_ss=r&variant=47817082143042",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9764_e6ccbced-49a8-4ff1-8566-5859db91aab7_298x298_crop_center.jpg?v=1708459679",
-    "price": "22.00"
-  },
-  {
-    "listing": "Avenger SS",
-    "detailsUrl": "https://bangachain.com/products/avenger-ss?_pos=5&_sid=bdb028633&_ss=r&variant=48965643141442",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9840_298x298_crop_center.jpg?v=1708467961",
-    "price": "15.00"
-  },
-  {
-    "listing": "Hades",
-    "detailsUrl": "https://bangachain.com/products/hades?_pos=6&_sid=bdb028633&_ss=r&variant=47817081422146",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9756_12e63fcb-434d-4ee2-a395-939be414da27_298x298_crop_center.jpg?v=1708456592",
-    "price": "18.00"
-  },
-  {
-    "listing": "Athena",
-    "detailsUrl": "https://bangachain.com/products/athena?_pos=7&_sid=bdb028633&_ss=r&variant=47375400304962",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9842_298x298_crop_center.jpg?v=1708468047",
-    "price": "22.00"
-  },
-  {
-    "listing": "Nuke OS",
-    "detailsUrl": "https://bangachain.com/products/nuke-os?_pos=8&_sid=bdb028633&_ss=r&variant=47817078669634",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9992_298x298_crop_center.jpg?v=1708559786",
-    "price": "18.00"
-  },
-  {
-    "listing": "Luna",
-    "detailsUrl": "https://bangachain.com/products/luna?_pos=9&_sid=bdb028633&_ss=r&variant=47817086337346",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9695_298x298_crop_center.jpg?v=1708393852",
-    "price": "22.00"
-  },
-  {
-    "listing": "Paige Pierce First Run Drive",
-    "detailsUrl": "https://bangachain.com/products/paige-pierce-first-run-drive?_pos=10&_sid=bdb028633&_ss=r&variant=49119170265410",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2833_298x298_crop_center.jpg?v=1719005735",
-    "price": "20.00"
-  },
-  {
-    "listing": "Zone",
-    "detailsUrl": "https://bangachain.com/products/zone?_pos=11&_sid=bdb028633&_ss=r&variant=48965638553922",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2660_298x298_crop_center.jpg?v=1717795462",
-    "price": "12.00"
-  },
-  {
-    "listing": "Meteor",
-    "detailsUrl": "https://bangachain.com/products/meteor?_pos=12&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2680_298x298_crop_center.jpg?v=1717796618",
-    "price": "15.00"
-  },
-  {
-    "listing": "Nuke",
-    "detailsUrl": "https://bangachain.com/products/nuke?_pos=13&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9775_d6a020df-199b-4e9c-9781-02d3b4196f5c_298x298_crop_center.jpg?v=1708460137",
-    "price": "18.00"
-  },
-  {
-    "listing": "Magnet",
-    "detailsUrl": "https://bangachain.com/products/magnet?_pos=14&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9698_298x298_crop_center.jpg?v=1708393934",
-    "price": "12.00"
-  },
-  {
-    "listing": "Heat",
-    "detailsUrl": "https://bangachain.com/products/heat?_pos=15&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9690_14823ff3-ba36-4f8a-88cf-858fa2e18e43_298x298_crop_center.jpg?v=1708393758",
-    "price": "12.00"
-  },
-  {
-    "listing": "Zombee",
-    "detailsUrl": "https://bangachain.com/products/zombee?_pos=16&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0044_b77ad7be-a7ae-470a-aa35-df68649d0c68_298x298_crop_center.jpg?v=1708636502",
-    "price": "18.00"
-  },
-  {
-    "listing": "Mini Big Z Buzzz",
-    "detailsUrl": "https://bangachain.com/products/mini-buzzz?_pos=17&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/minibzbuzzz_minibigzbuzzz_298x298_crop_center.png?v=1721334485",
-    "price": "10.00"
-  },
-  {
-    "listing": "Mini Big Z Crank",
-    "detailsUrl": "https://bangachain.com/products/mini-big-z-crank?_pos=18&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/defaultimage_ee658a80-739a-428e-bf90-44db45a8eec3_298x298_crop_center.jpg?v=1713739413",
-    "price": "10.00"
-  },
-  {
-    "listing": "Banger GT",
-    "detailsUrl": "https://bangachain.com/products/banger-gt?_pos=20&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9832_298x298_crop_center.jpg?v=1708467839",
-    "price": "12.00"
-  },
-  {
-    "listing": "Force",
-    "detailsUrl": "https://bangachain.com/products/force?_pos=21&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9906_298x298_crop_center.jpg?v=1708546825",
-    "price": "18.00"
-  },
-  {
-    "listing": "Machete",
-    "detailsUrl": "https://bangachain.com/products/machete?_pos=22&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9946_298x298_crop_center.jpg?v=1708550783",
-    "price": "18.00"
-  },
-  {
-    "listing": "Ringer",
-    "detailsUrl": "https://bangachain.com/products/ringer?_pos=23&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9968_87a696f2-f4f1-418e-b07f-e9490c060bb0_298x298_crop_center.jpg?v=1708559240",
-    "price": "12.00"
-  },
-  {
-    "listing": "Crank",
-    "detailsUrl": "https://bangachain.com/products/crank?_pos=24&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9918_298x298_crop_center.jpg?v=1708547371",
-    "price": "18.00"
-  },
-  {
-    "listing": "Cicada",
-    "detailsUrl": "https://bangachain.com/products/cicada",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9702_8b5601ef-747b-494e-9cd9-1c70475f42e0_298x298_crop_center.jpg?v=1708394235",
-    "price": "18.00"
-  },
-  {
-    "listing": "Cicada",
-    "detailsUrl": "https://bangachain.com/products/cicada?_pos=2&_sid=bdb028633&_ss=r&variant=48965632491842",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2618_298x298_crop_center.jpg?v=1717792138",
-    "price": "18.00"
-  },
-  {
-    "listing": "Buzzz",
-    "detailsUrl": "https://bangachain.com/products/buzzz?_pos=3&_sid=bdb028633&_ss=r&variant=48965642191170",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2691_298x298_crop_center.jpg?v=1717798339",
-    "price": "12.00"
-  },
-  {
-    "listing": "Zeus",
-    "detailsUrl": "https://bangachain.com/products/zeus?_pos=4&_sid=bdb028633&_ss=r&variant=47817082143042",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9764_e6ccbced-49a8-4ff1-8566-5859db91aab7_298x298_crop_center.jpg?v=1708459679",
-    "price": "22.00"
-  },
-  {
-    "listing": "Avenger SS",
-    "detailsUrl": "https://bangachain.com/products/avenger-ss?_pos=5&_sid=bdb028633&_ss=r&variant=48965643141442",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9840_298x298_crop_center.jpg?v=1708467961",
-    "price": "15.00"
-  },
-  {
-    "listing": "Hades",
-    "detailsUrl": "https://bangachain.com/products/hades?_pos=6&_sid=bdb028633&_ss=r&variant=47817081422146",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9756_12e63fcb-434d-4ee2-a395-939be414da27_298x298_crop_center.jpg?v=1708456592",
-    "price": "18.00"
-  },
-  {
-    "listing": "Athena",
-    "detailsUrl": "https://bangachain.com/products/athena?_pos=7&_sid=bdb028633&_ss=r&variant=47375400304962",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9842_298x298_crop_center.jpg?v=1708468047",
-    "price": "22.00"
-  },
-  {
-    "listing": "Nuke OS",
-    "detailsUrl": "https://bangachain.com/products/nuke-os?_pos=8&_sid=bdb028633&_ss=r&variant=47817078669634",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9992_298x298_crop_center.jpg?v=1708559786",
-    "price": "18.00"
-  },
-  {
-    "listing": "Luna",
-    "detailsUrl": "https://bangachain.com/products/luna?_pos=9&_sid=bdb028633&_ss=r&variant=47817086337346",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9695_298x298_crop_center.jpg?v=1708393852",
-    "price": "22.00"
-  },
-  {
-    "listing": "Paige Pierce First Run Drive",
-    "detailsUrl": "https://bangachain.com/products/paige-pierce-first-run-drive?_pos=10&_sid=bdb028633&_ss=r&variant=49119170265410",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2833_298x298_crop_center.jpg?v=1719005735",
-    "price": "20.00"
-  },
-  {
-    "listing": "Zone",
-    "detailsUrl": "https://bangachain.com/products/zone?_pos=11&_sid=bdb028633&_ss=r&variant=48965638553922",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2660_298x298_crop_center.jpg?v=1717795462",
-    "price": "12.00"
-  },
-  {
-    "listing": "Meteor",
-    "detailsUrl": "https://bangachain.com/products/meteor?_pos=12&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2680_298x298_crop_center.jpg?v=1717796618",
-    "price": "15.00"
-  },
-  {
-    "listing": "Nuke",
-    "detailsUrl": "https://bangachain.com/products/nuke?_pos=13&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9775_d6a020df-199b-4e9c-9781-02d3b4196f5c_298x298_crop_center.jpg?v=1708460137",
-    "price": "18.00"
-  },
-  {
-    "listing": "Magnet",
-    "detailsUrl": "https://bangachain.com/products/magnet?_pos=14&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9698_298x298_crop_center.jpg?v=1708393934",
-    "price": "12.00"
-  },
-  {
-    "listing": "Heat",
-    "detailsUrl": "https://bangachain.com/products/heat?_pos=15&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9690_14823ff3-ba36-4f8a-88cf-858fa2e18e43_298x298_crop_center.jpg?v=1708393758",
-    "price": "12.00"
-  },
-  {
-    "listing": "Zombee",
-    "detailsUrl": "https://bangachain.com/products/zombee?_pos=16&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0044_b77ad7be-a7ae-470a-aa35-df68649d0c68_298x298_crop_center.jpg?v=1708636502",
-    "price": "18.00"
-  },
-  {
-    "listing": "Mini Big Z Buzzz",
-    "detailsUrl": "https://bangachain.com/products/mini-buzzz?_pos=17&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/minibzbuzzz_minibigzbuzzz_298x298_crop_center.png?v=1721334485",
-    "price": "10.00"
-  },
-  {
-    "listing": "Mini Big Z Crank",
-    "detailsUrl": "https://bangachain.com/products/mini-big-z-crank?_pos=18&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/defaultimage_ee658a80-739a-428e-bf90-44db45a8eec3_298x298_crop_center.jpg?v=1713739413",
-    "price": "10.00"
-  },
-  {
-    "listing": "Banger GT",
-    "detailsUrl": "https://bangachain.com/products/banger-gt?_pos=20&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9832_298x298_crop_center.jpg?v=1708467839",
-    "price": "12.00"
-  },
-  {
-    "listing": "Force",
-    "detailsUrl": "https://bangachain.com/products/force?_pos=21&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9906_298x298_crop_center.jpg?v=1708546825",
-    "price": "18.00"
-  },
-  {
-    "listing": "Machete",
-    "detailsUrl": "https://bangachain.com/products/machete?_pos=22&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9946_298x298_crop_center.jpg?v=1708550783",
-    "price": "18.00"
-  },
-  {
-    "listing": "Ringer",
-    "detailsUrl": "https://bangachain.com/products/ringer?_pos=23&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9968_87a696f2-f4f1-418e-b07f-e9490c060bb0_298x298_crop_center.jpg?v=1708559240",
-    "price": "12.00"
-  },
-  {
-    "listing": "Crank",
-    "detailsUrl": "https://bangachain.com/products/crank?_pos=24&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9918_298x298_crop_center.jpg?v=1708547371",
-    "price": "18.00"
-  },
-  {
-    "listing": "Comet",
-    "detailsUrl": "https://bangachain.com/products/comet?_pos=25&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9927_298x298_crop_center.jpg?v=1708547614",
-    "price": "18.00"
-  },
-  {
-    "listing": "Predator",
-    "detailsUrl": "https://bangachain.com/products/predator?_pos=26&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9980_298x298_crop_center.jpg?v=1708559564",
-    "price": "18.00"
-  },
-  {
-    "listing": "Mini ESP Buzzz",
-    "detailsUrl": "https://bangachain.com/products/mini-esp-buzzz?_pos=27&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/pmebuzzz.mini_3_298x298_crop_center.png?v=1721334428",
-    "price": "10.00"
-  },
-  {
-    "listing": "Mini Big Z Raptor",
-    "detailsUrl": "https://bangachain.com/products/mini-raptor?_pos=28&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/defaultimage_e5e5d50a-7fac-452c-bef6-3365d6c800fd_298x298_crop_center.jpg?v=1713739426",
-    "price": "10.00"
-  },
-  {
-    "listing": "Mini Paige Pierce Fierce",
-    "detailsUrl": "https://bangachain.com/products/mini-paige-pierce-fierce?_pos=29&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/ppmini.fierce_1_298x298_crop_center.png?v=1721334324",
-    "price": "12.00"
-  },
-  {
-    "listing": "Vulture",
-    "detailsUrl": "https://bangachain.com/products/vulture?_pos=30&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0056_298x298_crop_center.jpg?v=1708636893",
-    "price": "18.00"
-  },
-  {
-    "listing": "Focus",
-    "detailsUrl": "https://bangachain.com/products/focus?_pos=31&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9701_cb9da0fd-ecdc-4cf6-8cca-40b54e568f98_298x298_crop_center.jpg?v=1708393986",
-    "price": "12.00"
-  },
-  {
-    "listing": "Undertaker",
-    "detailsUrl": "https://bangachain.com/products/undertaker?_pos=32&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9769_298x298_crop_center.jpg?v=1708456426",
-    "price": "18.00"
-  },
-  {
-    "listing": "Challenger",
-    "detailsUrl": "https://bangachain.com/products/challenger?_pos=33&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9929_298x298_crop_center.jpg?v=1708547672",
-    "price": "12.00"
-  },
-  {
-    "listing": "Passion",
-    "detailsUrl": "https://bangachain.com/products/passion?_pos=34&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9982_298x298_crop_center.jpg?v=1708559610",
-    "price": "20.00"
-  },
-  {
-    "listing": "Stalker",
-    "detailsUrl": "https://bangachain.com/products/stalker?_pos=35&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0015_298x298_crop_center.jpg?v=1708633435",
-    "price": "18.00"
-  },
-  {
-    "listing": "SOL",
-    "detailsUrl": "https://bangachain.com/products/sol?_pos=36&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9777_2f3cff4b-d280-4314-8103-ca4ea97c29b9_298x298_crop_center.jpg?v=1708462430",
-    "price": "18.00"
-  },
-  {
-    "listing": "SOL",
-    "detailsUrl": "https://bangachain.com/products/sol?_pos=37&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9777_2f3cff4b-d280-4314-8103-ca4ea97c29b9_298x298_crop_center.jpg?v=1708462430",
-    "price": "18.00"
-  },
-  {
-    "listing": "Mini Big Z Undertaker",
-    "detailsUrl": "https://bangachain.com/products/mini-undertaker?_pos=38&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/defaultimage_f1d28ea1-7f32-4384-94b5-bc584cf70a89_298x298_crop_center.jpg?v=1713739442",
-    "price": "10.00"
-  },
-  {
-    "listing": "Mini Jawbreaker Challenger",
-    "detailsUrl": "https://bangachain.com/products/mini-jawbreaker-challenger?_pos=39&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/defaultimage_a834d954-af91-4da0-ad65-01213269a392_298x298_crop_center.jpg?v=1713739508",
-    "price": "10.00"
-  },
-  {
-    "listing": "Mini Jawbreaker Zone",
-    "detailsUrl": "https://bangachain.com/products/mini-jawbreaker-zone?_pos=40&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/defaultimage_94f5734e-fd37-43ae-a98c-4532a4523159_298x298_crop_center.jpg?v=1713745004",
-    "price": "10.00"
-  },
-  {
-    "listing": "Andrew Presnell Tour Series- Force",
-    "detailsUrl": "https://bangachain.com/products/andrew-presnell-tour-series-force?_pos=41&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9905_298x298_crop_center.jpg?v=1708547057",
+    "listing": "Discraft ESP Flick 155-159g 13330 35.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/discraft-esp-flick-155-159g-13330/8446?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p8446_i1_w2000.png?width=80&dpr=1",
+    "price": "35.00"
+  },
+  {
+    "listing": "Ezra Aderhold Z FLX Jawbreaker Nuke 173-174g 13635 25.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/ezra-aderhold-z-flx-jawbreaker-nuke-173-174g-13635/8806?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p8806_i1_w2000.png?width=80&dpr=1",
     "price": "25.00"
   },
   {
-    "listing": "Justin Sartin 2023 Fundraiser Discs - Passion",
-    "detailsUrl": "https://bangachain.com/products/justin-sartin-2023-fundraiser-discs-passion?_pos=42&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0356_298x298_crop_center.jpg?v=1699555285",
-    "price": "22.00"
-  },
-  {
-    "listing": "Surge SS",
-    "detailsUrl": "https://bangachain.com/products/surge-ss?_pos=43&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0014_298x298_crop_center.jpg?v=1708633021",
+    "listing": "Z Lite Nuke 158g 12607 18.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/z-lite-nuke-158g-12607/7779?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p7779_i2_w2000.png?width=80&dpr=1",
     "price": "18.00"
   },
   {
-    "listing": "Aaron Gossage Tour Series Raptor",
-    "detailsUrl": "https://bangachain.com/products/aaron-gossage-tour-series-raptor?_pos=44&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9977_298x298_crop_center.jpg?v=1708559444",
+    "listing": "Z Glo Fly Dye Nuke 173-174g 14403 25.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/z-glo-fly-dye-nuke-173-174g-14403/9555?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p9555_i1_w2000.png?width=80&dpr=1",
     "price": "25.00"
   },
   {
-    "listing": "Raptor",
-    "detailsUrl": "https://bangachain.com/products/raptor?_pos=45&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9976_298x298_crop_center.jpg?v=1708559398",
-    "price": "18.00"
-  },
-  {
-    "listing": "Roach",
-    "detailsUrl": "https://bangachain.com/products/roach?_pos=46&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9708_84fa96f7-69b2-46e8-8636-3d1551709307_298x298_crop_center.jpg?v=1708394422",
-    "price": "12.00"
-  },
-  {
-    "listing": "Thrasher",
-    "detailsUrl": "https://bangachain.com/products/thrasher?_pos=47&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9773_0a754e6c-16dd-4bcf-9fe6-72c43b1bfd65_298x298_crop_center.jpg?v=1708460052",
-    "price": "18.00"
-  },
-  {
-    "listing": "Scorch",
-    "detailsUrl": "https://bangachain.com/products/scorch?_pos=48&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0030_298x298_crop_center.jpg?v=1708633828",
-    "price": "18.00"
-  },
-  {
-    "listing": "Cicada",
-    "detailsUrl": "https://bangachain.com/products/cicada",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9702_8b5601ef-747b-494e-9cd9-1c70475f42e0_298x298_crop_center.jpg?v=1708394235",
-    "price": "18.00"
-  },
-  {
-    "listing": "Cicada",
-    "detailsUrl": "https://bangachain.com/products/cicada?_pos=2&_sid=bdb028633&_ss=r&variant=48965632491842",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2618_298x298_crop_center.jpg?v=1717792138",
-    "price": "18.00"
-  },
-  {
-    "listing": "Buzzz",
-    "detailsUrl": "https://bangachain.com/products/buzzz?_pos=3&_sid=bdb028633&_ss=r&variant=48965642191170",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2691_298x298_crop_center.jpg?v=1717798339",
-    "price": "12.00"
-  },
-  {
-    "listing": "Zeus",
-    "detailsUrl": "https://bangachain.com/products/zeus?_pos=4&_sid=bdb028633&_ss=r&variant=47817082143042",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9764_e6ccbced-49a8-4ff1-8566-5859db91aab7_298x298_crop_center.jpg?v=1708459679",
-    "price": "22.00"
-  },
-  {
-    "listing": "Avenger SS",
-    "detailsUrl": "https://bangachain.com/products/avenger-ss?_pos=5&_sid=bdb028633&_ss=r&variant=48965643141442",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9840_298x298_crop_center.jpg?v=1708467961",
-    "price": "15.00"
-  },
-  {
-    "listing": "Hades",
-    "detailsUrl": "https://bangachain.com/products/hades?_pos=6&_sid=bdb028633&_ss=r&variant=47817081422146",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9756_12e63fcb-434d-4ee2-a395-939be414da27_298x298_crop_center.jpg?v=1708456592",
-    "price": "18.00"
-  },
-  {
-    "listing": "Athena",
-    "detailsUrl": "https://bangachain.com/products/athena?_pos=7&_sid=bdb028633&_ss=r&variant=47375400304962",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9842_298x298_crop_center.jpg?v=1708468047",
-    "price": "22.00"
-  },
-  {
-    "listing": "Nuke OS",
-    "detailsUrl": "https://bangachain.com/products/nuke-os?_pos=8&_sid=bdb028633&_ss=r&variant=47817078669634",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9992_298x298_crop_center.jpg?v=1708559786",
-    "price": "18.00"
-  },
-  {
-    "listing": "Luna",
-    "detailsUrl": "https://bangachain.com/products/luna?_pos=9&_sid=bdb028633&_ss=r&variant=47817086337346",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9695_298x298_crop_center.jpg?v=1708393852",
-    "price": "22.00"
-  },
-  {
-    "listing": "Paige Pierce First Run Drive",
-    "detailsUrl": "https://bangachain.com/products/paige-pierce-first-run-drive?_pos=10&_sid=bdb028633&_ss=r&variant=49119170265410",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2833_298x298_crop_center.jpg?v=1719005735",
-    "price": "20.00"
-  },
-  {
-    "listing": "Zone",
-    "detailsUrl": "https://bangachain.com/products/zone?_pos=11&_sid=bdb028633&_ss=r&variant=48965638553922",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2660_298x298_crop_center.jpg?v=1717795462",
-    "price": "12.00"
-  },
-  {
-    "listing": "Meteor",
-    "detailsUrl": "https://bangachain.com/products/meteor?_pos=12&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2680_298x298_crop_center.jpg?v=1717796618",
-    "price": "15.00"
-  },
-  {
-    "listing": "Nuke",
-    "detailsUrl": "https://bangachain.com/products/nuke?_pos=13&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9775_d6a020df-199b-4e9c-9781-02d3b4196f5c_298x298_crop_center.jpg?v=1708460137",
-    "price": "18.00"
-  },
-  {
-    "listing": "Magnet",
-    "detailsUrl": "https://bangachain.com/products/magnet?_pos=14&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9698_298x298_crop_center.jpg?v=1708393934",
-    "price": "12.00"
-  },
-  {
-    "listing": "Heat",
-    "detailsUrl": "https://bangachain.com/products/heat?_pos=15&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9690_14823ff3-ba36-4f8a-88cf-858fa2e18e43_298x298_crop_center.jpg?v=1708393758",
-    "price": "12.00"
-  },
-  {
-    "listing": "Zombee",
-    "detailsUrl": "https://bangachain.com/products/zombee?_pos=16&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0044_b77ad7be-a7ae-470a-aa35-df68649d0c68_298x298_crop_center.jpg?v=1708636502",
-    "price": "18.00"
-  },
-  {
-    "listing": "Mini Big Z Buzzz",
-    "detailsUrl": "https://bangachain.com/products/mini-buzzz?_pos=17&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/minibzbuzzz_minibigzbuzzz_298x298_crop_center.png?v=1721334485",
-    "price": "10.00"
-  },
-  {
-    "listing": "Mini Big Z Crank",
-    "detailsUrl": "https://bangachain.com/products/mini-big-z-crank?_pos=18&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/defaultimage_ee658a80-739a-428e-bf90-44db45a8eec3_298x298_crop_center.jpg?v=1713739413",
-    "price": "10.00"
-  },
-  {
-    "listing": "Banger GT",
-    "detailsUrl": "https://bangachain.com/products/banger-gt?_pos=20&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9832_298x298_crop_center.jpg?v=1708467839",
-    "price": "12.00"
-  },
-  {
-    "listing": "Force",
-    "detailsUrl": "https://bangachain.com/products/force?_pos=21&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9906_298x298_crop_center.jpg?v=1708546825",
-    "price": "18.00"
-  },
-  {
-    "listing": "Machete",
-    "detailsUrl": "https://bangachain.com/products/machete?_pos=22&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9946_298x298_crop_center.jpg?v=1708550783",
-    "price": "18.00"
-  },
-  {
-    "listing": "Ringer",
-    "detailsUrl": "https://bangachain.com/products/ringer?_pos=23&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9968_87a696f2-f4f1-418e-b07f-e9490c060bb0_298x298_crop_center.jpg?v=1708559240",
-    "price": "12.00"
-  },
-  {
-    "listing": "Crank",
-    "detailsUrl": "https://bangachain.com/products/crank?_pos=24&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9918_298x298_crop_center.jpg?v=1708547371",
-    "price": "18.00"
-  },
-  {
-    "listing": "Comet",
-    "detailsUrl": "https://bangachain.com/products/comet?_pos=25&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9927_298x298_crop_center.jpg?v=1708547614",
-    "price": "18.00"
-  },
-  {
-    "listing": "Predator",
-    "detailsUrl": "https://bangachain.com/products/predator?_pos=26&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9980_298x298_crop_center.jpg?v=1708559564",
-    "price": "18.00"
-  },
-  {
-    "listing": "Mini ESP Buzzz",
-    "detailsUrl": "https://bangachain.com/products/mini-esp-buzzz?_pos=27&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/pmebuzzz.mini_3_298x298_crop_center.png?v=1721334428",
-    "price": "10.00"
-  },
-  {
-    "listing": "Mini Big Z Raptor",
-    "detailsUrl": "https://bangachain.com/products/mini-raptor?_pos=28&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/defaultimage_e5e5d50a-7fac-452c-bef6-3365d6c800fd_298x298_crop_center.jpg?v=1713739426",
-    "price": "10.00"
-  },
-  {
-    "listing": "Mini Paige Pierce Fierce",
-    "detailsUrl": "https://bangachain.com/products/mini-paige-pierce-fierce?_pos=29&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/ppmini.fierce_1_298x298_crop_center.png?v=1721334324",
-    "price": "12.00"
-  },
-  {
-    "listing": "Vulture",
-    "detailsUrl": "https://bangachain.com/products/vulture?_pos=30&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0056_298x298_crop_center.jpg?v=1708636893",
-    "price": "18.00"
-  },
-  {
-    "listing": "Focus",
-    "detailsUrl": "https://bangachain.com/products/focus?_pos=31&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9701_cb9da0fd-ecdc-4cf6-8cca-40b54e568f98_298x298_crop_center.jpg?v=1708393986",
-    "price": "12.00"
-  },
-  {
-    "listing": "Undertaker",
-    "detailsUrl": "https://bangachain.com/products/undertaker?_pos=32&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9769_298x298_crop_center.jpg?v=1708456426",
-    "price": "18.00"
-  },
-  {
-    "listing": "Challenger",
-    "detailsUrl": "https://bangachain.com/products/challenger?_pos=33&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9929_298x298_crop_center.jpg?v=1708547672",
-    "price": "12.00"
-  },
-  {
-    "listing": "Passion",
-    "detailsUrl": "https://bangachain.com/products/passion?_pos=34&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9982_298x298_crop_center.jpg?v=1708559610",
-    "price": "20.00"
-  },
-  {
-    "listing": "Stalker",
-    "detailsUrl": "https://bangachain.com/products/stalker?_pos=35&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0015_298x298_crop_center.jpg?v=1708633435",
-    "price": "18.00"
-  },
-  {
-    "listing": "SOL",
-    "detailsUrl": "https://bangachain.com/products/sol?_pos=36&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9777_2f3cff4b-d280-4314-8103-ca4ea97c29b9_298x298_crop_center.jpg?v=1708462430",
-    "price": "18.00"
-  },
-  {
-    "listing": "SOL",
-    "detailsUrl": "https://bangachain.com/products/sol?_pos=37&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9777_2f3cff4b-d280-4314-8103-ca4ea97c29b9_298x298_crop_center.jpg?v=1708462430",
-    "price": "18.00"
-  },
-  {
-    "listing": "Mini Big Z Undertaker",
-    "detailsUrl": "https://bangachain.com/products/mini-undertaker?_pos=38&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/defaultimage_f1d28ea1-7f32-4384-94b5-bc584cf70a89_298x298_crop_center.jpg?v=1713739442",
-    "price": "10.00"
-  },
-  {
-    "listing": "Mini Jawbreaker Challenger",
-    "detailsUrl": "https://bangachain.com/products/mini-jawbreaker-challenger?_pos=39&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/defaultimage_a834d954-af91-4da0-ad65-01213269a392_298x298_crop_center.jpg?v=1713739508",
-    "price": "10.00"
-  },
-  {
-    "listing": "Mini Jawbreaker Zone",
-    "detailsUrl": "https://bangachain.com/products/mini-jawbreaker-zone?_pos=40&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/defaultimage_94f5734e-fd37-43ae-a98c-4532a4523159_298x298_crop_center.jpg?v=1713745004",
-    "price": "10.00"
-  },
-  {
-    "listing": "Andrew Presnell Tour Series- Force",
-    "detailsUrl": "https://bangachain.com/products/andrew-presnell-tour-series-force?_pos=41&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9905_298x298_crop_center.jpg?v=1708547057",
+    "listing": "Z Glo Fly Dye Nuke 173-174g 14401 25.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/z-glo-fly-dye-nuke-173-174g-14401/9525?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p9525_i1_w2000.png?width=80&dpr=1",
     "price": "25.00"
   },
   {
-    "listing": "Justin Sartin 2023 Fundraiser Discs - Passion",
-    "detailsUrl": "https://bangachain.com/products/justin-sartin-2023-fundraiser-discs-passion?_pos=42&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0356_298x298_crop_center.jpg?v=1699555285",
-    "price": "22.00"
-  },
-  {
-    "listing": "Surge SS",
-    "detailsUrl": "https://bangachain.com/products/surge-ss?_pos=43&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0014_298x298_crop_center.jpg?v=1708633021",
-    "price": "18.00"
-  },
-  {
-    "listing": "Aaron Gossage Tour Series Raptor",
-    "detailsUrl": "https://bangachain.com/products/aaron-gossage-tour-series-raptor?_pos=44&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9977_298x298_crop_center.jpg?v=1708559444",
+    "listing": "Z Glo Fly Dye Nuke 173-174g 14399 25.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/z-glo-fly-dye-nuke-173-174g-14399/9511?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p9511_i1_w2000.png?width=80&dpr=1",
     "price": "25.00"
   },
   {
-    "listing": "Raptor",
-    "detailsUrl": "https://bangachain.com/products/raptor?_pos=45&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9976_298x298_crop_center.jpg?v=1708559398",
-    "price": "18.00"
-  },
-  {
-    "listing": "Roach",
-    "detailsUrl": "https://bangachain.com/products/roach?_pos=46&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9708_84fa96f7-69b2-46e8-8636-3d1551709307_298x298_crop_center.jpg?v=1708394422",
-    "price": "12.00"
-  },
-  {
-    "listing": "Thrasher",
-    "detailsUrl": "https://bangachain.com/products/thrasher?_pos=47&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9773_0a754e6c-16dd-4bcf-9fe6-72c43b1bfd65_298x298_crop_center.jpg?v=1708460052",
-    "price": "18.00"
-  },
-  {
-    "listing": "Scorch",
-    "detailsUrl": "https://bangachain.com/products/scorch?_pos=48&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0030_298x298_crop_center.jpg?v=1708633828",
-    "price": "18.00"
-  },
-  {
-    "listing": "Malta",
-    "detailsUrl": "https://bangachain.com/products/malta?_pos=49&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0005_298x298_crop_center.jpg?v=1708632725",
-    "price": "18.00"
-  },
-  {
-    "listing": "Ringer GT",
-    "detailsUrl": "https://bangachain.com/products/ringer-gt?_pos=50&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9967_08154cce-2e6a-4bf2-83a5-2750b834e137_298x298_crop_center.jpg?v=1708559161",
-    "price": "15.00"
-  },
-  {
-    "listing": "Archer",
-    "detailsUrl": "https://bangachain.com/products/archer?_pos=51&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9852_298x298_crop_center.jpg?v=1708468239",
-    "price": "18.00"
-  },
-  {
-    "listing": "Buzzz OS",
-    "detailsUrl": "https://bangachain.com/products/buzzz-os?_pos=52&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9766_298x298_crop_center.jpg?v=1708459747",
-    "price": "18.00"
-  },
-  {
-    "listing": "Brodie Roach",
-    "detailsUrl": "https://bangachain.com/products/brodie-roach?_pos=53&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9706_ef8a3273-d151-413c-8409-3d6653fb63a0_298x298_crop_center.jpg?v=1708394342",
-    "price": "15.00"
-  },
-  {
-    "listing": "Stratus",
-    "detailsUrl": "https://bangachain.com/products/stratus?_pos=54&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0084_298x298_crop_center.jpg?v=1708639135",
-    "price": "12.00"
-  },
-  {
-    "listing": "ZONE OS",
-    "detailsUrl": "https://bangachain.com/products/zone-os?_pos=55&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0083_298x298_crop_center.jpg?v=1708639121",
-    "price": "12.00"
-  },
-  {
-    "listing": "Andrew Presnell TS Swarm",
-    "detailsUrl": "https://bangachain.com/products/andrew-presnell-ts-swarm?_pos=57&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2970_298x298_crop_center.jpg?v=1720202156",
+    "listing": "Z Glo Fly Dye Nuke 173-174g 14402 25.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/z-glo-fly-dye-nuke-173-174g-14402/9503?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p9503_i1_w2000.png?width=80&dpr=1",
     "price": "25.00"
   },
   {
-    "listing": "Venom",
-    "detailsUrl": "https://bangachain.com/products/venom?_pos=58&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9678_8baff9e4-e1d1-4693-b008-e2e785f4c5eb_298x298_crop_center.jpg?v=1708393525",
-    "price": "18.00"
-  },
-  {
-    "listing": "Anax",
-    "detailsUrl": "https://bangachain.com/products/anax?_pos=59&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9858_298x298_crop_center.jpg?v=1708468841",
-    "price": "18.00"
-  },
-  {
-    "listing": "Cicada",
-    "detailsUrl": "https://bangachain.com/products/cicada",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9702_8b5601ef-747b-494e-9cd9-1c70475f42e0_298x298_crop_center.jpg?v=1708394235",
-    "price": "18.00"
-  },
-  {
-    "listing": "Cicada",
-    "detailsUrl": "https://bangachain.com/products/cicada?_pos=2&_sid=bdb028633&_ss=r&variant=48965632491842",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2618_298x298_crop_center.jpg?v=1717792138",
-    "price": "18.00"
-  },
-  {
-    "listing": "Buzzz",
-    "detailsUrl": "https://bangachain.com/products/buzzz?_pos=3&_sid=bdb028633&_ss=r&variant=48965642191170",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2691_298x298_crop_center.jpg?v=1717798339",
-    "price": "12.00"
-  },
-  {
-    "listing": "Zeus",
-    "detailsUrl": "https://bangachain.com/products/zeus?_pos=4&_sid=bdb028633&_ss=r&variant=47817082143042",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9764_e6ccbced-49a8-4ff1-8566-5859db91aab7_298x298_crop_center.jpg?v=1708459679",
-    "price": "22.00"
-  },
-  {
-    "listing": "Avenger SS",
-    "detailsUrl": "https://bangachain.com/products/avenger-ss?_pos=5&_sid=bdb028633&_ss=r&variant=48965643141442",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9840_298x298_crop_center.jpg?v=1708467961",
-    "price": "15.00"
-  },
-  {
-    "listing": "Hades",
-    "detailsUrl": "https://bangachain.com/products/hades?_pos=6&_sid=bdb028633&_ss=r&variant=47817081422146",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9756_12e63fcb-434d-4ee2-a395-939be414da27_298x298_crop_center.jpg?v=1708456592",
-    "price": "18.00"
-  },
-  {
-    "listing": "Athena",
-    "detailsUrl": "https://bangachain.com/products/athena?_pos=7&_sid=bdb028633&_ss=r&variant=47375400304962",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9842_298x298_crop_center.jpg?v=1708468047",
-    "price": "22.00"
-  },
-  {
-    "listing": "Nuke OS",
-    "detailsUrl": "https://bangachain.com/products/nuke-os?_pos=8&_sid=bdb028633&_ss=r&variant=47817078669634",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9992_298x298_crop_center.jpg?v=1708559786",
-    "price": "18.00"
-  },
-  {
-    "listing": "Luna",
-    "detailsUrl": "https://bangachain.com/products/luna?_pos=9&_sid=bdb028633&_ss=r&variant=47817086337346",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9695_298x298_crop_center.jpg?v=1708393852",
-    "price": "22.00"
-  },
-  {
-    "listing": "Paige Pierce First Run Drive",
-    "detailsUrl": "https://bangachain.com/products/paige-pierce-first-run-drive?_pos=10&_sid=bdb028633&_ss=r&variant=49119170265410",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2833_298x298_crop_center.jpg?v=1719005735",
-    "price": "20.00"
-  },
-  {
-    "listing": "Zone",
-    "detailsUrl": "https://bangachain.com/products/zone?_pos=11&_sid=bdb028633&_ss=r&variant=48965638553922",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2660_298x298_crop_center.jpg?v=1717795462",
-    "price": "12.00"
-  },
-  {
-    "listing": "Meteor",
-    "detailsUrl": "https://bangachain.com/products/meteor?_pos=12&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2680_298x298_crop_center.jpg?v=1717796618",
-    "price": "15.00"
-  },
-  {
-    "listing": "Nuke",
-    "detailsUrl": "https://bangachain.com/products/nuke?_pos=13&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9775_d6a020df-199b-4e9c-9781-02d3b4196f5c_298x298_crop_center.jpg?v=1708460137",
-    "price": "18.00"
-  },
-  {
-    "listing": "Magnet",
-    "detailsUrl": "https://bangachain.com/products/magnet?_pos=14&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9698_298x298_crop_center.jpg?v=1708393934",
-    "price": "12.00"
-  },
-  {
-    "listing": "Heat",
-    "detailsUrl": "https://bangachain.com/products/heat?_pos=15&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9690_14823ff3-ba36-4f8a-88cf-858fa2e18e43_298x298_crop_center.jpg?v=1708393758",
-    "price": "12.00"
-  },
-  {
-    "listing": "Zombee",
-    "detailsUrl": "https://bangachain.com/products/zombee?_pos=16&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0044_b77ad7be-a7ae-470a-aa35-df68649d0c68_298x298_crop_center.jpg?v=1708636502",
-    "price": "18.00"
-  },
-  {
-    "listing": "Mini Big Z Buzzz",
-    "detailsUrl": "https://bangachain.com/products/mini-buzzz?_pos=17&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/minibzbuzzz_minibigzbuzzz_298x298_crop_center.png?v=1721334485",
-    "price": "10.00"
-  },
-  {
-    "listing": "Mini Big Z Crank",
-    "detailsUrl": "https://bangachain.com/products/mini-big-z-crank?_pos=18&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/defaultimage_ee658a80-739a-428e-bf90-44db45a8eec3_298x298_crop_center.jpg?v=1713739413",
-    "price": "10.00"
-  },
-  {
-    "listing": "Banger GT",
-    "detailsUrl": "https://bangachain.com/products/banger-gt?_pos=20&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9832_298x298_crop_center.jpg?v=1708467839",
-    "price": "12.00"
-  },
-  {
-    "listing": "Force",
-    "detailsUrl": "https://bangachain.com/products/force?_pos=21&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9906_298x298_crop_center.jpg?v=1708546825",
-    "price": "18.00"
-  },
-  {
-    "listing": "Machete",
-    "detailsUrl": "https://bangachain.com/products/machete?_pos=22&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9946_298x298_crop_center.jpg?v=1708550783",
-    "price": "18.00"
-  },
-  {
-    "listing": "Ringer",
-    "detailsUrl": "https://bangachain.com/products/ringer?_pos=23&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9968_87a696f2-f4f1-418e-b07f-e9490c060bb0_298x298_crop_center.jpg?v=1708559240",
-    "price": "12.00"
-  },
-  {
-    "listing": "Crank",
-    "detailsUrl": "https://bangachain.com/products/crank?_pos=24&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9918_298x298_crop_center.jpg?v=1708547371",
-    "price": "18.00"
-  },
-  {
-    "listing": "Comet",
-    "detailsUrl": "https://bangachain.com/products/comet?_pos=25&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9927_298x298_crop_center.jpg?v=1708547614",
-    "price": "18.00"
-  },
-  {
-    "listing": "Predator",
-    "detailsUrl": "https://bangachain.com/products/predator?_pos=26&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9980_298x298_crop_center.jpg?v=1708559564",
-    "price": "18.00"
-  },
-  {
-    "listing": "Mini ESP Buzzz",
-    "detailsUrl": "https://bangachain.com/products/mini-esp-buzzz?_pos=27&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/pmebuzzz.mini_3_298x298_crop_center.png?v=1721334428",
-    "price": "10.00"
-  },
-  {
-    "listing": "Mini Big Z Raptor",
-    "detailsUrl": "https://bangachain.com/products/mini-raptor?_pos=28&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/defaultimage_e5e5d50a-7fac-452c-bef6-3365d6c800fd_298x298_crop_center.jpg?v=1713739426",
-    "price": "10.00"
-  },
-  {
-    "listing": "Mini Paige Pierce Fierce",
-    "detailsUrl": "https://bangachain.com/products/mini-paige-pierce-fierce?_pos=29&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/ppmini.fierce_1_298x298_crop_center.png?v=1721334324",
-    "price": "12.00"
-  },
-  {
-    "listing": "Vulture",
-    "detailsUrl": "https://bangachain.com/products/vulture?_pos=30&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0056_298x298_crop_center.jpg?v=1708636893",
-    "price": "18.00"
-  },
-  {
-    "listing": "Focus",
-    "detailsUrl": "https://bangachain.com/products/focus?_pos=31&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9701_cb9da0fd-ecdc-4cf6-8cca-40b54e568f98_298x298_crop_center.jpg?v=1708393986",
-    "price": "12.00"
-  },
-  {
-    "listing": "Undertaker",
-    "detailsUrl": "https://bangachain.com/products/undertaker?_pos=32&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9769_298x298_crop_center.jpg?v=1708456426",
-    "price": "18.00"
-  },
-  {
-    "listing": "Challenger",
-    "detailsUrl": "https://bangachain.com/products/challenger?_pos=33&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9929_298x298_crop_center.jpg?v=1708547672",
-    "price": "12.00"
-  },
-  {
-    "listing": "Passion",
-    "detailsUrl": "https://bangachain.com/products/passion?_pos=34&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9982_298x298_crop_center.jpg?v=1708559610",
-    "price": "20.00"
-  },
-  {
-    "listing": "Stalker",
-    "detailsUrl": "https://bangachain.com/products/stalker?_pos=35&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0015_298x298_crop_center.jpg?v=1708633435",
-    "price": "18.00"
-  },
-  {
-    "listing": "SOL",
-    "detailsUrl": "https://bangachain.com/products/sol?_pos=36&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9777_2f3cff4b-d280-4314-8103-ca4ea97c29b9_298x298_crop_center.jpg?v=1708462430",
-    "price": "18.00"
-  },
-  {
-    "listing": "SOL",
-    "detailsUrl": "https://bangachain.com/products/sol?_pos=37&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9777_2f3cff4b-d280-4314-8103-ca4ea97c29b9_298x298_crop_center.jpg?v=1708462430",
-    "price": "18.00"
-  },
-  {
-    "listing": "Mini Big Z Undertaker",
-    "detailsUrl": "https://bangachain.com/products/mini-undertaker?_pos=38&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/defaultimage_f1d28ea1-7f32-4384-94b5-bc584cf70a89_298x298_crop_center.jpg?v=1713739442",
-    "price": "10.00"
-  },
-  {
-    "listing": "Mini Jawbreaker Challenger",
-    "detailsUrl": "https://bangachain.com/products/mini-jawbreaker-challenger?_pos=39&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/defaultimage_a834d954-af91-4da0-ad65-01213269a392_298x298_crop_center.jpg?v=1713739508",
-    "price": "10.00"
-  },
-  {
-    "listing": "Mini Jawbreaker Zone",
-    "detailsUrl": "https://bangachain.com/products/mini-jawbreaker-zone?_pos=40&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/defaultimage_94f5734e-fd37-43ae-a98c-4532a4523159_298x298_crop_center.jpg?v=1713745004",
-    "price": "10.00"
-  },
-  {
-    "listing": "Andrew Presnell Tour Series- Force",
-    "detailsUrl": "https://bangachain.com/products/andrew-presnell-tour-series-force?_pos=41&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9905_298x298_crop_center.jpg?v=1708547057",
+    "listing": "Z Glo Fly Dye Nuke 173-174g 14397 25.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/z-glo-fly-dye-nuke-173-174g-14397/9450?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p9450_i1_w2000.png?width=80&dpr=1",
     "price": "25.00"
   },
   {
-    "listing": "Justin Sartin 2023 Fundraiser Discs - Passion",
-    "detailsUrl": "https://bangachain.com/products/justin-sartin-2023-fundraiser-discs-passion?_pos=42&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0356_298x298_crop_center.jpg?v=1699555285",
-    "price": "22.00"
-  },
-  {
-    "listing": "Surge SS",
-    "detailsUrl": "https://bangachain.com/products/surge-ss?_pos=43&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0014_298x298_crop_center.jpg?v=1708633021",
-    "price": "18.00"
-  },
-  {
-    "listing": "Aaron Gossage Tour Series Raptor",
-    "detailsUrl": "https://bangachain.com/products/aaron-gossage-tour-series-raptor?_pos=44&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9977_298x298_crop_center.jpg?v=1708559444",
+    "listing": "Z Glo Fly Dye Nuke 173-174g 14400 25.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/z-glo-fly-dye-nuke-173-174g-14400/9442?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p9442_i1_w2000.png?width=80&dpr=1",
     "price": "25.00"
   },
   {
-    "listing": "Raptor",
-    "detailsUrl": "https://bangachain.com/products/raptor?_pos=45&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9976_298x298_crop_center.jpg?v=1708559398",
-    "price": "18.00"
-  },
-  {
-    "listing": "Roach",
-    "detailsUrl": "https://bangachain.com/products/roach?_pos=46&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9708_84fa96f7-69b2-46e8-8636-3d1551709307_298x298_crop_center.jpg?v=1708394422",
-    "price": "12.00"
-  },
-  {
-    "listing": "Thrasher",
-    "detailsUrl": "https://bangachain.com/products/thrasher?_pos=47&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9773_0a754e6c-16dd-4bcf-9fe6-72c43b1bfd65_298x298_crop_center.jpg?v=1708460052",
-    "price": "18.00"
-  },
-  {
-    "listing": "Scorch",
-    "detailsUrl": "https://bangachain.com/products/scorch?_pos=48&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0030_298x298_crop_center.jpg?v=1708633828",
-    "price": "18.00"
-  },
-  {
-    "listing": "Malta",
-    "detailsUrl": "https://bangachain.com/products/malta?_pos=49&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0005_298x298_crop_center.jpg?v=1708632725",
-    "price": "18.00"
-  },
-  {
-    "listing": "Ringer GT",
-    "detailsUrl": "https://bangachain.com/products/ringer-gt?_pos=50&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9967_08154cce-2e6a-4bf2-83a5-2750b834e137_298x298_crop_center.jpg?v=1708559161",
-    "price": "15.00"
-  },
-  {
-    "listing": "Archer",
-    "detailsUrl": "https://bangachain.com/products/archer?_pos=51&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9852_298x298_crop_center.jpg?v=1708468239",
-    "price": "18.00"
-  },
-  {
-    "listing": "Buzzz OS",
-    "detailsUrl": "https://bangachain.com/products/buzzz-os?_pos=52&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9766_298x298_crop_center.jpg?v=1708459747",
-    "price": "18.00"
-  },
-  {
-    "listing": "Brodie Roach",
-    "detailsUrl": "https://bangachain.com/products/brodie-roach?_pos=53&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9706_ef8a3273-d151-413c-8409-3d6653fb63a0_298x298_crop_center.jpg?v=1708394342",
-    "price": "15.00"
-  },
-  {
-    "listing": "Stratus",
-    "detailsUrl": "https://bangachain.com/products/stratus?_pos=54&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0084_298x298_crop_center.jpg?v=1708639135",
-    "price": "12.00"
-  },
-  {
-    "listing": "ZONE OS",
-    "detailsUrl": "https://bangachain.com/products/zone-os?_pos=55&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_0083_298x298_crop_center.jpg?v=1708639121",
-    "price": "12.00"
-  },
-  {
-    "listing": "Andrew Presnell TS Swarm",
-    "detailsUrl": "https://bangachain.com/products/andrew-presnell-ts-swarm?_pos=57&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_2970_298x298_crop_center.jpg?v=1720202156",
+    "listing": "Z Glo Fly Dye Nuke 173-174g 14398 25.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/z-glo-fly-dye-nuke-173-174g-14398/9438?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p9438_i1_w2000.png?width=80&dpr=1",
     "price": "25.00"
   },
   {
-    "listing": "Venom",
-    "detailsUrl": "https://bangachain.com/products/venom?_pos=58&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9678_8baff9e4-e1d1-4693-b008-e2e785f4c5eb_298x298_crop_center.jpg?v=1708393525",
-    "price": "18.00"
+    "listing": "Z Glo Fly Dye Nuke 173-174g 14396 25.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/z-glo-fly-dye-nuke-173-174g-14396/9437?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p9437_i1_w2000.png?width=80&dpr=1",
+    "price": "25.00"
   },
   {
-    "listing": "Anax",
-    "detailsUrl": "https://bangachain.com/products/anax?_pos=59&_sid=bdb028633&_ss=r",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9858_298x298_crop_center.jpg?v=1708468841",
-    "price": "18.00"
+    "listing": "Jawbreaker Swirl Nuke 164-166g 13374 23.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/jawbreaker-swirl-nuke-164-166g-13374/8595?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p8595_i1_w2000.png?width=80&dpr=1",
+    "price": "23.00"
   },
   {
-    "listing": "Cicada",
-    "detailsUrl": "https://bangachain.com/products/cicada",
-    "imgSrc": "http://bangachain.com/cdn/shop/files/IMG_9702_8b5601ef-747b-494e-9cd9-1c70475f42e0_298x298_crop_center.jpg?v=1708394235",
+    "listing": "Jawbreaker Swirl Nuke 173-174g 13383 23.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/jawbreaker-swirl-nuke-173-174g-13383/8593?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p8593_i1_w2000.png?width=80&dpr=1",
+    "price": "23.00"
+  },
+  {
+    "listing": "Jawbreaker Swirl Nuke 173-174g 13381 23.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/jawbreaker-swirl-nuke-173-174g-13381/8567?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p8567_i1_w2000.png?width=80&dpr=1",
+    "price": "23.00"
+  },
+  {
+    "listing": "Jawbreaker Swirl Nuke 160-163g 13373 23.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/jawbreaker-swirl-nuke-160-163g-13373/8554?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p8554_i1_w2000.png?width=80&dpr=1",
+    "price": "23.00"
+  },
+  {
+    "listing": "Jawbreaker Swirl Nuke 173-174g 13380 23.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/jawbreaker-swirl-nuke-173-174g-13380/8552?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p8552_i1_w2000.png?width=80&dpr=1",
+    "price": "23.00"
+  },
+  {
+    "listing": "Jawbreaker Swirl Nuke 173-174g 13382 23.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/jawbreaker-swirl-nuke-173-174g-13382/8546?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p8546_i1_w2000.png?width=80&dpr=1",
+    "price": "23.00"
+  },
+  {
+    "listing": "Jawbreaker Swirl Nuke 164-166g 13375 23.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/jawbreaker-swirl-nuke-164-166g-13375/8510?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p8510_i1_w2000.png?width=80&dpr=1",
+    "price": "23.00"
+  },
+  {
+    "listing": "Jawbreaker Swirl Nuke 167-169g 13379 23.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/jawbreaker-swirl-nuke-167-169g-13379/8498?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p8498_i1_w2000.png?width=80&dpr=1",
+    "price": "23.00"
+  },
+  {
+    "listing": "Jawbreaker Swirl Nuke 167-169g 13378 23.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/jawbreaker-swirl-nuke-167-169g-13378/8483?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p8483_i1_w2000.png?width=80&dpr=1",
+    "price": "23.00"
+  },
+  {
+    "listing": "Jawbreaker Swirl Nuke 167-169g 13376 23.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/jawbreaker-swirl-nuke-167-169g-13376/8475?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p8475_i1_w2000.png?width=80&dpr=1",
+    "price": "23.00"
+  },
+  {
+    "listing": "Z Lite Cicada 161g 14580 18.00",
+    "detailsUrl": "https://www.sixsideddiscs.com/product/z-lite-cicada-161g-14580/9739?cp=true&sa=false&sbp=false&q=true",
+    "imgSrc": "https://142287440.cdn6.editmysite.com/uploads/1/4/2/2/142287440/s687240084487658835_p9739_i1_w2000.png?width=80&dpr=1",
     "price": "18.00"
   }
 ]

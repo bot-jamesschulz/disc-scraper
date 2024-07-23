@@ -21,6 +21,7 @@
     "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "devDependencies": {
+    "gpt-tokenizer": "^2.2.1",
     "ts-node": "^10.9.2"
   }
 }

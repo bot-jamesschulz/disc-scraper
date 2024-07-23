@@ -50,6 +50,8 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
         console.log("Page evaluation start");
   
         const maxTextLength = 250;
+        let curImgWait = 0;
+        const maxImgWait = 5000;
         let prevImgIndex = 0;
         const listings: ListingTitle[] = [];
         const listingImgs: ListingImgs = {};
@@ -123,7 +125,6 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
   
             // Wait for src attribute to be set
             const waitForSrc = async () => {
-              
   
               if (element.getAttribute("srcset")) {
                 let url;
@@ -153,14 +154,17 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
               }
               
               elapsedTime += waitInterval;
+              curImgWait += waitInterval;
               ++waitCount;
-              if (elapsedTime < maxWaitTime) {
+              if (
+                  elapsedTime < maxWaitTime
+                  && curImgWait < maxImgWait
+              ) {
+                console.log('waiting')
                 await new Promise((resolve) => setTimeout(resolve, waitInterval));
-  
                 await waitForSrc();
               }
             };
-  
             await waitForSrc();
           }
           // Make sure that the background-image isn't part of a subsection/gallery of images

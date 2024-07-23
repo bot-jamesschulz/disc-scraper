@@ -56,7 +56,7 @@ export default async function waitForNewContent(page: Page, { idleTime = 750, ti
   
       const intervalID = setInterval(() => {
         
-        console.log('network status:', `\n requests ${requests} \n prevRequests ${prevRequests} \n finishedRequests ${finishedRequests} \n prevfinishedRequests ${prevFinishedRequests}`);
+        // console.log('network status:', `\n requests ${requests} \n prevRequests ${prevRequests} \n finishedRequests ${finishedRequests} \n prevfinishedRequests ${prevFinishedRequests}`);
         
         if ((requests === prevRequests 
           && finishedRequests === prevFinishedRequests 
