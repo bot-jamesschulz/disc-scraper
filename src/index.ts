@@ -1,13 +1,11 @@
 import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import goToNewTab from "./goToNewTab";
-import getPageListings, { type ListingTitle, ListingData, ListingImgs, ListingPrices } from "./getListingData";
-import isNewListings from "../utils/isNewListings";
-import waitForStaticPage from "./waitForStaticPage";
+import { type ListingData, ListingImgs, ListingPrices } from "./getListingData";
 import validateListings, { type ValidatedListingTitles } from '../utils/validateListings';
 import groupListingData, { type Listing } from "../utils/groupListingData";
 import "dotenv/config";
-import { paginationListings } from "./iterationMethods";
+import extractInventory from "./extractInventory";
 import fs from 'fs';
 import searchInventory from "./searchInventory";
 
@@ -27,10 +25,9 @@ puppeteer.use(StealthPlugin());
 
 async function scrape() {
   const browser = await puppeteer.launch({ headless: false });
-  const listingData: ListingData[] = [];
   const manufacturer = manufacturers[15];
   const discStore = retailers[25];
-  // const discStore = 'https://chumbadiscs.com/search?type=product%2Carticle%2Cpage&options%5Bprefix%5D=last&q=Discraft';
+
   try {
     const page = await browser.newPage();
     await goToNewTab(
@@ -40,38 +37,7 @@ async function scrape() {
     
     await searchInventory(page, manufacturer);
     
-    let newListingData;
-    let scrollIterations = 0;
-    // Get infinite loaded listings
-    do {
-      scrollIterations++;
-      const pageListings = await getPageListings(page);
-
-      if (pageListings) {
-          listingData.push(pageListings);
-      }
-      
-      await waitForStaticPage(page);
-
-      newListingData = await getPageListings(page);
-    } while (isNewListings(listingData.map(data => data.listings).flat(), newListingData?.listings));
-    
-    let infiniteScroll = false;
-    if (scrollIterations > 1) {
-      infiniteScroll = true;
-    }
-    
-    if (!infiniteScroll) {
-      let listings;
-      try {
-        listings = await paginationListings(page);
-      } catch(e) {
-        console.log('Error extracting paginated listings', e)
-      }
-      if (listings) {
-        listingData.push(...listings);
-      }
-    }
+    const listingData: ListingData[] = await extractInventory(page)
 
     // Validate listings and group attributes
     const validatedListingPages: ValidatedListing[] = [];

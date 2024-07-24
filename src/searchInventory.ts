@@ -2,6 +2,7 @@ import { type Page, ElementHandle } from 'puppeteer';
 import scrollToElement from './scrollToElement';
 import "dotenv/config";
 import waitForStaticPage from './waitForStaticPage';
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 if (!process.env.GEMINI_API_KEY) {
     throw new Error("Gemini API key is missing or empty. Exiting.");
@@ -10,7 +11,7 @@ if (!process.env.GEMINI_API_KEY) {
 let prompt = "Identify which element is most likely to be a search input for the website's inventory, and return it. Do not return anything else.";
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-import { GoogleGenerativeAI } from "@google/generative-ai";
+
 
 export default async function searchInventory(page: Page, manufacturer: string) {
     
