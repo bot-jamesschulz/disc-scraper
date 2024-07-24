@@ -21,6 +21,7 @@ export default function groupListingData(listingData: ValidatedListing): Listing
     // console.log('Prices', listingPrices)
   
     const imgPositions = [...Object.keys(listingImgs)].map(index => Number(index)); // Positions of the images
+    const usedImgs = new Set<number>();
     // console.log('all img positions', imgPositions)
     
     const groupedListingData: Listing[] = [];
@@ -47,15 +48,15 @@ export default function groupListingData(listingData: ValidatedListing): Listing
                     closestImgDistance = imgDistance;
                     closestImgPosition = imgPosition;
                 }
-                // console.log('img distance', imgDistance)
-                // console.log('closestImg distance', closestImgDistance)
-                // console.log('closestImg position', closestImgPosition)
+                console.log('img distance', imgDistance)
+                console.log('closestImg distance', closestImgDistance)
+                console.log('closestImg position', closestImgPosition)
             }
 
-            // console.log('--listingPos', listingPosition)
-            // console.log('--imgPos', closestImgPosition)
-            // console.log('--href',listingImgs[Number(closestImgPosition)])
-            // console.log('--listing',listingData.listings.get(listingPosition))
+            console.log('--listingPos', listingPosition)
+            console.log('--imgPos', closestImgPosition)
+            console.log('--href',listingImgs[Number(closestImgPosition)])
+            console.log('--listing',listingData.listings.get(listingPosition))
     
             // Associate price
             let closestPricePosition = listingPosition;
@@ -69,12 +70,16 @@ export default function groupListingData(listingData: ValidatedListing): Listing
     
             const closestImg = listingImgs[Number(closestImgPosition)];
             const closestPrice = listingPrices[closestPricePosition];
-    
             const listing = listingData.listings.get(listingPosition);
-
-            if (!listing || !closestPrice) {
+            // Make sure there is an associated listing, price, and image that hasn't already been taken
+            if (!listing 
+                || !closestPrice 
+                || usedImgs.has(Number(closestImgPosition))
+            ) {
                 return;
             }
+
+            usedImgs.add(Number(closestImgPosition))
                 
             groupedListingData.push({
                 ...listing,
