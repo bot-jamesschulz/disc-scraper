@@ -1,7 +1,7 @@
 import waitForStaticPage from './waitForStaticPage';
 import { Page } from "puppeteer";
 
-export default async function goToNewTab(url: string, page: Page) {
+export default async function navigateTo(url: string, page: Page) {
     try {
         // await page.authenticate({
         //     username: proxyUsername,

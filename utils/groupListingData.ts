@@ -48,15 +48,15 @@ export default function groupListingData(listingData: ValidatedListing): Listing
                     closestImgDistance = imgDistance;
                     closestImgPosition = imgPosition;
                 }
-                console.log('img distance', imgDistance)
-                console.log('closestImg distance', closestImgDistance)
-                console.log('closestImg position', closestImgPosition)
+                // console.log('img distance', imgDistance)
+                // console.log('closestImg distance', closestImgDistance)
+                // console.log('closestImg position', closestImgPosition)
             }
 
-            console.log('--listingPos', listingPosition)
-            console.log('--imgPos', closestImgPosition)
-            console.log('--href',listingImgs[Number(closestImgPosition)])
-            console.log('--listing',listingData.listings.get(listingPosition))
+            // console.log('--listingPos', listingPosition)
+            // console.log('--imgPos', closestImgPosition)
+            // console.log('--href',listingImgs[Number(closestImgPosition)])
+            // console.log('--listing',listingData.listings.get(listingPosition))
     
             // Associate price
             let closestPricePosition = listingPosition;
