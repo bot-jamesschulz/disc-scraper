@@ -1,20 +1,15 @@
 import { type Page, ElementHandle } from 'puppeteer';
 import scrollToElement from './scrollToElement';
+import generateResponse from '../utils/inference';
 import "dotenv/config";
 import waitForStaticPage from './waitForStaticPage';
-import { GoogleGenerativeAI } from "@google/generative-ai";
 
-if (!process.env.GEMINI_API_KEY) {
-    throw new Error("Gemini API key is missing or empty. Exiting.");
-}
 
-let prompt = "Identify which element is most likely to be a search input for the website's inventory, and return it. Do not return anything else.";
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 
 export default async function searchInventory(page: Page, manufacturer: string) {
-    
+    let prompt = "Identify which element is most likely to be a search input for the website's inventory, and return it. Do not return anything else.";
+
     const inputHandles = await page.$$("input");
     const inputProspects = new Map<string, ElementHandle<HTMLInputElement>>();
     for (const handle of inputHandles) {
@@ -24,8 +19,7 @@ export default async function searchInventory(page: Page, manufacturer: string) 
 
     prompt = `${prompt} ${[...inputProspects.keys()]}`
 
-    let response = await model.generateContent(prompt);
-    const result = response.response.text().trim();
+    let result = await generateResponse(prompt);
 
     console.log('input element', result)
 
@@ -40,27 +34,28 @@ export default async function searchInventory(page: Page, manufacturer: string) 
 
     console.log('is hidden', await inputElement.isHidden())
 
-    // await inputElement.type(manufacturer);
+    const url = page.url();
 
     await page.evaluate(async (input, query) => {
-    if (input) {
         input.removeAttribute('disabled');
         input.style.visibility = 'visible';
         let i = 0;
         for (const char of query) {
-        const keyDownEvent = new KeyboardEvent('keydown', { key: char, bubbles: true });
-        const keyPressEvent = new KeyboardEvent('keypress', { key: char, bubbles: true });
-        const inputEvent = new Event('input', { bubbles: true });
-        const keyUpEvent = new KeyboardEvent('keyup', { key: char, bubbles: true });
+            const keyDownEvent = new KeyboardEvent('keydown', { key: char, bubbles: true });
+            const keyPressEvent = new KeyboardEvent('keypress', { key: char, bubbles: true });
+            const inputEvent = new Event('input', { bubbles: true });
+            const keyUpEvent = new KeyboardEvent('keyup', { key: char, bubbles: true });
 
-        input.value += char;
-        input.dispatchEvent(keyDownEvent);
-        input.dispatchEvent(keyPressEvent);
-        input.dispatchEvent(inputEvent);
-        input.dispatchEvent(keyUpEvent);
+            input.value += char;
+            input.dispatchEvent(keyDownEvent);
+            input.dispatchEvent(keyPressEvent);
+            input.dispatchEvent(inputEvent);
+            input.dispatchEvent(keyUpEvent);
 
-        await new Promise(resolve => setTimeout(resolve, 100));
+            await new Promise(resolve => setTimeout(resolve, 50));
         }
+
+        await new Promise(resolve => setTimeout(resolve, 500)); // Somehow this prevents a execution context error
 
         const enterEvent = new KeyboardEvent('keydown', {
         key: 'Enter',
@@ -73,19 +68,37 @@ export default async function searchInventory(page: Page, manufacturer: string) 
         const keyPressEvent = new KeyboardEvent('keypress', { key: 'Enter', bubbles: true });
         const inputEvent = new Event('input', { bubbles: true });
         const keyUpEvent = new KeyboardEvent('keyup', { key: 'Enter', bubbles: true });
+        const changeEvent = new Event('change', { bubbles: true, cancelable: true });
         input.dispatchEvent(enterEvent);
         input.dispatchEvent(keyDownEvent);
         input.dispatchEvent(keyPressEvent);
         input.dispatchEvent(inputEvent);
         input.dispatchEvent(keyUpEvent);
+        input.dispatchEvent(changeEvent);
         
         // input.value = query;
         console.log('input value', input.value);
 
-        await new Promise(resolve => setTimeout(resolve, 500)); // Somehow this prevents a execution context error
-        input.closest('form')?.submit();
-    }
     }, inputElement, manufacturer);
+
+    await waitForStaticPage(page);
+    let newUrl = page.url();
+
+    if (url === newUrl) {
+        try {
+            inputElement.press('Enter');
+        } catch{}
+    }
+
+    await waitForStaticPage(page);
+    newUrl = page.url();
+
+    if (url === newUrl) {
+
+        await page.evaluate((input) => {
+            input.closest('form')?.submit();
+        }, inputElement);
+    }
 
     await waitForStaticPage(page);
 }

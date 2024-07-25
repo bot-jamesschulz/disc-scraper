@@ -1,4 +1,4 @@
-import { type ListingTitle, ListingData } from "../src/getListingData";
+import { type ListingTitle, ListingData } from "../src/getPageData";
 import  {type Listing } from './groupListingData'
 import fs from 'fs';
 

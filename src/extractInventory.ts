@@ -1,4 +1,4 @@
-import getPageListings, { type ListingData } from "./getListingData";
+import getPageListings, { type ListingData } from "./getPageData";
 import waitForStaticPage from "./waitForStaticPage";
 import isNewListings from "../utils/isNewListings";
 import { paginationListings } from "./iterationMethods";

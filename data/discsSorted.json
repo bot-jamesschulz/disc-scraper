@@ -1,5 +1,5 @@
 {
-  "Lone Star Disc": [
+  "Lone Star": [
     {
       "id": 27462,
       "name": "Armadillo",
@@ -7613,7 +7613,7 @@
       "show": 1
     }
   ],
-  "Infinite Discs": [
+  "Infinite": [
     {
       "id": 174225,
       "name": "Glyph",
@@ -8155,7 +8155,7 @@
       "show": 1
     }
   ],
-  "Loft Discs": [
+  "Loft": [
     {
       "id": 17258,
       "name": "Hydrogen",
@@ -8277,7 +8277,7 @@
       "show": 0
     }
   ],
-  "Lightning Discs": [
+  "Lightning": [
     {
       "id": 87580,
       "name": "No2 Putter",
@@ -9361,7 +9361,7 @@
       "show": 1
     }
   ],
-  "Doomsday Discs": [
+  "Doomsday": [
     {
       "id": 161448,
       "name": "Proximity Mine",
@@ -11025,7 +11025,7 @@
       "show": 1
     }
   ],
-  "Dynamic Discs": [
+  "Dynamic": [
     {
       "id": 27435,
       "name": "Agent",
@@ -13709,7 +13709,7 @@
       "show": 1
     }
   ],
-  "Pie Pan Discs": [
+  "Pie Pan": [
     {
       "id": 104821,
       "name": "Bagger",
@@ -14917,7 +14917,7 @@
       "show": 1
     }
   ],
-  "Mint Discs": [
+  "Mint": [
     {
       "id": 847,
       "name": "Bullet",
@@ -15239,7 +15239,7 @@
       "show": 1
     }
   ],
-  "Clash Discs": [
+  "Clash": [
     {
       "id": 51235,
       "name": "Butter",
@@ -15743,7 +15743,7 @@
       "show": 0
     }
   ],
-  "Legacy Discs": [
+  "Legacy": [
     {
       "id": 638,
       "name": "Clozer",
@@ -16547,7 +16547,7 @@
       "show": 0
     }
   ],
-  "Momentum Discs": [
+  "Momentum": [
     {
       "id": 161438,
       "name": "Gain",
@@ -16649,7 +16649,7 @@
       "show": 0
     }
   ],
-  "Sacred Discs": [
+  "Sacred": [
     {
       "id": 147230,
       "name": "Gnome",
@@ -16731,7 +16731,7 @@
       "show": 0
     }
   ],
-  "Wild Discs": [
+  "Wild": [
     {
       "id": 17253,
       "name": "Hummingbird",
@@ -16933,7 +16933,7 @@
       "show": 1
     }
   ],
-  "Fourth Circle Discs": [
+  "Fourth Circle": [
     {
       "id": 21461,
       "name": "Huntsman",
@@ -17077,7 +17077,7 @@
       "show": 1
     }
   ],
-  "Element Discs": [
+  "Element": [
     {
       "id": 11060,
       "name": "Iridium",
@@ -17199,7 +17199,7 @@
       "show": 0
     }
   ],
-  "Viking Discs": [
+  "Viking": [
     {
       "id": 742,
       "name": "Knife",
@@ -18449,7 +18449,7 @@
       "show": 1
     }
   ],
-  "ITC Discs": [
+  "ITC": [
     {
       "id": 157743,
       "name": "Mercury",
@@ -18471,7 +18471,7 @@
       "show": 0
     }
   ],
-  "Kraken Discs": [
+  "Kraken": [
     {
       "id": 161458,
       "name": "Mimic",
@@ -19137,7 +19137,7 @@
       "show": 1
     }
   ],
-  "Finish Line Discs": [
+  "Finish Line": [
     {
       "id": 120441,
       "name": "Pace",
@@ -20489,7 +20489,7 @@
       "show": 0
     }
   ],
-  "Alfa Discs": [
+  "Alfa": [
     {
       "id": 58775,
       "name": "Snoopy",
@@ -20875,7 +20875,7 @@
       "show": 1
     }
   ],
-  "RPM Discs": [
+  "RPM": [
     {
       "id": 63953,
       "name": "Takapu",
@@ -21561,7 +21561,7 @@
       "show": 0
     }
   ],
-  "Meridian Discs": [
+  "Meridian": [
     {
       "id": 170326,
       "name": "Tundra",
@@ -21603,7 +21603,7 @@
       "show": 0
     }
   ],
-  "Premier Discs": [
+  "Premier": [
     {
       "id": 88010,
       "name": "War Dove",
@@ -21707,7 +21707,7 @@
       "show": 0
     }
   ],
-  "Northstar Discs": [
+  "Northstar": [
     {
       "id": 172916,
       "name": "Zoom",
@@ -22011,7 +22011,7 @@
       "show": 1
     }
   ],
-  "Hooligan Discs": [
+  "Hooligan": [
     {
       "id": 156523,
       "name": "Cash",
@@ -23363,7 +23363,7 @@
       "show": 0
     }
   ],
-  "Obsidian Discs": [
+  "Obsidian": [
     {
       "id": 47016,
       "name": "Fragment",
@@ -23545,7 +23545,7 @@
       "show": 0
     }
   ],
-  "Goliath Discs": [
+  "Goliath": [
     {
       "id": 86270,
       "name": "Genesis",
@@ -23953,7 +23953,7 @@
       "show": 1
     }
   ],
-  "Divergent Discs": [
+  "Divergent": [
     {
       "id": 17398,
       "name": "Narwhal",
@@ -25677,7 +25677,7 @@
       "show": 0
     }
   ],
-  "AquaFlight Discs": [
+  "AquaFlight": [
     {
       "id": 46282,
       "name": "Peace Frog",
@@ -25779,7 +25779,7 @@
       "show": 0
     }
   ],
-  "3C Discs": [
+  "3C": [
     {
       "id": 86736,
       "name": "ShoreBreak",
@@ -25925,7 +25925,7 @@
       "show": 0
     }
   ],
-  "Stokely Discs": [
+  "Stokely": [
     {
       "id": 171615,
       "name": "Wren",
@@ -25989,7 +25989,7 @@
       "show": 0
     }
   ],
-  "Exel Discs": [
+  "Exel": [
     {
       "id": 87362,
       "name": "Havu",
@@ -26255,7 +26255,7 @@
       "show": 0
     }
   ],
-  "Yeet Street Discs": [
+  "Yeet Street": [
     {
       "id": 161434,
       "name": "Petra",
@@ -26319,7 +26319,7 @@
       "show": 0
     }
   ],
-  "Terminal Velocity Discs": [
+  "Terminal Velocity": [
     {
       "id": 47146,
       "name": "Ursus",
@@ -26361,7 +26361,7 @@
       "show": 0
     }
   ],
-  "Neptune Discs": [
+  "Neptune": [
     {
       "id": 64950,
       "name": "Squid",

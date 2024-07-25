@@ -1,4 +1,4 @@
-import { type ListingData } from "../src/getListingData";
+import { type ListingData } from "../src/getPageData";
 import { type ValidatedListing } from "../src/index"
 
 export type Listing = {
