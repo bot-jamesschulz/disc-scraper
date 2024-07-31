@@ -1,19 +1,25 @@
-import { type ListingTitle, ListingData } from "../src/getPageData";
-import  {type Listing } from './groupListingData'
+import { type ListingTitle } from "../src/getPageData";
+import  {type Listing } from './groupListingData';
 import fs from 'fs';
 
 const jsonString = fs.readFileSync('./data/discsSorted.json', 'utf-8');
 const discs = JSON.parse(jsonString);
+const manufacturersJsonString = fs.readFileSync('./data/majorManufacturers.json', 'utf-8');
+const manufacturers = JSON.parse(manufacturersJsonString).map((m: string) => m.toLowerCase());
 
-export type ValidatedListingTitles = Map<number, {
+export type Disc = {
     listing: string;
     detailsUrl: string;
-}>
+    model: string,
+    manufacturer: string
+}
+
+export type ValidatedListingTitles = Map<number, Disc>
 
 export default function validateListings(unfilteredListings: ListingTitle[], manufacturer: string, inventoryHref: string): ValidatedListingTitles {
     console.log('validating listings');
     
-    const extractedData = new Map<number, { listing: string, detailsUrl: string }>();
+    const extractedData = new Map<number, Disc>();
     const rejectedListings: string[] = [];
 
     for (const listingData of unfilteredListings) {
@@ -35,6 +41,9 @@ export default function validateListings(unfilteredListings: ListingTitle[], man
 
         const cleanedListingLower = cleanedListing.toLowerCase();
 
+        // Other manufacturers cannot be present in listing. This is to prevent same model names being selected for the wrong manufacturer.
+        if (manufacturers.some((m: string) => cleanedListingLower.includes(m) && m !== manufacturer.toLowerCase())) continue;
+
         const listingModel = discs[manufacturer].find((info: any) => {
             const regex = new RegExp(`(^|\\s)${info.name.toLowerCase()}(\\s|$)`);
             return regex.test(cleanedListingLower)
@@ -44,6 +53,8 @@ export default function validateListings(unfilteredListings: ListingTitle[], man
             extractedData.set(listingData.listingIndex, {
                 listing: cleanedListing,
                 detailsUrl: url.href,
+                model: listingModel,
+                manufacturer
             })
         } else {
             rejectedListings.push(cleanedListing);
@@ -59,29 +70,4 @@ function makeUrl(listingHref: string, inventoryHref: string) {
     } catch(err) {
         console.log('error creating url from: ', listingHref)
     }
-}
-
-
-export function mostCommonPath(extractedData: Listing[]) {
-    const urls = [...extractedData.values()].filter(l => l.price).map(l => l.detailsUrl).filter(l => l);
-
-    const pathCounter = new Map<string, number>();
-
-    urls.forEach(url => {
-        const urlObj = new URL(url);
-        const pathSegments = urlObj.pathname.split('/').filter(segment => segment);
-
-        for (let i = 1; i <= pathSegments.length; i++) {
-            const path = pathSegments.slice(0, i).join('/');
-            const pathCount = pathCounter.get(path);
-            if (pathCount) {
-                pathCounter.set(path, pathCount + 1);
-            } else {
-                pathCounter.set(path, 1);
-            }
-        }
-    });
-
-    console.log(pathCounter)
-
 }

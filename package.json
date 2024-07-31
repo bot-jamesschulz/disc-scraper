@@ -18,9 +18,7 @@
     "puppeteer-core": "^22.12.1",
     "puppeteer-element2selector": "^0.0.3",
     "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2"
-  },
-  "devDependencies": {
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "gpt-tokenizer": "^2.2.1",
     "ts-node": "^10.9.2"
   }

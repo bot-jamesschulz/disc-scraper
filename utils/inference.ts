@@ -6,9 +6,11 @@ import { encode } from 'gpt-tokenizer';
 if (!process.env.GEMINI_API_KEY) {
     throw new Error("Gemini API key is missing or empty. Exiting.")
 }
-
+const generationConfig = {
+    temperature: 0
+};
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash", generationConfig});
 const delayTime = 5000;
 let tokenCount = 0;
 let requestCount = 0;
@@ -30,7 +32,7 @@ export default async function generateResponse(prompt: string, maxTries = 3) {
             response = await model.generateContent(prompt);
             return response.response.text().trim();
         } catch(e) {
-            console.log(e);
+            console.log(e, response);
         }
         await delay(delayTime);
         tries++;

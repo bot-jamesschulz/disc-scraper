@@ -4,11 +4,8 @@ import generateResponse from '../utils/inference';
 import "dotenv/config";
 import waitForStaticPage from './waitForStaticPage';
 
-
-
-
 export default async function searchInventory(page: Page, manufacturer: string) {
-    let prompt = "Identify which element is most likely to be a search input for the website's inventory, and return it. Do not return anything else.";
+    let prompt = "Identify which element is most likely to be a search input for the website's inventory, and return that exact element with no changes. Do not return anything else.";
 
     const inputHandles = await page.$$("input");
     const inputProspects = new Map<string, ElementHandle<HTMLInputElement>>();
