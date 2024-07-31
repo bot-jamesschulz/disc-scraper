@@ -29,6 +29,7 @@ async function scrape() {
   let page;
   try {
     for (const retailer of retailers.slice(25,45)) {
+      const retailerHostname = new URL(retailer).hostname;
       browser = await puppeteer.launch({ headless: false });
       page = await browser.newPage();
       try {
@@ -69,7 +70,11 @@ async function scrape() {
                 const groupedListings = groupListingData(pageListings)
 
                 if (groupedListings) {
-                  listings.push(...groupedListings);
+                  // Append hostname so we can easily identify which site each disc belongs to
+                  listings.push(...groupedListings.map(listing => ({
+                     ...listing, 
+                     retailerHostname 
+                  })));
                 }
               })
             }
