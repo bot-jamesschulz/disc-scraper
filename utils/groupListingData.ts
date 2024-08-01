@@ -2,10 +2,13 @@ import { type ListingData } from "../src/getPageData";
 import { type ValidatedListing } from "../src/index"
 
 export type Listing = {
-    listing?: string | undefined,
-    detailsUrl: string,
-    imgSrc: string,
-    price: string | null
+    listing: string,
+    details_url: string,
+    img_src: string,
+    price: number,
+    model: string,
+    manufacturer: string,
+    retailer: string
 }
 
 export default function groupListingData(listingData: ValidatedListing): Listing[] | undefined {
@@ -69,7 +72,7 @@ export default function groupListingData(listingData: ValidatedListing): Listing
             }
     
             const closestImg = listingImgs[Number(closestImgPosition)];
-            const closestPrice = listingPrices[closestPricePosition];
+            const closestPrice = Number(listingPrices[closestPricePosition]);
             const listing = listingData.listings.get(listingPosition);
             // Make sure there is an associated listing, price, and image that hasn't already been taken
             if (!listing 
@@ -83,7 +86,7 @@ export default function groupListingData(listingData: ValidatedListing): Listing
                 
             groupedListingData.push({
                 ...listing,
-                imgSrc: closestImg.startsWith('//') ? `http:${closestImg}` : closestImg,
+                img_src: closestImg.startsWith('//') ? `http:${closestImg}` : closestImg,
                 price: closestPrice,
             });
   

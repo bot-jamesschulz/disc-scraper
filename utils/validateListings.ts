@@ -1,6 +1,6 @@
 import { type ListingTitle } from "../src/getPageData";
-import  {type Listing } from './groupListingData';
 import fs from 'fs';
+import { type Listing } from '../utils/groupListingData';
 
 const jsonString = fs.readFileSync('./data/discsSorted.json', 'utf-8');
 const discs = JSON.parse(jsonString);
@@ -9,14 +9,36 @@ const manufacturers = JSON.parse(manufacturersJsonString).map((m: string) => m.t
 
 export type Disc = {
     listing: string;
-    detailsUrl: string;
+    details_url: string;
     model: string,
-    manufacturer: string
+    manufacturer: string,
+    retailer: string
+}
+
+type Model = {
+    id: number,
+    name: string,
+    speed: number,
+    glide: number,
+    turn: number,
+    fade: number,
+    primary_use: string,
+    stability: string,
+    bead: string,
+    border: string,
+    rim_diameter_ratio: number,
+    rim_configuration: string,
+    height: number,
+    rim_depth: number,
+    rim_thickness: number,
+    inside_rim_diameter: number,
+    diameter: number,
+    show: number
 }
 
 export type ValidatedListingTitles = Map<number, Disc>
 
-export default function validateListings(unfilteredListings: ListingTitle[], manufacturer: string, inventoryHref: string): ValidatedListingTitles {
+export default function validateListings(unfilteredListings: ListingTitle[], manufacturer: string, retailerHref: string, uniqueListings: Set<string>): { validatedListings: ValidatedListingTitles, uniqueListings: Set<string> } {
     console.log('validating listings');
     
     const extractedData = new Map<number, Disc>();
@@ -24,10 +46,12 @@ export default function validateListings(unfilteredListings: ListingTitle[], man
 
     for (const listingData of unfilteredListings) {
         
-        const url = makeUrl(listingData?.href || '', inventoryHref);
+        const url = makeUrl(listingData.href || '', retailerHref);
 
-        if (!url)  continue;   
-        
+        if (!url || uniqueListings.has(url.href)) continue;   
+        uniqueListings.add(url.href);
+
+        const retailer = new URL(retailerHref).hostname;
         let listing = listingData?.innerText 
 
         let cleanedListing = listing
@@ -44,7 +68,7 @@ export default function validateListings(unfilteredListings: ListingTitle[], man
         // Other manufacturers cannot be present in listing. This is to prevent same model names being selected for the wrong manufacturer.
         if (manufacturers.some((m: string) => cleanedListingLower.includes(m) && m !== manufacturer.toLowerCase())) continue;
 
-        const listingModel = discs[manufacturer].find((info: any) => {
+        const listingModel: Model = discs[manufacturer].find((info: any) => {
             const regex = new RegExp(`(^|\\s)${info.name.toLowerCase()}(\\s|$)`);
             return regex.test(cleanedListingLower)
         });
@@ -52,21 +76,22 @@ export default function validateListings(unfilteredListings: ListingTitle[], man
         if (listingModel) { 
             extractedData.set(listingData.listingIndex, {
                 listing: cleanedListing,
-                detailsUrl: url.href,
-                model: listingModel,
-                manufacturer
+                details_url: url.href,
+                model: listingModel.name,
+                manufacturer,
+                retailer
             })
         } else {
             rejectedListings.push(cleanedListing);
         }
     }
 
-    return extractedData;
+    return { validatedListings: extractedData, uniqueListings };
 }
 
-function makeUrl(listingHref: string, inventoryHref: string) {
+function makeUrl(listingHref: string, retailerHref: string) {
     try {
-        return new URL(listingHref, inventoryHref);
+        return new URL(listingHref, retailerHref);
     } catch(err) {
         console.log('error creating url from: ', listingHref)
     }
