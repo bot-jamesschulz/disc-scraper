@@ -32,7 +32,7 @@ export default async function searchInventory(page: Page, manufacturer: string) 
     console.log('is hidden', await inputElement.isHidden())
 
     const url = page.url();
-
+    
     await page.evaluate(async (input, query) => {
         input.removeAttribute('disabled');
         input.style.visibility = 'visible';
@@ -77,12 +77,15 @@ export default async function searchInventory(page: Page, manufacturer: string) 
         console.log('input value', input.value);
 
     }, inputElement, manufacturer);
+    
 
     await waitForStaticPage(page);
     let newUrl = page.url();
 
     if (url === newUrl) {
         try {
+            await inputElement.evaluate(el => el.value = "");
+            await inputElement.type(manufacturer);
             inputElement.press('Enter');
         } catch{}
     }

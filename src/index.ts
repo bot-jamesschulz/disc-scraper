@@ -30,7 +30,7 @@ async function scrape() {
   let browser;
   let page;
   try {
-    for (const retailer of retailers.slice(26,27)) {
+    for (const retailer of retailers.slice(47,48)) {
       const retailerHostname = new URL(retailer).hostname;
       browser = await puppeteer.launch({ headless: false });
       page = await browser.newPage();
