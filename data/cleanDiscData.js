@@ -57,4 +57,38 @@ async function getManufacturers() {
   }
 }
 
-getManufacturers();
+async function getMajorManufacturerMolds() {
+  try {
+    // Read the contents of discsDefault.json
+    const data = await fs.readFile('./data/discsSorted.json', 'utf-8');
+    const majorManufacturersData = await fs.readFile('./data/majorManufacturers.json', 'utf-8');
+    const manufacturers = {};
+    
+    // Parse the JSON data
+    const discs = JSON.parse(data);
+
+    const majorManufacturers = new Set(JSON.parse(majorManufacturersData))
+    
+
+    
+    // Perform any operations on discs
+    for (const key in discs) {
+      if (majorManufacturers.has(key)) {
+        const molds = discs[key].map(mold => mold.name)
+        manufacturers[key] = molds;
+      }
+    }
+
+    // Convert the processed data back to JSON
+    const newData = JSON.stringify(manufacturers, null, 2);
+    
+    // Write the processed data to discs.json
+    await fs.writeFile('./data/majorDiscMolds.json', newData, 'utf-8');
+    
+    console.log('Successfully processed discs and wrote to discs.json');
+  } catch (error) {
+    console.error('Error processing discs:', error);
+  }
+}
+
+getMajorManufacturerMolds();

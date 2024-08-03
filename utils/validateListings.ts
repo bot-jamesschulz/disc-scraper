@@ -68,16 +68,24 @@ export default function validateListings(unfilteredListings: ListingTitle[], man
         // Other manufacturers cannot be present in listing. This is to prevent same model names being selected for the wrong manufacturer.
         if (manufacturers.some((m: string) => cleanedListingLower.includes(m) && m !== manufacturer.toLowerCase())) continue;
 
-        const listingModel: Model = discs[manufacturer].find((info: any) => {
+        const listingModels: string[] = discs[manufacturer].filter((info: any) => {
             const regex = new RegExp(`(^|\\s)${info.name.toLowerCase()}(\\s|$)`);
-            return regex.test(cleanedListingLower)
-        });
+            return regex.test(cleanedListingLower);
+        }).map((m: Model) => m.name);
+
+        console.log('Models', listingModels);
+
+        const listingModel = listingModels.reduce((longest, current) => {
+            return current.length > longest.length ? current : longest;
+        }, "");
+
+        console.log('Model', listingModel);
 
         if (listingModel) { 
             extractedData.set(listingData.listingIndex, {
                 listing: cleanedListing,
                 details_url: url.href,
-                model: listingModel.name,
+                model: listingModel,
                 manufacturer,
                 retailer
             })
