@@ -15,7 +15,6 @@ const retailersJson = fs.readFileSync('./data/retailers.json', 'utf-8');
 const retailers = JSON.parse(retailersJson);
 const manufacturersJson = fs.readFileSync('./data/majorManufacturers.json', 'utf-8');
 const manufacturers = JSON.parse(manufacturersJson);
-// const manufacturers = ['Axiom'];
 
 export type ValidatedListing = {
   listings: ValidatedListingTitles,
@@ -30,7 +29,7 @@ async function scrape() {
   let browser;
   let page;
   try {
-    for (const retailer of retailers.slice(47,48)) {
+    for (const retailer of retailers.slice(81,82)) {
       const retailerHostname = new URL(retailer).hostname;
       browser = await puppeteer.launch({ headless: false });
       page = await browser.newPage();

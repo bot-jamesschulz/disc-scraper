@@ -86,6 +86,8 @@ export default async function searchInventory(page: Page, manufacturer: string) 
         try {
             await inputElement.evaluate(el => el.value = "");
             await inputElement.type(manufacturer);
+            await inputElement.evaluate((el, brand) => el.value = brand, manufacturer);
+
             inputElement.press('Enter');
         } catch{}
     }

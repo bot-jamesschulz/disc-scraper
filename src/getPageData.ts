@@ -81,7 +81,7 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
                 //     console.log('price', wholeText);
                 // }
             }
-        }
+          } 
   
           // Looking for price
           if (wholeText?.includes("$") && wholeText?.length < maxTextLength) {

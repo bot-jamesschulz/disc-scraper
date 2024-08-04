@@ -29,7 +29,11 @@ export default function groupListingData(listingData: ValidatedListing): Listing
     
     const groupedListingData: Listing[] = [];
     try { 
+
+        const imgBeforeListing = isImgBeforeListing(listingPositions[0], imgPositions);
         listingPositions.forEach( (listingPosition, index) => {    
+            
+            
          
             const nearestListingPosition = listingPositions[index + 1] ?
                 listingPositions[index + 1] :
@@ -45,15 +49,20 @@ export default function groupListingData(listingData: ValidatedListing): Listing
             let closestImgDistance = Math.abs(Number(closestImgPosition) - listingPosition);
             for (const imgPosition of imgPositions) {
 
+                // Do not look for images past the listing
+                if (imgBeforeListing && imgPosition > listingPosition) break; 
+
                 const imgDistance = Math.abs(imgPosition - listingPosition);
 
                 if (imgDistance < closestImgDistance) {
                     closestImgDistance = imgDistance;
                     closestImgPosition = imgPosition;
                 }
-                // console.log('img distance', imgDistance)
-                // console.log('closestImg distance', closestImgDistance)
-                // console.log('closestImg position', closestImgPosition)
+                // console.log('img distance', imgDistance);
+                // console.log('cur pos', imgPosition);
+                // console.log('cur img', listingImgs[Number(imgPosition)]);
+                // console.log('closestImg distance', closestImgDistance);
+                // console.log('closestImg position', closestImgPosition);
             }
 
             // console.log('--listingPos', listingPosition)
@@ -95,4 +104,14 @@ export default function groupListingData(listingData: ValidatedListing): Listing
         console.log('error parsing listing/image data', err)
     }
     return groupedListingData;
+  }
+
+  // Sometimes the closest image to the listing is actuall the image after the listing that belongs to the proceeding listing. 
+  // If we know that there is already an image directly before the first listing than we should stop looking after we get to the listing to avoid finding closer listings after, that belong to the proceeding listing.
+  function isImgBeforeListing(listingPosition: number, imgPositions: number[]) {
+    const maxImgDistance = 100;
+    for (const imgPosition of imgPositions) {
+        if (imgPosition > listingPosition) return false;
+        if (listingPosition - imgPosition < maxImgDistance) return true;
+    }
   }

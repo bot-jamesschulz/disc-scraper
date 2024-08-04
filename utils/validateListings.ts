@@ -73,13 +73,9 @@ export default function validateListings(unfilteredListings: ListingTitle[], man
             return regex.test(cleanedListingLower);
         }).map((m: Model) => m.name);
 
-        console.log('Models', listingModels);
-
         const listingModel = listingModels.reduce((longest, current) => {
             return current.length > longest.length ? current : longest;
         }, "");
-
-        console.log('Model', listingModel);
 
         if (listingModel) { 
             extractedData.set(listingData.listingIndex, {
