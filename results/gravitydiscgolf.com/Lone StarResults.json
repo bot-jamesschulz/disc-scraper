@@ -1,0 +1,29 @@
+[
+  {
+    "listing": "PRE-OWNED - LONE STAR - LONE WOLF ALPHA Lone Star 14.99 16.99",
+    "detailsUrl": "https://gravitydiscgolf.com/products/pre-owned-lone-star-lone-wolf-alpha?_pos=1&_sid=85f6588d8&_ss=r",
+    "model": {
+      "id": 95844,
+      "name": "Lone Wolf",
+      "speed": 5,
+      "glide": 5,
+      "turn": -3,
+      "fade": 1,
+      "primary_use": "Mid Range",
+      "stability": "-2",
+      "bead": "Beaded",
+      "border": "#8e1313",
+      "rim_diameter_ratio": 5.1,
+      "rim_configuration": 41.75,
+      "height": 1.5,
+      "rim_depth": 1.1,
+      "rim_thickness": 1.4,
+      "inside_rim_diameter": 18.9,
+      "diameter": 21.6,
+      "show": 1
+    },
+    "manufacturer": "Lone Star",
+    "imgSrc": "http://gravitydiscgolf.com/cdn/shop/files/051081F5-0DD1-4828-B705-4C29A4A812F8_180x.jpg?v=1718913840",
+    "price": "14.99"
+  }
+]

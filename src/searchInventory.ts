@@ -54,12 +54,12 @@ export default async function searchInventory(page: Page, manufacturer: string) 
 
         await new Promise(resolve => setTimeout(resolve, 500)); // Somehow this prevents a execution context error
 
-        const enterEvent = new KeyboardEvent('keydown', {
-        key: 'Enter',
-        code: 'Enter',
-        keyCode: 13,
-        which: 13,
-        bubbles: true
+	const enterEvent = new KeyboardEvent('keydown', {
+        	key: 'Enter',
+        	code: 'Enter',
+        	keyCode: 13,
+        	which: 13,
+        	bubbles: true
         });
         const keyDownEvent = new KeyboardEvent('keydown', { key: 'Enter', bubbles: true });
         const keyPressEvent = new KeyboardEvent('keypress', { key: 'Enter', bubbles: true });
@@ -73,34 +73,34 @@ export default async function searchInventory(page: Page, manufacturer: string) 
         input.dispatchEvent(keyUpEvent);
         input.dispatchEvent(changeEvent);
         
-        // input.value = query;
-        console.log('input value', input.value);
+        
 
     }, inputElement, manufacturer);
     
-
     await waitForStaticPage(page);
     let newUrl = page.url();
+    console.log('url after browser handling', newUrl);
 
     if (url === newUrl) {
         try {
             await inputElement.evaluate(el => el.value = "");
             await inputElement.type(manufacturer);
             await inputElement.evaluate((el, brand) => el.value = brand, manufacturer);
-
+    
             inputElement.press('Enter');
         } catch{}
     }
 
     await waitForStaticPage(page);
     newUrl = page.url();
+    console.log('url after puppeteer handling', newUrl);
 
     if (url === newUrl) {
-
         await page.evaluate((input) => {
             input.closest('form')?.submit();
         }, inputElement);
     }
 
     await waitForStaticPage(page);
+    console.log('url after form submission', newUrl);
 }

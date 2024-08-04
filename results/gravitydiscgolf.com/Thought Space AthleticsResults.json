@@ -1,0 +1,83 @@
+[
+  {
+    "listing": "THOUGHT SPACE TSA - SYNAPSE - NEBULA ETHEREAL Thought Space 15.99 21.99",
+    "detailsUrl": "https://gravitydiscgolf.com/products/synapse-nebula-ethereal?_pos=1&_sid=0d4c4b41b&_ss=r",
+    "model": {
+      "id": 33780,
+      "name": "Synapse",
+      "speed": 12,
+      "glide": 5,
+      "turn": -1.5,
+      "fade": 3,
+      "primary_use": "Distance Driver",
+      "stability": "1.5",
+      "bead": "Beadless",
+      "border": "#8e1313",
+      "rim_diameter_ratio": 5.7,
+      "rim_configuration": 26.25,
+      "height": 1.6,
+      "rim_depth": 1.2,
+      "rim_thickness": 2.3,
+      "inside_rim_diameter": 16.6,
+      "diameter": 21.2,
+      "show": 1
+    },
+    "manufacturer": "Thought Space Athletics",
+    "imgSrc": "http://gravitydiscgolf.com/cdn/shop/products/image_1ca10214-c61e-41aa-b3a5-e30df5e84040_180x.heic?v=1695299396",
+    "price": "15.99"
+  },
+  {
+    "listing": "THOUGHT SPACE TSA - THOMAS GILBERT SIGNATURE PNEUMA - NERVE Thought Space 16.99",
+    "detailsUrl": "https://gravitydiscgolf.com/products/thought-space-tsa-thomas-gilbert-signature-pneuma-nerve?_pos=2&_sid=0d4c4b41b&_ss=r",
+    "model": {
+      "id": 158967,
+      "name": "Pneuma",
+      "speed": 2,
+      "glide": 3,
+      "turn": 0,
+      "fade": 0,
+      "primary_use": "Putt & Approach",
+      "stability": "0",
+      "bead": "Beaded",
+      "border": "#8e1313",
+      "rim_diameter_ratio": 6.7,
+      "rim_configuration": 57,
+      "height": 1.9,
+      "rim_depth": 1.4,
+      "rim_thickness": 1,
+      "inside_rim_diameter": 19,
+      "diameter": 21,
+      "show": 1
+    },
+    "manufacturer": "Thought Space Athletics",
+    "imgSrc": "http://gravitydiscgolf.com/cdn/shop/files/0B00AB98-F264-4A8D-8812-41C52D1FF7B6_180x.jpg?v=1706366310",
+    "price": "16.99"
+  },
+  {
+    "listing": "THOUGHT SPACE TSA - MATT BELL SIGNATURE SERIES SYNAPSE - NEBULA AURA Thought Space 24.99",
+    "detailsUrl": "https://gravitydiscgolf.com/products/thought-space-tsa-matt-bell-signature-series-synapse-nebula-aura?_pos=3&_sid=0d4c4b41b&_ss=r",
+    "model": {
+      "id": 33780,
+      "name": "Synapse",
+      "speed": 12,
+      "glide": 5,
+      "turn": -1.5,
+      "fade": 3,
+      "primary_use": "Distance Driver",
+      "stability": "1.5",
+      "bead": "Beadless",
+      "border": "#8e1313",
+      "rim_diameter_ratio": 5.7,
+      "rim_configuration": 26.25,
+      "height": 1.6,
+      "rim_depth": 1.2,
+      "rim_thickness": 2.3,
+      "inside_rim_diameter": 16.6,
+      "diameter": 21.2,
+      "show": 1
+    },
+    "manufacturer": "Thought Space Athletics",
+    "imgSrc": "http://gravitydiscgolf.com/cdn/shop/files/FullSizeRender_66526fe5-5f62-475b-8bbd-add0ca4e8f8e_180x.heic?v=1692754585",
+    "price": "24.99"
+  }
+]

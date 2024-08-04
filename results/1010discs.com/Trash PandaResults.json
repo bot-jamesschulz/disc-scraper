@@ -1,0 +1,83 @@
+[
+  {
+    "listing": "Trash Panda Ozone",
+    "detailsUrl": "https://1010discs.com/customdiscs/index/post/?id=165031",
+    "model": {
+      "id": 174229,
+      "name": "Ozone",
+      "speed": 8,
+      "glide": 6,
+      "turn": -3,
+      "fade": 1,
+      "primary_use": "Control Driver",
+      "stability": "-2",
+      "bead": "Beadless",
+      "border": "#8e1313",
+      "rim_diameter_ratio": 5.2,
+      "rim_configuration": 29.75,
+      "height": 1.9,
+      "rim_depth": 1.1,
+      "rim_thickness": 1.9,
+      "inside_rim_diameter": 17.4,
+      "diameter": 21.2,
+      "show": 1
+    },
+    "manufacturer": "Trash Panda",
+    "imgSrc": "https://1010discs.com/media/amasty/webp/catalog/product/cache/b2027ae20942b2af257e6c3f02d0a744/2/0/2024.06.24_top_0164_l1t_15_23_49_1892_jpg.webp",
+    "price": "21.99"
+  },
+  {
+    "listing": "Trash Panda Dune",
+    "detailsUrl": "https://1010discs.com/customdiscs/index/post/?id=108304",
+    "model": {
+      "id": 149527,
+      "name": "Dune",
+      "speed": 5,
+      "glide": 5,
+      "turn": -1,
+      "fade": 0,
+      "primary_use": "Mid Range",
+      "stability": "-1",
+      "bead": "Beadless",
+      "border": "#8e1313",
+      "rim_diameter_ratio": 6.5,
+      "rim_configuration": 49.5,
+      "height": 1.8,
+      "rim_depth": 1.4,
+      "rim_thickness": 1.2,
+      "inside_rim_diameter": 19.1,
+      "diameter": 21.5,
+      "show": 1
+    },
+    "manufacturer": "Trash Panda",
+    "imgSrc": "https://1010discs.com/media/amasty/webp/catalog/product/cache/b2027ae20942b2af257e6c3f02d0a744/2/0/2023.07.12_jpg_stock_images_w-10_18_02_0110a_jpg.webp",
+    "price": "21.99"
+  },
+  {
+    "listing": "Trash Panda Inner Core",
+    "detailsUrl": "https://1010discs.com/customdiscs/index/post/?id=95928",
+    "model": {
+      "id": 89186,
+      "name": "Inner Core",
+      "speed": 2,
+      "glide": 4,
+      "turn": -0.5,
+      "fade": 0,
+      "primary_use": "Putt & Approach",
+      "stability": "-0.5",
+      "bead": "Beadless",
+      "border": "#8e1313",
+      "rim_diameter_ratio": 7,
+      "rim_configuration": 56.5,
+      "height": 1.9,
+      "rim_depth": 1.5,
+      "rim_thickness": 1,
+      "inside_rim_diameter": 19.4,
+      "diameter": 21.3,
+      "show": 1
+    },
+    "manufacturer": "Trash Panda",
+    "imgSrc": "https://1010discs.com/media/amasty/webp/catalog/product/cache/b2027ae20942b2af257e6c3f02d0a744/2/3/23.5.15_jpg_stock_images_e-16_24_34_0591vs_jpg.webp",
+    "price": "16.99"
+  }
+]

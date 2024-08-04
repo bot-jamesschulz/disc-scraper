@@ -1,5 +1,6 @@
 import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
+import chromium from "@sparticuz/chromium";
 import navigateTo from "./navigateTo";
 import { type ListingData, ListingImgs, ListingPrices } from "./getPageData";
 import validateListings, { type ValidatedListingTitles } from '../utils/validateListings';
@@ -29,9 +30,13 @@ async function scrape() {
   let browser;
   let page;
   try {
-    for (const retailer of retailers.slice(81,82)) {
+    for (const retailer of retailers.slice(0)) {
       const retailerHostname = new URL(retailer).hostname;
-      browser = await puppeteer.launch({ headless: false });
+      browser = await puppeteer.launch({
+              executablePath: await chromium.executablePath(),
+	      headless: true,
+	      args: [...chromium.args, "--disable-notifications"]
+      });
       page = await browser.newPage();
       // Remove old listings
       await dbDeleteListings("discs", retailerHostname);

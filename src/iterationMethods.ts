@@ -15,6 +15,7 @@ export async function paginationListings(page: Page): Promise<ListingData[]> {
     let newListings;
     do {
         await waitForStaticPage(page);
+	console.log("Cur page:", await page.url());
         const nextElem = await getNextElem(page, terminatingString, pageNum);
 
         if (!nextElem) {

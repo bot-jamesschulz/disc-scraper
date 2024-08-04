@@ -3,11 +3,6 @@ import { Page } from "puppeteer";
 
 export default async function navigateTo(url: string, page: Page) {
     try {
-        // await page.authenticate({
-        //     username: proxyUsername,
-        //     password: proxyPassword
-        // });
-
         await page.setRequestInterception(true);
         
         const blankImage = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAHzwGA78JN5wAAAABJRU5ErkJggg==';
