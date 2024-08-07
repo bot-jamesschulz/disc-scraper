@@ -13,6 +13,7 @@
     "@google/generative-ai": "^0.14.0",
     "@sparticuz/chromium": "^126.0.0",
     "@supabase/supabase-js": "^2.45.0",
+    "dom-parser": "^1.1.5",
     "dotenv": "^16.4.5",
     "gpt-tokenizer": "^2.2.1",
     "puppeteer": "^22.12.1",

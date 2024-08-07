@@ -1,7 +1,7 @@
 
 import supabase from './config';
 import { TableNames } from './types';
-import { type Listing } from "../utils/groupListingData";
+import { type Listing } from "../utils/validateListings";
 
 export default async function dbInsertListings(table: TableNames, rows: Listing[]) {
     console.log('inserting into db:', 'table:');

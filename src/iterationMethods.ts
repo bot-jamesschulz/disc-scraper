@@ -1,53 +1,61 @@
 
 import scrollToElement from "./scrollToElement";
-import { type Page, ElementHandle } from 'puppeteer';
-import getPageListings, { type ListingTitle, ListingData, ListingImgs, ListingPrices } from "./getPageData";
+import { 
+    type Page, 
+    ElementHandle 
+} from 'puppeteer';
+import validateListings, {
+    type Listing
+} from "../utils/validateListings";
+import getPageListings, { type ListingTitle, ListingData, ListingImgs, ListingPrices } from "./getPageListings";
 import isNewListings from "../utils/isNewListings";
 import waitForStaticPage from "./waitForStaticPage";
 import generateResponse from '../utils/inference';
   
 // Extract listings by clicking the next button
-export async function paginationListings(page: Page): Promise<ListingData[]> {
-    const listingData: ListingData[] = [];
+export async function paginationListings(page: Page, manufacturer: string, retailer: string): Promise<Listing[]> {
+    // Keeps track of all the potential listings. This is important to keep track of as well as validated listings
+    // Becasue we use this to decide when to stop paginating. We don't want to stop just because one page doesn't have any valid listings.
+    const listingData: ListingData[] = []; 
+    const validatedListings: Listing[] = [];
     const terminatingString = 'End of inventory';
 
     let pageNum = 1;
     let newListings;
     do {
         await waitForStaticPage(page);
-	console.log("Cur page:", await page.url());
+	    console.log("Cur page:", page.url());
         const nextElem = await getNextElem(page, terminatingString, pageNum);
 
         if (!nextElem) {
-            return listingData;
+            return validatedListings;
         }
 
         await scrollToElement(page, nextElem);
         
-
         const pageListings = await getPageListings(page);
         newListings = isNewListings(listingData.map(data => data.listings).flat(), pageListings?.listings)
         console.log('newListings?', newListings)
 
         if (pageListings) {
             listingData.push(pageListings);
+            const listings = await validateListings(page, pageListings, manufacturer, retailer);
+
+            if (listings.length) {
+                validatedListings.push(...listings)   
+            }
         }
-        
-        try {
-            
+        try {    
             await nextElem.evaluate((handle) => (handle as HTMLElement).click());
             console.log('clicked')
         } catch(e) {
             console.log('Error clicking element', e)
-            return listingData;
+            return validatedListings;
         }
         pageNum++;
     } while (newListings);
 
-    // Convert the processed data back to JSON
-    const newData = JSON.stringify(listingData.map(data => data.listings).flat(), null, 2);
-
-    return listingData;
+    return validatedListings;
 }
 
 async function getNextElem(page: Page, terminatingString: string, pageNum: number): Promise<ElementHandle | null> {

@@ -1,4 +1,4 @@
-import { type ListingTitle } from '../src/getPageData'
+import { type ListingTitle } from '../src/getPageListings'
 
 export default function isNewListings(oldListingsData: ListingTitle[], newListingsData: ListingTitle[] | undefined): boolean {
     const oldListingsSet = new Set(oldListingsData?.map((elem) => elem?.href));

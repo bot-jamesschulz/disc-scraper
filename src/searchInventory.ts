@@ -76,30 +76,31 @@ export default async function searchInventory(page: Page, manufacturer: string) 
         
 
     }, inputElement, manufacturer);
-    
+
     await waitForStaticPage(page);
     let newUrl = page.url();
     console.log('url after browser handling', newUrl);
 
-    if (url === newUrl) {
-        try {
-            await inputElement.evaluate(el => el.value = "");
-            await inputElement.type(manufacturer);
-            await inputElement.evaluate((el, brand) => el.value = brand, manufacturer);
-    
-            inputElement.press('Enter');
-        } catch{}
-    }
+    // If we haven't navigated to a new page, the search hasn't been submitted so we should try a different submission technique
+    if (url !== newUrl) return;
+
+    try {
+        await inputElement.evaluate(el => el.value = "");
+        await inputElement.type(manufacturer);
+        await inputElement.evaluate((el, brand) => el.value = brand, manufacturer);
+
+        inputElement.press('Enter');
+    } catch{}
 
     await waitForStaticPage(page);
     newUrl = page.url();
     console.log('url after puppeteer handling', newUrl);
 
-    if (url === newUrl) {
-        await page.evaluate((input) => {
-            input.closest('form')?.submit();
-        }, inputElement);
-    }
+    if (url !== newUrl) return;
+
+    await page.evaluate((input) => {
+        input.closest('form')?.submit();
+    }, inputElement);
 
     await waitForStaticPage(page);
     console.log('url after form submission', newUrl);

@@ -1,5 +1,5 @@
 {
-    "include": ["src/**/*.ts", "src/scrollPage.js", "utils/isNewListings.ts", "utils/validateListings.ts", "utils/groupListingData.ts"],
+    "include": ["src/**/*.ts", "src/scrollPage.js", "utils/isNewListings.ts", "utils/validateListings.ts", "utils/extractPrices.ts"],
     "compilerOptions": {
         "outDir": "./dist",
         "paths": {

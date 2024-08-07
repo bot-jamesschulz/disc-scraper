@@ -18,6 +18,10 @@ export default async function navigateTo(url: string, page: Page) {
                 request.continue();
             }
         });
+        page.on('console', msg => {
+            if (msg.text().includes('111'))
+                console.log('PAGE LOG:', msg.text())
+        });
 
         await page.goto(url,{ waitUntil: 'load'});
         await waitForStaticPage(page);

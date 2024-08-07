@@ -4,19 +4,19 @@ import { Page } from "puppeteer";
 export type ListingTitle = {
   listingIndex: number;
   innerText: string;
-  href: string | null;
+  href: string;
 };
 
 export type ListingImgs = {
-  [key: string]: string;
+  [key: string]: string
 };
 
 export type ListingPrices = (string | null) [];
 
 export type ListingData = {
     listings: ListingTitle[],
-    listingImgs: ListingImgs,
-    listingPrices: ListingPrices
+    listingPrices: ListingPrices,
+    url: string
 };
 
 /**
@@ -25,7 +25,7 @@ export type ListingData = {
  * @param {Page} page - The Puppeteer page object.
  * @returns {Object} - An object containing disc listing information.
  */
-export default async function getPageData(page: Page): Promise<ListingData | undefined> {
+export default async function getPageListings(page: Page): Promise<ListingData | undefined> {
   const timeout = 10000; // ms
 
   console.log("getting listings");
@@ -42,7 +42,7 @@ export default async function getPageData(page: Page): Promise<ListingData | und
 }
 
 async function extractData(page: Page): Promise<ListingData | undefined> {
-    let listingData;
+    let listingData: ListingData;
   
     try {
       // Extract the images/listings from the page, keyed by their position in the DOM
@@ -69,8 +69,9 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
               : window.getComputedStyle(element).backgroundImage;
   
           const trimmedText = element.innerText
-            ?.trim()
-            .replace(/\r?\n|\r|\s+/, " ");
+            ?.replace(/\r?\n|\r|\s+/g, " ")                       // Replace newlines and consecutive spaces with a single space
+            .replace(/[^\w\.\/\s\u2013\u2014\u2212-]/g, '')      // Remove any abnormal characters
+            .trim();                                             
   
           let wholeText;
           const children = element.childNodes;
@@ -108,65 +109,10 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
             listings.push({
               listingIndex: index,
               innerText: trimmedText,
-              href: element.getAttribute("href"),
+              href: element.getAttribute("href") || "",
             });
           }
   
-          // Get images
-          if (
-            element.tagName === "IMG" ||
-            (element.tagName === "INPUT" &&
-              (element.hasAttribute("src") || element.hasAttribute("srcset")))
-          ) {
-            const waitInterval = 100; // Time to wait before checking the src attribute again
-            const maxWaitTime = 500; // Maximum wait time for checking src
-            let elapsedTime = 0;
-            let waitCount = 0;
-  
-            // Wait for src attribute to be set
-            const waitForSrc = async () => {
-  
-              if (element.getAttribute("srcset")) {
-                let url;
-                url = element.getAttribute("srcset");
-                const endOfUrl = url?.indexOf(" ");
-                const firstUrl = endOfUrl !== -1 ? url?.substring(0, endOfUrl) : url;
-                listingImgs[index] = firstUrl || ''; // Save the img's url with an associated element index, for use later to find closest listing element
-                prevImgIndex = index;
-  
-                return;
-              }
-
-              if (element.getAttribute("src")) {
-                let url;
-                try {
-                  const src = element.getAttribute("src");
-                  if (src) {
-                    url = new URL(src, window.location.href);
-                  }
-                } catch (err) {}
-  
-                if (url?.href.startsWith("http")) {
-                  listingImgs[index] = url.href; // Save the img's url with an associated element index, for use later to find closest listing element
-                  prevImgIndex = index;
-                  return;
-                }
-              }
-              
-              elapsedTime += waitInterval;
-              curImgWait += waitInterval;
-              ++waitCount;
-              if (
-                  elapsedTime < maxWaitTime
-                  && curImgWait < maxImgWait
-              ) {
-                console.log('waiting')
-                await new Promise((resolve) => setTimeout(resolve, waitInterval));
-                await waitForSrc();
-              }
-            };
-            await waitForSrc();
-          }
           // Make sure that the background-image isn't part of a subsection/gallery of images
           if (backgroundImg) {
             const backgroundImgUrlMatch = backgroundImg.match(/url\("(.+)"\)/); // Extract the url
@@ -179,7 +125,7 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
           }
         }
   
-        return { listings, listingImgs, listingPrices };
+        return { listings, listingPrices, url: window.location.href };
       });
     } catch (err) {
       console.log("error retrieving data/images from the DOM", err);
