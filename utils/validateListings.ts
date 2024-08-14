@@ -1,10 +1,11 @@
 import { 
     type ListingTitle,
-    type ListingData
+    type ListingImg,
+    type ListingPrice,
+    type ListingData,
+    type Position
 } from "../src/getPageListings";
 import fs from 'fs';
-import extractImages from "../src/extractImages";
-import extractPrices from "../src/extractPrices";
 import { Page } from 'puppeteer';
 
 const jsonString = fs.readFileSync('./data/discsSorted.json', 'utf-8');
@@ -14,10 +15,11 @@ const manufacturers = JSON.parse(manufacturersJsonString).map((m: string) => m.t
 
 export type PartialListing = {
     listing: string,
-    listing_index: number,
     details_url: string,
     original_href: string,
+    position: Position,
     model: string,
+    type: string,
     manufacturer: string,
     retailer: string
 }
@@ -28,6 +30,7 @@ export type Listing = {
     img_src: string,
     price: number,
     model: string,
+    type: string,
     manufacturer: string,
     retailer: string
 }
@@ -59,6 +62,8 @@ export default async function validateListings(page: Page, unfilteredListings: L
     console.log('validating listings');
     
     const unfilteredListingsTitles: ListingTitle[] = unfilteredListings.listings;
+    const listingImgs = unfilteredListings.listingImgs;
+    const listingPrices = unfilteredListings.listingPrices;
     const partialListings: PartialListing[] = [];
     const rejectedListings: string[] = [];
 
@@ -80,22 +85,24 @@ export default async function validateListings(page: Page, unfilteredListings: L
         // Other manufacturers cannot be present in listing. This is to prevent same model names being selected for the wrong manufacturer.
         if (manufacturers.some((m: string) => cleanedListingLower.includes(m) && m !== manufacturer.toLowerCase())) continue;
 
-        const listingModels: string[] = discs[manufacturer].filter((info: any) => {
+        const listingModels: { name: string, type: string }[] = discs[manufacturer].filter((info: any) => {
             const regex = new RegExp(`(^|\\s)${info.name.toLowerCase()}(\\s|$)`);
             return regex.test(cleanedListingLower);
-        }).map((m: Model) => m.name);
+        }).map((m: Model) => ({ name: m.name, type: m.primary_use }));
 
+        // Find the longest matching listing so we get the most complete possible mold name
         const listingModel = listingModels.reduce((longest, current) => {
-            return current.length > longest.length ? current : longest;
-        }, "");
+            return current.name.length > longest.name.length ? current : longest;
+        }, listingModels[0]);
 
         if (listingModel) { 
             partialListings.push({
                 listing,
-                listing_index: listingData.listingIndex,
                 details_url: url.href,
+                position: listingData.position,
                 original_href: listingData.href,
-                model: listingModel,
+                model: listingModel.name,
+                type: listingModel.type,
                 manufacturer,
                 retailer
             })
@@ -103,33 +110,10 @@ export default async function validateListings(page: Page, unfilteredListings: L
             rejectedListings.push(listing);
         }
     }
+
+    const validatedListings = extractInfo(partialListings, listingImgs, listingPrices)
     
-    const images = await extractImages(page, partialListings.map(l => l.original_href));
-    const prices = extractPrices(partialListings.map(l => ({ listingPosition: l.listing_index, listing: l.original_href })), unfilteredListings.listingPrices);
-    console.log('extracted images', images);
-    console.log('extracted prices', prices);
-
-    const listings: Listing[] = [];
-
-    // Assemble listings
-    partialListings.forEach(l => {
-        const img = images.find(i => i.associatedListing === l.original_href);
-        const price = prices.find(p => p.associatedListing === l.original_href);
-
-        if (img && price) {
-            listings.push({
-                listing: l.listing,
-                details_url: l.details_url,
-                img_src: img.src,
-                price: price.price,
-                model: l.model,
-                manufacturer: l.manufacturer,
-                retailer: l.retailer
-            })
-        }
-    })
-
-    return listings;
+    return validatedListings;
 }
 
 function makeUrl(listingHref: string, retailerHref: string) {
@@ -139,3 +123,69 @@ function makeUrl(listingHref: string, retailerHref: string) {
         console.log('error creating url from: ', listingHref)
     }
 }
+
+function extractInfo(partialListings: PartialListing[], listingImgs: ListingImg[], listingPrices: ListingPrice[]) {
+    const listings: Listing[] = [];
+    const seenImgs = new Set();
+    const seenPrices = new Set();
+
+    for (const l of partialListings) {
+        const img = findClosest(l.position, listingImgs);
+        const price = findClosest(l.position, listingPrices);
+
+        console.log('listing', l.details_url);
+        console.log('listing position', l.position)
+        console.log('closestPrice', price);
+        console.log('closestImg', img);
+        
+        if (!img || !price) continue;
+        if (seenImgs.has(img.position)) img.src = '';
+        if (seenPrices.has(price.position)) continue;
+
+        seenPrices.add(price.position);
+        seenImgs.add(img.position);
+
+        listings.push({
+            listing: l.listing,
+            details_url: l.details_url,
+            img_src: img.src,
+            price: Number(price.price),
+            model: l.model,
+            type: l.type,
+            manufacturer: l.manufacturer,
+            retailer: l.retailer
+        })
+    }
+
+    return listings;
+}
+
+function findClosest<T extends { position: Position }>(listingPosition: Position, listingInfo: T[]) {
+    let closestInfo: T | null = null;
+    let smallestDistance = Infinity;
+
+    for (const info of listingInfo) {
+        // Image has to be above the listing. this to prevent icon images being falsely selected
+        if (isListingImg(info)) {
+            if (listingPosition.y < info.topCoord) {
+                console.log('Img above listing', listingPosition, info, info.position)
+                continue;
+            }
+        }
+        const distance = Math.sqrt(
+            Math.pow(info.position.x - listingPosition.x, 2) +
+            Math.pow(info.position.y - listingPosition.y, 2)
+        );
+
+        if (distance < smallestDistance) {
+            smallestDistance = distance;
+            closestInfo = info;
+        }
+    }
+
+    return closestInfo;
+}
+
+function isListingImg(info: any): info is ListingImg {
+    return (info as ListingImg).topCoord !== undefined;
+  }

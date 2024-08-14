@@ -7,11 +7,54 @@ import {
 import validateListings, {
     type Listing
 } from "../utils/validateListings";
-import getPageListings, { type ListingTitle, ListingData, ListingImgs, ListingPrices } from "./getPageListings";
+import getPageListings, { type ListingData } from "./getPageListings";
 import isNewListings from "../utils/isNewListings";
 import waitForStaticPage from "./waitForStaticPage";
 import generateResponse from '../utils/inference';
   
+
+// Extract listings by infinite scroll
+export async function infiniteScrollListings(page: Page, manufacturer: string, retailer: string): Promise<{ listings: Listing[], isInfiniteScroll: boolean }> {
+    // Keeps track of all the potential listings. This is important to keep track of as well as validated listings
+    // Becasue we use this to decide when to stop paginating. We don't want to stop just because one page doesn't have any valid listings.
+    const listingData: ListingData[] = [];
+    const validatedListings: Listing[] = [];
+    let newListingData;
+    let scrollIterations = 0;
+
+    // Get infinite loaded listings
+    do {
+        console.log('Infite scroll iteration: ', scrollIterations);
+        scrollIterations++;
+        const pageListings = await getPageListings(page);
+
+        if (pageListings) {
+        listingData.push(pageListings);
+        }
+        
+        await waitForStaticPage(page);
+
+        newListingData = await getPageListings(page);
+    } while (isNewListings(listingData.map(data => data.listings).flat(), newListingData?.listings));
+    
+    // Only the last page is passed since each "page" has all the listings of the previous pages as well
+    const listings = await validateListings(page, listingData[listingData.length - 1], manufacturer, retailer);
+
+    if (listings.length) {
+        validatedListings.push(...listings)   
+    }
+    
+    // If there was infinite scroll then skip checking for pagination
+    if (scrollIterations > 1) {
+        console.log('Infinite scroll listings. Pagination not attempted');
+        return { listings, isInfiniteScroll: true };
+    } else
+
+    return { 
+        listings, 
+        isInfiniteScroll: scrollIterations > 1 ? true : false 
+    }
+}
 // Extract listings by clicking the next button
 export async function paginationListings(page: Page, manufacturer: string, retailer: string): Promise<Listing[]> {
     // Keeps track of all the potential listings. This is important to keep track of as well as validated listings
@@ -25,13 +68,7 @@ export async function paginationListings(page: Page, manufacturer: string, retai
     do {
         await waitForStaticPage(page);
 	    console.log("Cur page:", page.url());
-        const nextElem = await getNextElem(page, terminatingString, pageNum);
-
-        if (!nextElem) {
-            return validatedListings;
-        }
-
-        await scrollToElement(page, nextElem);
+        
         
         const pageListings = await getPageListings(page);
         newListings = isNewListings(listingData.map(data => data.listings).flat(), pageListings?.listings)
@@ -45,11 +82,19 @@ export async function paginationListings(page: Page, manufacturer: string, retai
                 validatedListings.push(...listings)   
             }
         }
+        
         try {    
+            const nextElem = await getNextElem(page, terminatingString, pageNum);
+
+            if (!nextElem) {
+                return validatedListings;
+            }
+
+            await scrollToElement(page, nextElem);
             await nextElem.evaluate((handle) => (handle as HTMLElement).click());
             console.log('clicked')
         } catch(e) {
-            console.log('Error clicking element', e)
+            console.log('Error navigating to next page', e)
             return validatedListings;
         }
         pageNum++;
@@ -87,3 +132,5 @@ async function getNextElem(page: Page, terminatingString: string, pageNum: numbe
 
     return nextElem;
 }
+
+

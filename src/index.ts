@@ -18,8 +18,8 @@ const retailersJson = fs.readFileSync('./data/retailers.json', 'utf-8');
 const retailers = JSON.parse(retailersJson);
 // const retailers = ["https://www.marshallstreetdiscgolf.com/"];
 const manufacturersJson = fs.readFileSync('./data/majorManufacturers.json', 'utf-8');
-// const manufacturers = JSON.parse(manufacturersJson);
-const manufacturers = ["Axiom"];
+const manufacturers = JSON.parse(manufacturersJson);
+// const manufacturers = ["Prodigy"];
 
 puppeteer.use(StealthPlugin());
 
@@ -28,11 +28,11 @@ async function scrape() {
   let browser: Browser | null = null;
   let page: Page
   try {
-    for (const retailer of retailers.slice(1,10)) {
+    for (const retailer of retailers.slice(0,30)) {
       const retailerHostname = new URL(retailer).hostname;
       browser = await puppeteer.launch({
 	      headless: false,
-	      args: [...chromium.args, "--disable-notifications"]
+	      args: [ ...chromium.args, "--disable-notifications" ]
       });
       page = await browser.newPage();
       // Remove old listings
@@ -52,6 +52,8 @@ async function scrape() {
             dedupedListings.push(l);
             seen.add(l.details_url);
           })
+
+          console.log('deduped listings', dedupedListings)
 
           await dbInsertListings("discs", dedupedListings);
         }
