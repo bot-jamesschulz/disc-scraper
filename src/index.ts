@@ -29,7 +29,7 @@ async function scrape() {
   let browser: Browser | null = null;
   let page: Page;
   try {
-    for (const retailer of retailers.slice(5,30)) {
+    for (const retailer of retailers.slice(7,8)) {
       const retailerHostname = new URL(retailer).hostname;
       let pageQueryParam;
       let inventoryStartUrl;
