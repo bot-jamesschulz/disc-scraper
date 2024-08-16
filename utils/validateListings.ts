@@ -139,8 +139,10 @@ function extractInfo(partialListings: PartialListing[], listingImgs: ListingImg[
         console.log('closestImg', img);
         
         if (!img || !price) continue;
-        if (seenImgs.has(img.position)) img.src = '';
+        if (seenImgs.has(img.position)) continue;
         if (seenPrices.has(price.position)) continue;
+        const numPrice = Number(price.price);
+        if (numPrice < 4.99) continue;
 
         seenPrices.add(price.position);
         seenImgs.add(img.position);
@@ -149,7 +151,7 @@ function extractInfo(partialListings: PartialListing[], listingImgs: ListingImg[
             listing: l.listing,
             details_url: l.details_url,
             img_src: img.src,
-            price: Number(price.price),
+            price: numPrice,
             model: l.model,
             type: l.type,
             manufacturer: l.manufacturer,

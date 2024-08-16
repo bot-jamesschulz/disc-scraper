@@ -14,7 +14,14 @@ import generateResponse from '../utils/inference';
 import navigateTo from "./navigateTo";
   
 // Extract listings by infinite scroll
-export async function infiniteScrollListings(page: Page, manufacturer: string, retailer: string): Promise<{ listings: Listing[], isInfiniteScroll: boolean }> {
+export async function infiniteScrollListings(
+    page: Page, 
+    manufacturer: string, 
+    retailer: string
+): Promise<{ 
+    listings: Listing[], 
+    isInfiniteScroll: boolean 
+}> {
     // Keeps track of all the potential listings. This is important to keep track of as well as validated listings.
     // Becasue we use this to decide when to stop paginating. We don't want to stop just because one page doesn't have any valid listings.
     const listingData: ListingData[] = [];
@@ -29,7 +36,7 @@ export async function infiniteScrollListings(page: Page, manufacturer: string, r
         const pageListings = await getPageListings(page);
 
         if (pageListings) {
-        listingData.push(pageListings);
+            listingData.push(pageListings);
         }
         
         await waitForStaticPage(page);
@@ -47,17 +54,25 @@ export async function infiniteScrollListings(page: Page, manufacturer: string, r
     // If there was infinite scroll then skip checking for pagination
     if (scrollIterations > 1) {
         console.log('Infinite scroll listings. Pagination not attempted');
-        return { listings, isInfiniteScroll: true };
+        return { 
+            listings: validatedListings, 
+            isInfiniteScroll: true 
+        };
     } else
 
     return { 
-        listings, 
+        listings: validatedListings, 
         isInfiniteScroll: scrollIterations > 1 ? true : false 
     }
 }
 
 // Extract listings by iterating through the pages
-export async function paginationListings(page: Page, manufacturer: string, retailer: string, pageQueryParam: string | undefined): Promise<{ 
+export async function paginationListings(
+    page: Page,
+    manufacturer: string,
+    retailer: string,
+    pageQueryParam: string | undefined
+): Promise<{ 
     listings: Listing[], pageQueryParam: string | undefined 
 }> {
     // Keeps track of all the potential listings. This is important to keep track of as well as validated listings
@@ -119,7 +134,11 @@ export async function paginationListings(page: Page, manufacturer: string, retai
     return { listings: validatedListings, pageQueryParam };
 }
 
-async function getNextElem(page: Page, terminatingString: string, pageNum: number): Promise<ElementHandle | null> {
+async function getNextElem(
+    page: Page, 
+    terminatingString: string, 
+    pageNum: number
+): Promise<ElementHandle | null> {
     // Get pagination loaded listings
     const buttonAndAnchorHandles = await page.$$('button, a');
     

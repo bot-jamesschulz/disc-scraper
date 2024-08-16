@@ -74,7 +74,7 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
           let rect = element.getBoundingClientRect();
           let position = {
             x: rect.left + rect.width / 2,
-            y: rect.top + rect.height / 2
+            y: rect.top + rect.height / 2 + window.scrollY,
           }
   
           const trimmedText = element.innerText
@@ -91,12 +91,9 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
           } 
           
           // Looking for price
-          const priceRegex = /\$[\d.]+/;
-          if (wholeText 
-            && priceRegex.test(wholeText) 
-            && wholeText?.length < maxTextLength
-          ) {
-          
+          // Necessary to check for just the $ since sometimes the $ and the price is split into multiple elements
+          if (wholeText?.includes("$") && wholeText?.length < maxTextLength) {
+            const priceRegex = /\$[\d.]+/;
             let price = trimmedText?.match(priceRegex);
             let currElement = element;
 
@@ -108,10 +105,11 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
             const currElementRect = currElement.getBoundingClientRect();
             const currElementPosition = {
               x: currElementRect.left + currElementRect.width / 2,
-              y: currElementRect.top + currElementRect.height / 2
+              y: currElementRect.top + currElementRect.height / 2 + window.scrollY
             }
-  
+
             const trimmedPrice = price?.[0].replace(/[^\d.]/g, ""); // Remove everything but digits and "."
+            
             if (trimmedPrice) {
               listingPrices.push({
                 price: trimmedPrice,
@@ -154,7 +152,7 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
                     rect = element.parentElement?.getBoundingClientRect() || rect;
                     position = {
                       x: rect.left + rect.width / 2,
-                      y: rect.top + rect.height / 2
+                      y: rect.top + rect.height / 2  + window.scrollY
                     }
                   }
 

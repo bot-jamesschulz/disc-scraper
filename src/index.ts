@@ -25,22 +25,18 @@ const manufacturers = JSON.parse(manufacturersJson);
 puppeteer.use(StealthPlugin());
 
 async function scrape() {
-  
+  console.time()
   let browser: Browser | null = null;
   let page: Page;
-  let searchQueryParam;
-  let inventoryStartUrl;
   try {
-    for (const retailer of retailers.slice(25,30)) {
+    for (const retailer of retailers.slice(5,30)) {
       const retailerHostname = new URL(retailer).hostname;
       let pageQueryParam;
-      // browser = await puppeteer.launch({
-	    //   headless: true,
-	    //   args: [ ...chromium.args, "--disable-notifications" ]
-      // });
+      let inventoryStartUrl;
+      let searchQueryParam;
       browser = await puppeteer.launch({
-	      headless: false,
-	      args: [ "--disable-notifications" ]
+	      headless: true,
+	      args: [ ...chromium.args, "--disable-notifications" ]
       });
       page = await browser.newPage();
       // Remove old listings
@@ -91,10 +87,12 @@ async function scrape() {
       } finally {
         await browser.close();
       }
+      
     }
   } catch(e) {
     console.log(e)
   } finally {
+    console.timeEnd()
     await browser?.close();
   }
 }
