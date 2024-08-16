@@ -180,7 +180,7 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
                   if (medianIndex) medianSrc = sources?.[medianIndex].url;
                   if (medianSrc) listingImgs.push({ 
                       src: medianSrc,
-                      topCoord: rect.top,
+                      topCoord: rect.top + window.scrollY,
                       position
                   });
                   return;
@@ -210,7 +210,7 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
                   if (medianIndex) medianSrc = sources?.[medianIndex].url;
                   if (medianSrc) listingImgs.push({ 
                       src: medianSrc,
-                      topCoord: rect.top,
+                      topCoord: rect.top + window.scrollY,
                       position
                   });
                   return;
@@ -228,7 +228,7 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
                     if (url?.href.startsWith("http")) {
                         listingImgs.push({ 
                             src: url.href, 
-                            topCoord: rect.top,
+                            topCoord: rect.top + window.scrollY,
                             position
                         });
                         return;
