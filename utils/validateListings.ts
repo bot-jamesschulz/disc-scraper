@@ -168,7 +168,7 @@ function findClosest<T extends { position: Position }>(listingPosition: Position
         // Image has to be above the listing. this to prevent icon images being falsely selected
         if (isListingImg(info)) {
             if (listingPosition.y < info.topCoord) {
-                console.log('Img above listing', listingPosition, info, info.position)
+                // console.log('Img above listing', listingPosition, info, info.position)
                 continue;
             }
         }

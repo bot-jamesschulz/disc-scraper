@@ -71,15 +71,15 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
         for (const [index, element] of elements.entries()) {
           if (!element) continue;
 
-          const rect = element.getBoundingClientRect();
-          const position = {
+          let rect = element.getBoundingClientRect();
+          let position = {
             x: rect.left + rect.width / 2,
             y: rect.top + rect.height / 2
           }
   
           const trimmedText = element.innerText
             ?.replace(/\r?\n|\r|\s+/g, " ")                       // Replace newlines and consecutive spaces with a single space
-            .replace(/[^\w\.\/\s\u2013\u2014\u2212-]/g, '')      // Remove any abnormal characters
+            .replace(/[^\w\.\/\s\u2013\u2014\u2212-]/g, '')       // Remove any abnormal characters
             .trim();                                             
   
           let wholeText;
@@ -87,16 +87,16 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
           for (const child of children) {
             if (child.nodeType === Node.TEXT_NODE) {
                 wholeText = (child as Text).wholeText;
-                // if (wholeText.includes('$')) {
-                //     console.log('price', wholeText);
-                // }
             }
           } 
-  
+          
           // Looking for price
-          if (wholeText?.includes("$") && wholeText?.length < maxTextLength) {
-            
-            const priceRegex = /\$[\d.]+/;
+          const priceRegex = /\$[\d.]+/;
+          if (wholeText 
+            && priceRegex.test(wholeText) 
+            && wholeText?.length < maxTextLength
+          ) {
+          
             let price = trimmedText?.match(priceRegex);
             let currElement = element;
 
@@ -104,12 +104,18 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
               currElement = currElement.parentNode as HTMLElement;
               price = currElement?.innerText?.match(priceRegex);
             }
+
+            const currElementRect = currElement.getBoundingClientRect();
+            const currElementPosition = {
+              x: currElementRect.left + currElementRect.width / 2,
+              y: currElementRect.top + currElementRect.height / 2
+            }
   
             const trimmedPrice = price?.[0].replace(/[^\d.]/g, ""); // Remove everything but digits and "."
             if (trimmedPrice) {
               listingPrices.push({
                 price: trimmedPrice,
-                position,
+                position: currElementPosition,
               });
             }
           }
@@ -124,7 +130,9 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
             });
           }
 
-          if ((element.tagName === 'IMG') || (element.tagName === 'INPUT') 
+          if ((element.tagName === 'IMG') 
+            || (element.tagName === 'PICTURE') 
+            ||  (element.tagName === 'INPUT') 
             && (element.hasAttribute('src') || element.hasAttribute('srcset'))) {
               
               const waitInterval = 100; // Time to wait before checking the src attribute again
@@ -135,12 +143,34 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
               // Wait for src attribute to be set
               const waitForSrc = async () => {
 
-                if (element.getAttribute("srcset")) {
-                  const srcset = element.getAttribute("srcset");
-                  const sources = srcset?.split(',').map(item => {
-                    const [url, descriptor] = item.trim().split(' ');
-                    const width = parseInt(descriptor.replace('w', ''), 10);
-                    return { url, width };
+                // Picture elements
+                if (element.querySelector("source")) {
+                  // Get computed style of the element
+                  const computedStyle = window.getComputedStyle(element);
+
+                  // If display is none we need to get the position of the parent element
+                  const displayValue = computedStyle.display;
+                  if (displayValue === 'none' || displayValue === 'hidden') {
+                    rect = element.parentElement?.getBoundingClientRect() || rect;
+                    position = {
+                      x: rect.left + rect.width / 2,
+                      y: rect.top + rect.height / 2
+                    }
+                  }
+
+                  const source = element.querySelector("source");
+                  const srcset = source?.getAttribute("srcset");
+
+                  // Get the median resolution src
+                  const sources: {url: string, width: number}[] = [];
+
+                  srcset?.split(',').forEach(src => {
+                    const [url, descriptor] = src.trim().split(' ');
+                    const width = parseInt(descriptor?.replace('w', ''), 10);
+                    
+                    if (!url || !width) return;
+
+                    sources.push({ url, width });
                   });
 
                   // Sort the sources by pixel width
@@ -150,7 +180,6 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
                   if (sources) medianIndex = Math.floor(sources.length / 2);
                   let medianSrc;
                   if (medianIndex) medianSrc = sources?.[medianIndex].url;
-
                   if (medianSrc) listingImgs.push({ 
                       src: medianSrc,
                       topCoord: rect.top,
@@ -158,50 +187,67 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
                   });
                   return;
                 }
-                  
-                  // // Get first url of scrset
-                  // if (element.getAttribute("srcset")) {
-                  //     const url = element.getAttribute("srcset");
-                  //     const endOfUrl = url?.indexOf(" ");
-                  //     const firstUrl = endOfUrl !== -1 ? url?.substring(0, endOfUrl) : url;
-                  //     if (firstUrl) listingImgs.push({ 
-                  //         src: firstUrl,
-                  //         topCoord: rect.top,
-                  //         position
-                  //     });
-                  //     return;
-                  // }
 
-                  if (element.getAttribute("src")) {
-                      let url;
-                      try {
-                      const src = element.getAttribute("src");
-                      if (src) {
-                          url = new URL(src, window.location.href);
-                      }
-                      } catch (err) {}
-      
-                      if (url?.href.startsWith("http")) {
-                          listingImgs.push({ 
-                              src: url.href, 
-                              topCoord: rect.top,
-                              position
-                          });
-                          return;
-                      }
-                  }
-                  
-                  elapsedTime += waitInterval;
-                  curImgWait += waitInterval;
-                  ++waitCount;
-                  if (
-                      elapsedTime < maxWaitTime
-                      && curImgWait < maxImgWait
-                  ) {
-                      console.log('waiting')
-                      await new Promise((resolve) => setTimeout(resolve, waitInterval));
-                      await waitForSrc();
-                  }
+                if (element.getAttribute("srcset")) {
+                  const srcset = element.getAttribute("srcset");
+
+                  // Get the median resolution src
+                  const sources: {url: string, width: number}[] = [];
+
+                  srcset?.split(',').forEach(src => {
+                    const [url, descriptor] = src.trim().split(' ');
+                    const width = parseInt(descriptor?.replace('w', ''), 10);
+                    
+                    if (!url || !width) return;
+
+                    sources.push({ url, width });
+                  });
+
+                  // Sort the sources by pixel width
+                  sources?.sort((a, b) => a.width - b.width);
+
+                  let medianIndex;
+                  if (sources) medianIndex = Math.floor(sources.length / 2);
+                  let medianSrc;
+                  if (medianIndex) medianSrc = sources?.[medianIndex].url;
+                  if (medianSrc) listingImgs.push({ 
+                      src: medianSrc,
+                      topCoord: rect.top,
+                      position
+                  });
+                  return;
+                }
+
+                if (element.getAttribute("src")) {
+                    let url;
+                    try {
+                    const src = element.getAttribute("src");
+                    if (src) {
+                        url = new URL(src, window.location.href);
+                    }
+                    } catch (err) {}
+    
+                    if (url?.href.startsWith("http")) {
+                        listingImgs.push({ 
+                            src: url.href, 
+                            topCoord: rect.top,
+                            position
+                        });
+                        return;
+                    }
+                }
+                
+                elapsedTime += waitInterval;
+                curImgWait += waitInterval;
+                ++waitCount;
+                if (
+                    elapsedTime < maxWaitTime
+                    && curImgWait < maxImgWait
+                ) {
+                    console.log('waiting')
+                    await new Promise((resolve) => setTimeout(resolve, waitInterval));
+                    await waitForSrc();
+                }
               };
               await waitForSrc();     
               

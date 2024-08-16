@@ -11,11 +11,11 @@ import getPageListings, { type ListingData } from "./getPageListings";
 import isNewListings from "../utils/isNewListings";
 import waitForStaticPage from "./waitForStaticPage";
 import generateResponse from '../utils/inference';
+import navigateTo from "./navigateTo";
   
-
 // Extract listings by infinite scroll
 export async function infiniteScrollListings(page: Page, manufacturer: string, retailer: string): Promise<{ listings: Listing[], isInfiniteScroll: boolean }> {
-    // Keeps track of all the potential listings. This is important to keep track of as well as validated listings
+    // Keeps track of all the potential listings. This is important to keep track of as well as validated listings.
     // Becasue we use this to decide when to stop paginating. We don't want to stop just because one page doesn't have any valid listings.
     const listingData: ListingData[] = [];
     const validatedListings: Listing[] = [];
@@ -55,8 +55,11 @@ export async function infiniteScrollListings(page: Page, manufacturer: string, r
         isInfiniteScroll: scrollIterations > 1 ? true : false 
     }
 }
-// Extract listings by clicking the next button
-export async function paginationListings(page: Page, manufacturer: string, retailer: string): Promise<Listing[]> {
+
+// Extract listings by iterating through the pages
+export async function paginationListings(page: Page, manufacturer: string, retailer: string, pageQueryParam: string | undefined): Promise<{ 
+    listings: Listing[], pageQueryParam: string | undefined 
+}> {
     // Keeps track of all the potential listings. This is important to keep track of as well as validated listings
     // Becasue we use this to decide when to stop paginating. We don't want to stop just because one page doesn't have any valid listings.
     const listingData: ListingData[] = []; 
@@ -66,9 +69,7 @@ export async function paginationListings(page: Page, manufacturer: string, retai
     let pageNum = 1;
     let newListings;
     do {
-        await waitForStaticPage(page);
 	    console.log("Cur page:", page.url());
-        
         
         const pageListings = await getPageListings(page);
         newListings = isNewListings(listingData.map(data => data.listings).flat(), pageListings?.listings)
@@ -84,23 +85,38 @@ export async function paginationListings(page: Page, manufacturer: string, retai
         }
         
         try {    
-            const nextElem = await getNextElem(page, terminatingString, pageNum);
+            // First page we find the next page element and click it
+            if (!pageQueryParam) {
+                const nextElem = await getNextElem(page, terminatingString, pageNum);
 
-            if (!nextElem) {
-                return validatedListings;
+                if (!nextElem) {
+                    return { listings: validatedListings, pageQueryParam };
+                }
+    
+                await scrollToElement(page, nextElem);
+                await nextElem.evaluate((handle) => (handle as HTMLElement).click());
+                console.log('clicked');
+                await waitForStaticPage(page);
+
+                pageQueryParam = await getPageQueryParam(page);
+            // For the remainder of the pages, we try to increment the page query parameter, so we don't have to make LLM requests each page.
+            } else {
+                console.log('page query param:', pageQueryParam);
+
+                const url = new URL(page.url());
+                url.searchParams.set(pageQueryParam, (pageNum + 1).toString())
+
+                await navigateTo(url.toString(), page);
             }
 
-            await scrollToElement(page, nextElem);
-            await nextElem.evaluate((handle) => (handle as HTMLElement).click());
-            console.log('clicked')
         } catch(e) {
             console.log('Error navigating to next page', e)
-            return validatedListings;
+            return { listings: validatedListings, pageQueryParam };
         }
         pageNum++;
     } while (newListings);
 
-    return validatedListings;
+    return { listings: validatedListings, pageQueryParam };
 }
 
 async function getNextElem(page: Page, terminatingString: string, pageNum: number): Promise<ElementHandle | null> {
@@ -131,6 +147,11 @@ async function getNextElem(page: Page, terminatingString: string, pageNum: numbe
     const nextElem = navigationOptions.get(result) || null;
 
     return nextElem;
+}
+
+async function getPageQueryParam(page: Page) {
+    const url = page.url();
+    return await generateResponse(`Identify which query param is responsible for setting the current page of inventory. Return only the name of the query param and no other information. If There is none, return 'None': ${url}`);
 }
 
 
