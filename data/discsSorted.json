@@ -6693,6 +6693,26 @@
   ],
   "MVP": [
     {
+      "id": 77992,
+      "name": "Trail",
+      "speed": 10,
+      "glide": 5,
+      "turn": -1,
+      "fade": 1,
+      "primary_use": "Distance Driver",
+      "stability": "0",
+      "bead": "Beadless",
+      "border": "#8e1313",
+      "rim_diameter_ratio": 5.2,
+      "rim_configuration": 26.5,
+      "height": 1.6,
+      "rim_depth": 1.1,
+      "rim_thickness": 2.10,
+      "inside_rim_diameter": 17.0,
+      "diameter": 21.2,
+      "show": 1
+    },
+    {
       "id": 77990,
       "name": "Glitch",
       "speed": 1,
