@@ -108,7 +108,7 @@ async function extractData(page: Page): Promise<ListingData | undefined> {
               y: currElementRect.top + currElementRect.height / 2 + window.scrollY
             }
 
-            const trimmedPrice = price?.[0].replace(/[^\d.]/g, ""); // Remove everything but digits and "."
+            const trimmedPrice = price?.[0].replace(/[^\d]/g, ""); // Remove everything but digits and "."
             
             if (trimmedPrice) {
               listingPrices.push({

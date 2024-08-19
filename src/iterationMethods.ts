@@ -113,7 +113,11 @@ export async function paginationListings(
                 console.log('clicked');
                 await waitForStaticPage(page);
 
-                pageQueryParam = await getPageQueryParam(page);
+                const pageListings = await getPageListings(page);
+                newListings = isNewListings(listingData.map(data => data.listings).flat(), pageListings?.listings)
+                if (newListings) {
+                    pageQueryParam = await getPageQueryParam(page);
+                }
             // For the remainder of the pages, we try to increment the page query parameter, so we don't have to make LLM requests each page.
             } else {
                 console.log('page query param:', pageQueryParam);

@@ -104,7 +104,6 @@ export default async function searchInventory(page: Page, manufacturer: string) 
     if (url !== newUrl) return;
     await scrollToElement(page, inputElement);
     await page.evaluate((input) => {
-        console.log('111 search value', input.value)
         input.closest('form')?.submit();
     }, inputElement);
 

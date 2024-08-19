@@ -130,10 +130,10 @@ function extractInfo(partialListings: PartialListing[], listingImgs: ListingImg[
         const img = findClosest(l.position, listingImgs);
         const price = findClosest(l.position, listingPrices);
 
-        console.log('listing', l.details_url);
-        console.log('listing position', l.position)
-        console.log('closestPrice', price);
-        console.log('closestImg', img);
+        // console.log('listing', l.details_url);
+        // console.log('listing position', l.position)
+        // console.log('closestPrice', price);
+        // console.log('closestImg', img);
         
         if (!img || !price) continue;
         if (seenImgs.has(img.position)) continue;

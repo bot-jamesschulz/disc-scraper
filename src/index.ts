@@ -29,7 +29,7 @@ async function scrape() {
   let browser: Browser | null = null;
   let page: Page;
   try {
-    for (const retailer of retailers.slice(32,33)) {
+    for (const [ index, retailer ] of retailers.slice(4,5).entries()) {
       const retailerHostname = new URL(retailer).hostname;
       let pageQueryParam;
       let inventoryStartUrl;
@@ -58,11 +58,13 @@ async function scrape() {
               page
             );
             await searchInventory(page, manufacturer);
-            // Get url of the start of the inventory after search has been triggered
-            inventoryStartUrl = new URL(page.url());
-            const result = await generateResponse(`Identify which query param is responsible for setting the current search value of the inventory, ${manufacturer}. Return only the name of the query param and no other information. If There is none, return 'None': ${inventoryStartUrl}`);
-            console.log('search query param:', result);
-            searchQueryParam = result === 'None' ? undefined : result;
+            if (index == 0) {
+              // Get url of the start of the inventory after search has been triggered
+              inventoryStartUrl = new URL(page.url());
+              const result = await generateResponse(`Identify the query param key that is used to set "${manufacturer}". Return only the key if it is present and no other information. They key has to already be present in the URL. Do not create a key. If there is no key present used to set "${manufacturer}", return 'None': ${inventoryStartUrl}`);
+              console.log('search query param:', result);
+              searchQueryParam = result === 'None' ? undefined : result;
+              }
           }
 
           const inventoryInfo = await extractInventory(page, manufacturer, retailer, pageQueryParam);
