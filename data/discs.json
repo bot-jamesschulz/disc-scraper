@@ -2,7 +2,7 @@
   {
     "id": 27462,
     "name": "Armadillo",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 1,
     "glide": 2,
     "turn": 0,
@@ -170,7 +170,7 @@
   {
     "id": 174225,
     "name": "Glyph",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 1,
     "glide": 5,
     "turn": 0,
@@ -191,7 +191,7 @@
   {
     "id": 17258,
     "name": "Hydrogen",
-    "manufacturer": "Loft Discs",
+    "manufacturer": "Lofts",
     "speed": 1,
     "glide": 2,
     "turn": 0,
@@ -212,7 +212,7 @@
   {
     "id": 87580,
     "name": "No2 Putter",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 1,
     "glide": 2,
     "turn": -2,
@@ -229,6 +229,48 @@
     "inside_rim_diameter": 19.8,
     "diameter": 21.8,
     "show": 0
+  },
+  {
+    "id": 149254,
+    "name": "Time-Lapse",
+    "manufacturer": "MVP",
+    "speed": 12,
+    "glide": 5,
+    "turn": -1,
+    "fade": 3,
+    "primary_use": "Distance Driver",
+    "stability": "2",
+    "bead": "Beadless",
+    "border": "#8e1313",
+    "rim_diameter_ratio": 5.7,
+    "rim_configuration": 26.25,
+    "height": 1.7,
+    "rim_depth": 1.2,
+    "rim_thickness": 2.3,
+    "inside_rim_diameter": 16.5,
+    "diameter": 21.2,
+    "show": 1
+  },
+  {
+    "id": 149256,
+    "name": "Time-Lapse",
+    "manufacturer": "Axiom",
+    "speed": 12,
+    "glide": 5,
+    "turn": -1,
+    "fade": 3,
+    "primary_use": "Distance Driver",
+    "stability": "2",
+    "bead": "Beadless",
+    "border": "#8e1313",
+    "rim_diameter_ratio": 5.7,
+    "rim_configuration": 26.25,
+    "height": 1.7,
+    "rim_depth": 1.2,
+    "rim_thickness": 2.3,
+    "inside_rim_diameter": 16.5,
+    "diameter": 21.2,
+    "show": 1
   },
   {
     "id": 171613,
@@ -275,7 +317,7 @@
   {
     "id": 161448,
     "name": "Proximity Mine",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 1,
     "glide": 2,
     "turn": -1,
@@ -338,7 +380,7 @@
   {
     "id": 95845,
     "name": "Super Dillo",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 1,
     "glide": 4,
     "turn": -3,
@@ -359,7 +401,7 @@
   {
     "id": 87969,
     "name": "Upshot",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 1,
     "glide": 3,
     "turn": -2,
@@ -401,7 +443,7 @@
   {
     "id": 27435,
     "name": "Agent",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -506,7 +548,7 @@
   {
     "id": 104821,
     "name": "Bagger",
-    "manufacturer": "Pie Pan Discs",
+    "manufacturer": "Pie Pans",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -611,7 +653,7 @@
   {
     "id": 86039,
     "name": "Bleak",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 2,
     "glide": 4,
     "turn": -1,
@@ -653,7 +695,7 @@
   {
     "id": 85946,
     "name": "Bluebonnet",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -695,7 +737,7 @@
   {
     "id": 847,
     "name": "Bullet",
-    "manufacturer": "Mint Discs",
+    "manufacturer": "Mints",
     "speed": 2,
     "glide": 4,
     "turn": 0,
@@ -716,7 +758,7 @@
   {
     "id": 51235,
     "name": "Butter",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -863,7 +905,7 @@
   {
     "id": 638,
     "name": "Clozer",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -884,7 +926,7 @@
   {
     "id": 639,
     "name": "Clutch",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -926,7 +968,7 @@
   {
     "id": 88075,
     "name": "Cumulus",
-    "manufacturer": "Guru Disc Golf",
+    "manufacturer": "Guru Golf",
     "speed": 2,
     "glide": 3,
     "turn": -1,
@@ -968,7 +1010,7 @@
   {
     "id": 142309,
     "name": "Depth Charge",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 2,
     "glide": 2,
     "turn": 0,
@@ -989,7 +1031,7 @@
   {
     "id": 16101,
     "name": "EMac Judge",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 2,
     "glide": 4,
     "turn": 0,
@@ -1052,7 +1094,7 @@
   {
     "id": 88077,
     "name": "Flow Motion",
-    "manufacturer": "Guru Disc Golf",
+    "manufacturer": "Guru Golf",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -1094,7 +1136,7 @@
   {
     "id": 118919,
     "name": "Fudge",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -1115,7 +1157,7 @@
   {
     "id": 161438,
     "name": "Gain",
-    "manufacturer": "Momentum Discs",
+    "manufacturer": "Momentums",
     "speed": 2,
     "glide": 5,
     "turn": -3,
@@ -1157,7 +1199,7 @@
   {
     "id": 161451,
     "name": "Gloom",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 2,
     "glide": 3,
     "turn": -1,
@@ -1178,7 +1220,7 @@
   {
     "id": 147230,
     "name": "Gnome",
-    "manufacturer": "Sacred Discs",
+    "manufacturer": "Sacreds",
     "speed": 2,
     "glide": 2,
     "turn": 0,
@@ -1220,7 +1262,7 @@
   {
     "id": 146,
     "name": "Guard",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 2,
     "glide": 5,
     "turn": 0,
@@ -1346,7 +1388,7 @@
   {
     "id": 17253,
     "name": "Hummingbird",
-    "manufacturer": "Wild Discs",
+    "manufacturer": "Wilds",
     "speed": 2,
     "glide": 4,
     "turn": 0,
@@ -1367,7 +1409,7 @@
   {
     "id": 640,
     "name": "Hunter",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 2,
     "glide": 4,
     "turn": 0,
@@ -1388,7 +1430,7 @@
   {
     "id": 21461,
     "name": "Huntsman",
-    "manufacturer": "Fourth Circle Discs",
+    "manufacturer": "Fourth Circles",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -1430,7 +1472,7 @@
   {
     "id": 11060,
     "name": "Iridium",
-    "manufacturer": "Element Discs",
+    "manufacturer": "Elements",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -1472,7 +1514,7 @@
   {
     "id": 147,
     "name": "Judge",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 2,
     "glide": 4,
     "turn": 0,
@@ -1493,7 +1535,7 @@
   {
     "id": 174223,
     "name": "Jury",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 2,
     "glide": 4,
     "turn": 0,
@@ -1556,7 +1598,7 @@
   {
     "id": 742,
     "name": "Knife",
-    "manufacturer": "Viking Discs",
+    "manufacturer": "Vikings",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -1577,7 +1619,7 @@
   {
     "id": 86397,
     "name": "Land Mine",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 2,
     "glide": 2,
     "turn": 0,
@@ -1640,7 +1682,7 @@
   {
     "id": 165228,
     "name": "Love",
-    "manufacturer": "Jester Disc Golf",
+    "manufacturer": "Jester Golf",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -1724,7 +1766,7 @@
   {
     "id": 11078,
     "name": "Magneton",
-    "manufacturer": "Galaxy Disc Golf",
+    "manufacturer": "Galaxy Golf",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -1787,7 +1829,7 @@
   {
     "id": 157743,
     "name": "Mercury",
-    "manufacturer": "ITC Discs",
+    "manufacturer": "ITCs",
     "speed": 2,
     "glide": 3,
     "turn": -1,
@@ -1850,7 +1892,7 @@
   {
     "id": 161458,
     "name": "Mimic",
-    "manufacturer": "Kraken Discs",
+    "manufacturer": "Krakens",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -1871,7 +1913,7 @@
   {
     "id": 11083,
     "name": "Mjolner",
-    "manufacturer": "Guru Disc Golf",
+    "manufacturer": "Guru Golf",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -1913,7 +1955,7 @@
   {
     "id": 202,
     "name": "Myth",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -1934,7 +1976,7 @@
   {
     "id": 87583,
     "name": "No2 Upshot",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 2,
     "glide": 4,
     "turn": -1,
@@ -2207,7 +2249,7 @@
   {
     "id": 120441,
     "name": "Pace",
-    "manufacturer": "Finish Line Discs",
+    "manufacturer": "Finish Lines",
     "speed": 2,
     "glide": 4,
     "turn": 0,
@@ -2354,7 +2396,7 @@
   {
     "id": 669,
     "name": "Profit",
-    "manufacturer": "Mint Discs",
+    "manufacturer": "Mints",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -2375,7 +2417,7 @@
   {
     "id": 641,
     "name": "Prowler",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 2,
     "glide": 2,
     "turn": 0,
@@ -2417,7 +2459,7 @@
   {
     "id": 724,
     "name": "Radar",
-    "manufacturer": "Storm Disc Golf",
+    "manufacturer": "Storm Golf",
     "speed": 2,
     "glide": 5,
     "turn": 0,
@@ -2585,7 +2627,7 @@
   {
     "id": 161449,
     "name": "Rot",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 2,
     "glide": 4,
     "turn": 0,
@@ -2606,7 +2648,7 @@
   {
     "id": 87767,
     "name": "Rubber Putter",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 2,
     "glide": 3,
     "turn": -1,
@@ -2627,7 +2669,7 @@
   {
     "id": 743,
     "name": "Rune",
-    "manufacturer": "Viking Discs",
+    "manufacturer": "Vikings",
     "speed": 2,
     "glide": 4,
     "turn": 0,
@@ -2669,7 +2711,7 @@
   {
     "id": 11093,
     "name": "Scale",
-    "manufacturer": "Reptilian Disc Golf",
+    "manufacturer": "Reptilian Golf",
     "speed": 2,
     "glide": 1,
     "turn": 0,
@@ -2690,7 +2732,7 @@
   {
     "id": 204,
     "name": "Scarab",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 2,
     "glide": 4,
     "turn": 0,
@@ -2711,7 +2753,7 @@
   {
     "id": 33698,
     "name": "Sea Otter",
-    "manufacturer": "Wild Discs",
+    "manufacturer": "Wilds",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -2732,7 +2774,7 @@
   {
     "id": 11094,
     "name": "Serpent",
-    "manufacturer": "Reptilian Disc Golf",
+    "manufacturer": "Reptilian Golf",
     "speed": 2,
     "glide": 2,
     "turn": 0,
@@ -2795,7 +2837,7 @@
   {
     "id": 46966,
     "name": "Slim",
-    "manufacturer": "Momentum Discs",
+    "manufacturer": "Momentums",
     "speed": 2,
     "glide": 4,
     "turn": -3,
@@ -2816,7 +2858,7 @@
   {
     "id": 58775,
     "name": "Snoopy",
-    "manufacturer": "Alfa Discs",
+    "manufacturer": "Alfas",
     "speed": 2,
     "glide": 4,
     "turn": 0,
@@ -2984,7 +3026,7 @@
   {
     "id": 92501,
     "name": "Supreme Judge",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 2,
     "glide": 4,
     "turn": 0,
@@ -3005,7 +3047,7 @@
   {
     "id": 63953,
     "name": "Takapu",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -3131,7 +3173,7 @@
   {
     "id": 170326,
     "name": "Tundra",
-    "manufacturer": "Meridian Discs",
+    "manufacturer": "Meridians",
     "speed": 2,
     "glide": 4,
     "turn": 0,
@@ -3152,7 +3194,7 @@
   {
     "id": 151674,
     "name": "UFO",
-    "manufacturer": "Mint Discs",
+    "manufacturer": "Mints",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -3215,7 +3257,7 @@
   {
     "id": 88010,
     "name": "War Dove",
-    "manufacturer": "Premier Discs",
+    "manufacturer": "Premiers",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -3236,7 +3278,7 @@
   {
     "id": 88012,
     "name": "War Pigeon",
-    "manufacturer": "Premier Discs",
+    "manufacturer": "Premiers",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -3257,7 +3299,7 @@
   {
     "id": 150,
     "name": "Warden",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 2,
     "glide": 4,
     "turn": 0,
@@ -3509,7 +3551,7 @@
   {
     "id": 172916,
     "name": "Zoom",
-    "manufacturer": "Northstar Discs",
+    "manufacturer": "Northstars",
     "speed": 2,
     "glide": 3,
     "turn": 0,
@@ -3656,7 +3698,7 @@
   {
     "id": 5711,
     "name": "Alpaca",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 3,
     "glide": 3,
     "turn": 0,
@@ -3803,7 +3845,7 @@
   {
     "id": 118668,
     "name": "Benny",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 3,
     "glide": 4,
     "turn": 0,
@@ -3866,7 +3908,7 @@
   {
     "id": 55044,
     "name": "Bull Snake",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 3,
     "glide": 2,
     "turn": 0,
@@ -3908,7 +3950,7 @@
   {
     "id": 156525,
     "name": "Candy",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 3,
     "glide": 3,
     "turn": -1,
@@ -3929,7 +3971,7 @@
   {
     "id": 156523,
     "name": "Cash",
-    "manufacturer": "Hooligan Discs",
+    "manufacturer": "Hooligans",
     "speed": 3,
     "glide": 3,
     "turn": 0,
@@ -3950,7 +3992,7 @@
   {
     "id": 102560,
     "name": "Chainsaw",
-    "manufacturer": "Black Zombie Disc Golf",
+    "manufacturer": "Black Zombie Golf",
     "speed": 3,
     "glide": 5,
     "turn": 0,
@@ -4076,7 +4118,7 @@
   {
     "id": 95843,
     "name": "Copperhead",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 3,
     "glide": 4,
     "turn": 0,
@@ -4097,7 +4139,7 @@
   {
     "id": 723,
     "name": "Crater",
-    "manufacturer": "Storm Disc Golf",
+    "manufacturer": "Storm Golf",
     "speed": 3,
     "glide": 2,
     "turn": 0,
@@ -4181,7 +4223,7 @@
   {
     "id": 144,
     "name": "Deputy",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 3,
     "glide": 4,
     "turn": -1.5,
@@ -4244,7 +4286,7 @@
   {
     "id": 125821,
     "name": "Eldritch",
-    "manufacturer": "Remix Disc Golf",
+    "manufacturer": "Remix Golf",
     "speed": 3,
     "glide": 3,
     "turn": 0,
@@ -4307,7 +4349,7 @@
   {
     "id": 47016,
     "name": "Fragment",
-    "manufacturer": "Obsidian Discs",
+    "manufacturer": "Obsidians",
     "speed": 3,
     "glide": 4,
     "turn": 0,
@@ -4328,7 +4370,7 @@
   {
     "id": 145,
     "name": "Gavel",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 3,
     "glide": 5,
     "turn": -2,
@@ -4349,7 +4391,7 @@
   {
     "id": 86270,
     "name": "Genesis",
-    "manufacturer": "Goliath Discs",
+    "manufacturer": "Goliaths",
     "speed": 3,
     "glide": 3,
     "turn": -1.5,
@@ -4454,7 +4496,7 @@
   {
     "id": 27793,
     "name": "Jack Rabbit",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 3,
     "glide": 3,
     "turn": 0,
@@ -4538,7 +4580,7 @@
   {
     "id": 22063,
     "name": "Koi",
-    "manufacturer": "Elevation Disc Golf",
+    "manufacturer": "Elevation Golf",
     "speed": 3,
     "glide": 4,
     "turn": -1,
@@ -4580,7 +4622,7 @@
   {
     "id": 11072,
     "name": "Lander",
-    "manufacturer": "Launch Disc Golf",
+    "manufacturer": "Launch Golf",
     "speed": 3,
     "glide": 4,
     "turn": -0.5,
@@ -4601,7 +4643,7 @@
   {
     "id": 158969,
     "name": "Lasso",
-    "manufacturer": "Mint Discs",
+    "manufacturer": "Mints",
     "speed": 3,
     "glide": 3,
     "turn": 0,
@@ -4622,7 +4664,7 @@
   {
     "id": 88074,
     "name": "Lockdown",
-    "manufacturer": "Guru Disc Golf",
+    "manufacturer": "Guru Golf",
     "speed": 3,
     "glide": 3,
     "turn": 0,
@@ -4685,7 +4727,7 @@
   {
     "id": 88078,
     "name": "Mad Mission",
-    "manufacturer": "Guru Disc Golf",
+    "manufacturer": "Guru Golf",
     "speed": 3,
     "glide": 3,
     "turn": 0,
@@ -4769,7 +4811,7 @@
   {
     "id": 148,
     "name": "Marshal",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 3,
     "glide": 4,
     "turn": 0,
@@ -4832,7 +4874,7 @@
   {
     "id": 17398,
     "name": "Narwhal",
-    "manufacturer": "Divergent Discs",
+    "manufacturer": "Divergents",
     "speed": 3,
     "glide": 5,
     "turn": 0,
@@ -4853,7 +4895,7 @@
   {
     "id": 166496,
     "name": "Neon",
-    "manufacturer": "Loft Discs",
+    "manufacturer": "Lofts",
     "speed": 3,
     "glide": 1,
     "turn": 0,
@@ -4874,7 +4916,7 @@
   {
     "id": 23366,
     "name": "Nuno",
-    "manufacturer": "Divergent Discs",
+    "manufacturer": "Divergents",
     "speed": 3,
     "glide": 4,
     "turn": -1,
@@ -5168,7 +5210,7 @@
   {
     "id": 46282,
     "name": "Peace Frog",
-    "manufacturer": "AquaFlight Discs",
+    "manufacturer": "AquaFlights",
     "speed": 3,
     "glide": 3,
     "turn": 0,
@@ -5189,7 +5231,7 @@
   {
     "id": 17453,
     "name": "Penny Putter",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 3,
     "glide": 3,
     "turn": 0,
@@ -5252,7 +5294,7 @@
   {
     "id": 161445,
     "name": "Pillar",
-    "manufacturer": "Goliath Discs",
+    "manufacturer": "Goliaths",
     "speed": 3,
     "glide": 2,
     "turn": 0,
@@ -5273,7 +5315,7 @@
   {
     "id": 11087,
     "name": "Plutonium",
-    "manufacturer": "Element Discs",
+    "manufacturer": "Elements",
     "speed": 3,
     "glide": 3,
     "turn": 0,
@@ -5315,7 +5357,7 @@
   {
     "id": 28017,
     "name": "Popcorn",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 3,
     "glide": 3,
     "turn": 0,
@@ -5420,7 +5462,7 @@
   {
     "id": 124015,
     "name": "Raze",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 3,
     "glide": 2,
     "turn": 0,
@@ -5504,7 +5546,7 @@
   {
     "id": 203,
     "name": "Ruin",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 3,
     "glide": 3,
     "turn": 0,
@@ -5525,7 +5567,7 @@
   {
     "id": 704,
     "name": "Ruru",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 3,
     "glide": 3,
     "turn": 0,
@@ -5630,7 +5672,7 @@
   {
     "id": 86736,
     "name": "ShoreBreak",
-    "manufacturer": "3C Discs",
+    "manufacturer": "3Cs",
     "speed": 3,
     "glide": 3,
     "turn": 0,
@@ -5672,7 +5714,7 @@
   {
     "id": 149,
     "name": "Slammer",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 3,
     "glide": 2,
     "turn": 0,
@@ -5693,7 +5735,7 @@
   {
     "id": 28150,
     "name": "Sockibomb Slammer",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 3,
     "glide": 2,
     "turn": 0,
@@ -5735,7 +5777,7 @@
   {
     "id": 47017,
     "name": "Splinter",
-    "manufacturer": "Obsidian Discs",
+    "manufacturer": "Obsidians",
     "speed": 3,
     "glide": 2,
     "turn": 0,
@@ -5777,7 +5819,7 @@
   {
     "id": 11099,
     "name": "Stego",
-    "manufacturer": "Reptilian Disc Golf",
+    "manufacturer": "Reptilian Golf",
     "speed": 3,
     "glide": 1,
     "turn": 1,
@@ -5861,7 +5903,7 @@
   {
     "id": 703,
     "name": "TeMoko",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 3,
     "glide": 4,
     "turn": 0,
@@ -5882,7 +5924,7 @@
   {
     "id": 205,
     "name": "Tomb",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 3,
     "glide": 4,
     "turn": 0,
@@ -5903,7 +5945,7 @@
   {
     "id": 705,
     "name": "Tui",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 3,
     "glide": 4,
     "turn": -1,
@@ -5945,7 +5987,7 @@
   {
     "id": 102555,
     "name": "War Hammer",
-    "manufacturer": "Black Zombie Disc Golf",
+    "manufacturer": "Black Zombie Golf",
     "speed": 3,
     "glide": 4,
     "turn": 0,
@@ -6008,7 +6050,7 @@
   {
     "id": 171615,
     "name": "Wren",
-    "manufacturer": "Stokely Discs",
+    "manufacturer": "Stokelys",
     "speed": 3,
     "glide": 3.5,
     "turn": -0.5,
@@ -6113,7 +6155,7 @@
   {
     "id": 47155,
     "name": "Zeal",
-    "manufacturer": "Uplay Disc Golf",
+    "manufacturer": "Uplay Golf",
     "speed": 3,
     "glide": 4,
     "turn": -2,
@@ -6134,7 +6176,7 @@
   {
     "id": 201,
     "name": "Cohort",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 3.5,
     "glide": 4,
     "turn": 0,
@@ -6302,7 +6344,7 @@
   {
     "id": 22872,
     "name": "Alpas",
-    "manufacturer": "Divergent Discs",
+    "manufacturer": "Divergents",
     "speed": 4,
     "glide": 4,
     "turn": -2,
@@ -6323,7 +6365,7 @@
   {
     "id": 33010,
     "name": "Angler",
-    "manufacturer": "Wild Discs",
+    "manufacturer": "Wilds",
     "speed": 4,
     "glide": 3,
     "turn": 0,
@@ -6365,7 +6407,7 @@
   {
     "id": 161452,
     "name": "Area 51",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 4,
     "glide": 3,
     "turn": 0,
@@ -6386,7 +6428,7 @@
   {
     "id": 146895,
     "name": "Arrowhead",
-    "manufacturer": "Sacred Discs",
+    "manufacturer": "Sacreds",
     "speed": 4,
     "glide": 3,
     "turn": 0,
@@ -6407,7 +6449,7 @@
   {
     "id": 137372,
     "name": "Artemis",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 4,
     "glide": 4,
     "turn": 0,
@@ -6449,7 +6491,7 @@
   {
     "id": 739,
     "name": "Axe",
-    "manufacturer": "Viking Discs",
+    "manufacturer": "Vikings",
     "speed": 4,
     "glide": 3,
     "turn": 0,
@@ -6512,7 +6554,7 @@
   {
     "id": 5776,
     "name": "Bounty",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 4,
     "glide": 5,
     "turn": -1.5,
@@ -6659,7 +6701,7 @@
   {
     "id": 161450,
     "name": "Crisis",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 4,
     "glide": 2,
     "turn": 0,
@@ -6701,7 +6743,7 @@
   {
     "id": 27589,
     "name": "Culprit",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 4,
     "glide": 3,
     "turn": 0,
@@ -6827,7 +6869,7 @@
   {
     "id": 634,
     "name": "Ghost",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 4,
     "glide": 5,
     "turn": 0,
@@ -6848,7 +6890,7 @@
   {
     "id": 23151,
     "name": "Golem",
-    "manufacturer": "Divergent Discs",
+    "manufacturer": "Divergents",
     "speed": 4,
     "glide": 2,
     "turn": 0,
@@ -6932,7 +6974,7 @@
   {
     "id": 17242,
     "name": "Harpoon",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 4,
     "glide": 3,
     "turn": 0,
@@ -6953,7 +6995,7 @@
   {
     "id": 87362,
     "name": "Havu",
-    "manufacturer": "Exel Discs",
+    "manufacturer": "Exels",
     "speed": 4,
     "glide": 4,
     "turn": 0,
@@ -7037,7 +7079,7 @@
   {
     "id": 149698,
     "name": "Horny Toad",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 4,
     "glide": 3,
     "turn": 0,
@@ -7079,7 +7121,7 @@
   {
     "id": 701,
     "name": "Kea",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 4,
     "glide": 3,
     "turn": 0,
@@ -7121,7 +7163,7 @@
   {
     "id": 21508,
     "name": "Kon Tiki",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 4,
     "glide": 5,
     "turn": -3,
@@ -7142,7 +7184,7 @@
   {
     "id": 740,
     "name": "Loki",
-    "manufacturer": "Viking Discs",
+    "manufacturer": "Vikings",
     "speed": 4,
     "glide": 2,
     "turn": 0,
@@ -7289,7 +7331,7 @@
   {
     "id": 27913,
     "name": "Mint",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 4,
     "glide": 3,
     "turn": 0,
@@ -7331,7 +7373,7 @@
   {
     "id": 87586,
     "name": "No3 Hookshot",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 4,
     "glide": 5,
     "turn": -1,
@@ -7352,7 +7394,7 @@
   {
     "id": 87587,
     "name": "No3 Hyzer",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 4,
     "glide": 4,
     "turn": 0,
@@ -7373,7 +7415,7 @@
   {
     "id": 741,
     "name": "Nordic Warrior",
-    "manufacturer": "Viking Discs",
+    "manufacturer": "Vikings",
     "speed": 4,
     "glide": 4,
     "turn": 0,
@@ -7436,7 +7478,7 @@
   {
     "id": 86580,
     "name": "Peach",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 4,
     "glide": 5,
     "turn": -2,
@@ -7478,7 +7520,7 @@
   {
     "id": 127902,
     "name": "Peppermint",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 4,
     "glide": 2,
     "turn": 0,
@@ -7688,7 +7730,7 @@
   {
     "id": 142942,
     "name": "Scope",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 4,
     "glide": 4,
     "turn": 0,
@@ -7814,7 +7856,7 @@
   {
     "id": 172915,
     "name": "Spy",
-    "manufacturer": "Northstar Discs",
+    "manufacturer": "Northstars",
     "speed": 4,
     "glide": 3,
     "turn": 0,
@@ -7877,7 +7919,7 @@
   {
     "id": 140,
     "name": "Suspect",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 4,
     "glide": 3,
     "turn": 0,
@@ -8087,7 +8129,7 @@
   {
     "id": 11107,
     "name": "Thor",
-    "manufacturer": "Guru Disc Golf",
+    "manufacturer": "Guru Golf",
     "speed": 4,
     "glide": 4,
     "turn": 0,
@@ -8129,7 +8171,7 @@
   {
     "id": 11110,
     "name": "Uranium",
-    "manufacturer": "Element Discs",
+    "manufacturer": "Elements",
     "speed": 4,
     "glide": 2,
     "turn": 0,
@@ -8381,7 +8423,7 @@
   {
     "id": 16942,
     "name": "Addax",
-    "manufacturer": "Wild Discs",
+    "manufacturer": "Wilds",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -8402,7 +8444,7 @@
   {
     "id": 108235,
     "name": "Addax V2",
-    "manufacturer": "Wild Discs",
+    "manufacturer": "Wilds",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -8486,7 +8528,7 @@
   {
     "id": 197,
     "name": "Anubis",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -8507,7 +8549,7 @@
   {
     "id": 22886,
     "name": "Apollo",
-    "manufacturer": "Alfa Discs",
+    "manufacturer": "Alfas",
     "speed": 5,
     "glide": 5,
     "turn": -1,
@@ -8570,7 +8612,7 @@
   {
     "id": 8821,
     "name": "Arcturus",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 5,
     "glide": 6,
     "turn": -1,
@@ -8654,7 +8696,7 @@
   {
     "id": 22915,
     "name": "Badger",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 5,
     "glide": 3,
     "turn": 0,
@@ -8717,7 +8759,7 @@
   {
     "id": 125631,
     "name": "Battleship",
-    "manufacturer": "Remix Disc Golf",
+    "manufacturer": "Remix Golf",
     "speed": 5,
     "glide": 4.5,
     "turn": 0,
@@ -8738,7 +8780,7 @@
   {
     "id": 22927,
     "name": "BB6",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 5,
     "glide": 5,
     "turn": -2,
@@ -8759,7 +8801,7 @@
   {
     "id": 160203,
     "name": "BearKat",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 5,
     "glide": 5,
     "turn": -2,
@@ -8801,7 +8843,7 @@
   {
     "id": 27503,
     "name": "Berry",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 5,
     "glide": 5,
     "turn": -1,
@@ -8822,7 +8864,7 @@
   {
     "id": 668,
     "name": "Bobcat",
-    "manufacturer": "Mint Discs",
+    "manufacturer": "Mints",
     "speed": 5,
     "glide": 4,
     "turn": 0,
@@ -8927,7 +8969,7 @@
   {
     "id": 171616,
     "name": "Cardinal",
-    "manufacturer": "Stokely Discs",
+    "manufacturer": "Stokelys",
     "speed": 5,
     "glide": 4,
     "turn": 0,
@@ -8948,7 +8990,7 @@
   {
     "id": 198,
     "name": "Chariot",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -8969,7 +9011,7 @@
   {
     "id": 160202,
     "name": "Cherry",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 5,
     "glide": 5,
     "turn": -2,
@@ -9053,7 +9095,7 @@
   {
     "id": 88073,
     "name": "Conquest",
-    "manufacturer": "Guru Disc Golf",
+    "manufacturer": "Guru Golf",
     "speed": 5,
     "glide": 4,
     "turn": -2,
@@ -9074,7 +9116,7 @@
   {
     "id": 157744,
     "name": "Creature",
-    "manufacturer": "Remix Disc Golf",
+    "manufacturer": "Remix Golf",
     "speed": 5,
     "glide": 5,
     "turn": -3,
@@ -9116,7 +9158,7 @@
   {
     "id": 752,
     "name": "Crossbow",
-    "manufacturer": "Black Zombie Disc Golf",
+    "manufacturer": "Black Zombie Golf",
     "speed": 5,
     "glide": 5,
     "turn": -1,
@@ -9158,7 +9200,7 @@
   {
     "id": 142311,
     "name": "Desolation",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -9179,7 +9221,7 @@
   {
     "id": 86166,
     "name": "Despair",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 5,
     "glide": 4,
     "turn": -1,
@@ -9221,7 +9263,7 @@
   {
     "id": 11053,
     "name": "Dingo",
-    "manufacturer": "Fourth Circle Discs",
+    "manufacturer": "Fourth Circles",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -9242,7 +9284,7 @@
   {
     "id": 46281,
     "name": "Dragonfly",
-    "manufacturer": "AquaFlight Discs",
+    "manufacturer": "AquaFlights",
     "speed": 5,
     "glide": 4,
     "turn": -3,
@@ -9368,7 +9410,7 @@
   {
     "id": 134,
     "name": "EMac Truth",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -9389,7 +9431,7 @@
   {
     "id": 135,
     "name": "Evidence",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 5,
     "glide": 5,
     "turn": -1,
@@ -9410,7 +9452,7 @@
   {
     "id": 722,
     "name": "Eye",
-    "manufacturer": "Storm Disc Golf",
+    "manufacturer": "Storm Golf",
     "speed": 5,
     "glide": 5,
     "turn": -1,
@@ -9431,7 +9473,7 @@
   {
     "id": 142395,
     "name": "Flat Earth",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 5,
     "glide": 5,
     "turn": -1,
@@ -9452,7 +9494,7 @@
   {
     "id": 93616,
     "name": "Flip",
-    "manufacturer": "Hooligan Discs",
+    "manufacturer": "Hooligans",
     "speed": 5,
     "glide": 6,
     "turn": -4,
@@ -9494,7 +9536,7 @@
   {
     "id": 86249,
     "name": "Frag",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 5,
     "glide": 2,
     "turn": 0,
@@ -9515,7 +9557,7 @@
   {
     "id": 136,
     "name": "Fugitive",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 5,
     "glide": 5,
     "turn": -0.5,
@@ -9599,7 +9641,7 @@
   {
     "id": 633,
     "name": "Gauge",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -9620,7 +9662,7 @@
   {
     "id": 11057,
     "name": "Gila",
-    "manufacturer": "Reptilian Disc Golf",
+    "manufacturer": "Reptilian Golf",
     "speed": 5,
     "glide": 4,
     "turn": 0,
@@ -9641,7 +9683,7 @@
   {
     "id": 171614,
     "name": "Gladius",
-    "manufacturer": "Remix Disc Golf",
+    "manufacturer": "Remix Golf",
     "speed": 5,
     "glide": 5,
     "turn": -0.5,
@@ -9725,7 +9767,7 @@
   {
     "id": 160201,
     "name": "Guava",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -9809,7 +9851,7 @@
   {
     "id": 174226,
     "name": "Houston",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -9851,7 +9893,7 @@
   {
     "id": 199,
     "name": "Inca",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -9872,7 +9914,7 @@
   {
     "id": 21475,
     "name": "Interceptor",
-    "manufacturer": "Elevation Disc Golf",
+    "manufacturer": "Elevation Golf",
     "speed": 5,
     "glide": 4,
     "turn": 0,
@@ -9914,7 +9956,7 @@
   {
     "id": 46624,
     "name": "Jireh",
-    "manufacturer": "Goliath Discs",
+    "manufacturer": "Goliaths",
     "speed": 5,
     "glide": 5,
     "turn": -1,
@@ -9935,7 +9977,7 @@
   {
     "id": 137,
     "name": "Justice",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 5,
     "glide": 1,
     "turn": 0.5,
@@ -9956,7 +9998,7 @@
   {
     "id": 87420,
     "name": "Kanto",
-    "manufacturer": "Exel Discs",
+    "manufacturer": "Exels",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -9977,7 +10019,7 @@
   {
     "id": 23231,
     "name": "Kapre",
-    "manufacturer": "Divergent Discs",
+    "manufacturer": "Divergents",
     "speed": 5,
     "glide": 5,
     "turn": -1,
@@ -10019,7 +10061,7 @@
   {
     "id": 167770,
     "name": "Khonsu",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 5,
     "glide": 5,
     "turn": -3,
@@ -10061,7 +10103,7 @@
   {
     "id": 22490,
     "name": "Kotuku",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -10124,7 +10166,7 @@
   {
     "id": 47014,
     "name": "Lava",
-    "manufacturer": "Obsidian Discs",
+    "manufacturer": "Obsidians",
     "speed": 5,
     "glide": 5,
     "turn": -1.5,
@@ -10145,7 +10187,7 @@
   {
     "id": 17308,
     "name": "Leviathan",
-    "manufacturer": "Divergent Discs",
+    "manufacturer": "Divergents",
     "speed": 5,
     "glide": 4,
     "turn": -3,
@@ -10187,7 +10229,7 @@
   {
     "id": 11076,
     "name": "Lithium",
-    "manufacturer": "Element Discs",
+    "manufacturer": "Elements",
     "speed": 5,
     "glide": 4,
     "turn": -2,
@@ -10208,7 +10250,7 @@
   {
     "id": 57017,
     "name": "Lobster",
-    "manufacturer": "Mint Discs",
+    "manufacturer": "Mints",
     "speed": 5,
     "glide": 5,
     "turn": -3,
@@ -10229,7 +10271,7 @@
   {
     "id": 95844,
     "name": "Lone Wolf",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 5,
     "glide": 5,
     "turn": -3,
@@ -10397,7 +10439,7 @@
   {
     "id": 47015,
     "name": "Magma",
-    "manufacturer": "Obsidian Discs",
+    "manufacturer": "Obsidians",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -10502,7 +10544,7 @@
   {
     "id": 27880,
     "name": "Mango",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 5,
     "glide": 4,
     "turn": 0,
@@ -10710,6 +10752,48 @@
     "show": 1
   },
   {
+    "id": 149255,
+    "name": "Time Lapse",
+    "manufacturer": "Axiom",
+    "speed": 12,
+    "glide": 5,
+    "turn": -1,
+    "fade": 3,
+    "primary_use": "Distance Driver",
+    "stability": "2",
+    "bead": "Beadless",
+    "border": "#8e1313",
+    "rim_diameter_ratio": 5.7,
+    "rim_configuration": 26.25,
+    "height": 1.7,
+    "rim_depth": 1.2,
+    "rim_thickness": 2.3,
+    "inside_rim_diameter": 16.5,
+    "diameter": 21.2,
+    "show": 1
+  },
+  {
+    "id": 149253,
+    "name": "Time Lapse",
+    "manufacturer": "MVP",
+    "speed": 12,
+    "glide": 5,
+    "turn": -1,
+    "fade": 3,
+    "primary_use": "Distance Driver",
+    "stability": "2",
+    "bead": "Beadless",
+    "border": "#8e1313",
+    "rim_diameter_ratio": 5.7,
+    "rim_configuration": 26.25,
+    "height": 1.7,
+    "rim_depth": 1.2,
+    "rim_thickness": 2.3,
+    "inside_rim_diameter": 16.5,
+    "diameter": 21.2,
+    "show": 1
+  },
+  {
     "id": 27908,
     "name": "Mid Disc3",
     "manufacturer": "Innova",
@@ -10754,7 +10838,7 @@
   {
     "id": 17378,
     "name": "Middy",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -10796,7 +10880,7 @@
   {
     "id": 1203,
     "name": "Mustang",
-    "manufacturer": "Mint Discs",
+    "manufacturer": "Mints",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -10964,7 +11048,7 @@
   {
     "id": 87578,
     "name": "No2 Hookshot",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 5,
     "glide": 5,
     "turn": -1,
@@ -10985,7 +11069,7 @@
   {
     "id": 87579,
     "name": "No2 Hyzer",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 5,
     "glide": 5,
     "turn": 1,
@@ -11048,7 +11132,7 @@
   {
     "id": 11085,
     "name": "Orbit",
-    "manufacturer": "Galaxy Disc Golf",
+    "manufacturer": "Galaxy Golf",
     "speed": 5,
     "glide": 4,
     "turn": 0,
@@ -11153,7 +11237,7 @@
   {
     "id": 138,
     "name": "Patrol",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 5,
     "glide": 5,
     "turn": -3,
@@ -11174,7 +11258,7 @@
   {
     "id": 165227,
     "name": "Peace Train",
-    "manufacturer": "Jester Disc Golf",
+    "manufacturer": "Jester Golf",
     "speed": 5,
     "glide": 4,
     "turn": -2,
@@ -11195,7 +11279,7 @@
   {
     "id": 161434,
     "name": "Petra",
-    "manufacturer": "Yeet Street Discs",
+    "manufacturer": "Yeet Streets",
     "speed": 5,
     "glide": 5,
     "turn": -1,
@@ -11237,7 +11321,7 @@
   {
     "id": 702,
     "name": "Piwakawaka",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 5,
     "glide": 6,
     "turn": -1,
@@ -11258,7 +11342,7 @@
   {
     "id": 139,
     "name": "Proof",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 5,
     "glide": 6,
     "turn": -3,
@@ -11300,7 +11384,7 @@
   {
     "id": 150464,
     "name": "Pursue",
-    "manufacturer": "Wing It Disc Golf",
+    "manufacturer": "Wing It Golf",
     "speed": 5,
     "glide": 4,
     "turn": 0,
@@ -11321,7 +11405,7 @@
   {
     "id": 635,
     "name": "Pursuit",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 5,
     "glide": 3,
     "turn": 0,
@@ -11384,7 +11468,7 @@
   {
     "id": 200,
     "name": "Ra",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 5,
     "glide": 4,
     "turn": 0,
@@ -11426,7 +11510,7 @@
   {
     "id": 636,
     "name": "Recluse",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 5,
     "glide": 3,
     "turn": 0,
@@ -11447,7 +11531,7 @@
   {
     "id": 161444,
     "name": "Redemption",
-    "manufacturer": "Goliath Discs",
+    "manufacturer": "Goliaths",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -11552,7 +11636,7 @@
   {
     "id": 156524,
     "name": "Rope",
-    "manufacturer": "Hooligan Discs",
+    "manufacturer": "Hooligans",
     "speed": 5,
     "glide": 6,
     "turn": -1,
@@ -11594,7 +11678,7 @@
   {
     "id": 161453,
     "name": "Scavenger",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 5,
     "glide": 5,
     "turn": -2,
@@ -11678,7 +11762,7 @@
   {
     "id": 102556,
     "name": "Shotgun",
-    "manufacturer": "Black Zombie Disc Golf",
+    "manufacturer": "Black Zombie Golf",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -11699,7 +11783,7 @@
   {
     "id": 88079,
     "name": "Silent Cruiser",
-    "manufacturer": "Guru Disc Golf",
+    "manufacturer": "Guru Golf",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -11720,7 +11804,7 @@
   {
     "id": 86741,
     "name": "Silicon",
-    "manufacturer": "Loft Discs",
+    "manufacturer": "Lofts",
     "speed": 5,
     "glide": 4,
     "turn": 0,
@@ -11888,7 +11972,7 @@
   {
     "id": 170327,
     "name": "Strait",
-    "manufacturer": "Meridian Discs",
+    "manufacturer": "Meridians",
     "speed": 5,
     "glide": 5,
     "turn": -1,
@@ -11930,7 +12014,7 @@
   {
     "id": 120694,
     "name": "Supra",
-    "manufacturer": "Finish Line Discs",
+    "manufacturer": "Finish Lines",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -11951,7 +12035,7 @@
   {
     "id": 104817,
     "name": "Supreme Fugitive",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 5,
     "glide": 3,
     "turn": 0,
@@ -12014,7 +12098,7 @@
   {
     "id": 170323,
     "name": "Taco",
-    "manufacturer": "Mint Discs",
+    "manufacturer": "Mints",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -12035,7 +12119,7 @@
   {
     "id": 55045,
     "name": "Texas Ranger",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 5,
     "glide": 5,
     "turn": -1,
@@ -12077,7 +12161,7 @@
   {
     "id": 126593,
     "name": "Torpedo",
-    "manufacturer": "Remix Disc Golf",
+    "manufacturer": "Remix Golf",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -12140,7 +12224,7 @@
   {
     "id": 141,
     "name": "Truth",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 5,
     "glide": 5,
     "turn": -1,
@@ -12224,7 +12308,7 @@
   {
     "id": 47146,
     "name": "Ursus",
-    "manufacturer": "Terminal Velocity Discs",
+    "manufacturer": "Terminal Velocitys",
     "speed": 5,
     "glide": 4,
     "turn": 0,
@@ -12245,7 +12329,7 @@
   {
     "id": 637,
     "name": "Valor",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -12308,7 +12392,7 @@
   {
     "id": 142,
     "name": "Verdict",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 5,
     "glide": 4,
     "turn": 0,
@@ -12350,7 +12434,7 @@
   {
     "id": 44308,
     "name": "Walker",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 5,
     "glide": 3,
     "turn": 0,
@@ -12371,7 +12455,7 @@
   {
     "id": 1536,
     "name": "Wall Cloud",
-    "manufacturer": "Storm Disc Golf",
+    "manufacturer": "Storm Golf",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -12392,7 +12476,7 @@
   {
     "id": 143,
     "name": "Warrant",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 5,
     "glide": 5,
     "turn": -2,
@@ -12476,7 +12560,7 @@
   {
     "id": 161456,
     "name": "Wasteland",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 5,
     "glide": 4,
     "turn": 0,
@@ -12497,7 +12581,7 @@
   {
     "id": 172917,
     "name": "Wingman",
-    "manufacturer": "Northstar Discs",
+    "manufacturer": "Northstars",
     "speed": 5,
     "glide": 5,
     "turn": 0,
@@ -12602,7 +12686,7 @@
   {
     "id": 11052,
     "name": "Code",
-    "manufacturer": "Launch Disc Golf",
+    "manufacturer": "Launch Golf",
     "speed": 5.5,
     "glide": 4,
     "turn": -0.5,
@@ -12623,7 +12707,7 @@
   {
     "id": 22012,
     "name": "Code-X",
-    "manufacturer": "Launch Disc Golf",
+    "manufacturer": "Launch Golf",
     "speed": 5.5,
     "glide": 5,
     "turn": -1,
@@ -12791,7 +12875,7 @@
   {
     "id": 88076,
     "name": "Contrail",
-    "manufacturer": "Guru Disc Golf",
+    "manufacturer": "Guru Golf",
     "speed": 6,
     "glide": 5,
     "turn": 0,
@@ -13148,7 +13232,7 @@
   {
     "id": 11082,
     "name": "Midgard",
-    "manufacturer": "Guru Disc Golf",
+    "manufacturer": "Guru Golf",
     "speed": 6,
     "glide": 5,
     "turn": -1,
@@ -13190,7 +13274,7 @@
   {
     "id": 87571,
     "name": "No1 Hookshot",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 6,
     "glide": 4,
     "turn": 0,
@@ -13211,7 +13295,7 @@
   {
     "id": 87581,
     "name": "No2 Roller",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 6,
     "glide": 6,
     "turn": -2,
@@ -13232,7 +13316,7 @@
   {
     "id": 87582,
     "name": "No2 Slice",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 6,
     "glide": 5,
     "turn": -3,
@@ -13253,7 +13337,7 @@
   {
     "id": 87584,
     "name": "No3 Driver",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 6,
     "glide": 5,
     "turn": -2,
@@ -13274,7 +13358,7 @@
   {
     "id": 87588,
     "name": "No3 Slice",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 6,
     "glide": 5,
     "turn": -3,
@@ -13295,7 +13379,7 @@
   {
     "id": 46279,
     "name": "Pelican",
-    "manufacturer": "AquaFlight Discs",
+    "manufacturer": "AquaFlights",
     "speed": 6,
     "glide": 5,
     "turn": -3,
@@ -13337,7 +13421,7 @@
   {
     "id": 11091,
     "name": "Radium",
-    "manufacturer": "Element Discs",
+    "manufacturer": "Elements",
     "speed": 6,
     "glide": 4,
     "turn": -1,
@@ -13715,7 +13799,7 @@
   {
     "id": 138862,
     "name": "Galleon",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 6.5,
     "glide": 1,
     "turn": 1,
@@ -13862,7 +13946,7 @@
   {
     "id": 737,
     "name": "Barbarian",
-    "manufacturer": "Viking Discs",
+    "manufacturer": "Vikings",
     "speed": 7,
     "glide": 5,
     "turn": 0,
@@ -13925,7 +14009,7 @@
   {
     "id": 110627,
     "name": "Brazos",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 7,
     "glide": 5,
     "turn": 0,
@@ -13946,7 +14030,7 @@
   {
     "id": 161455,
     "name": "Bunker Buster",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 7,
     "glide": 4,
     "turn": -2,
@@ -13967,7 +14051,7 @@
   {
     "id": 193,
     "name": "Centurion",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 7,
     "glide": 5,
     "turn": -1,
@@ -14009,7 +14093,7 @@
   {
     "id": 47012,
     "name": "Cinder",
-    "manufacturer": "Obsidian Discs",
+    "manufacturer": "Obsidians",
     "speed": 7,
     "glide": 5,
     "turn": 0,
@@ -14030,7 +14114,7 @@
   {
     "id": 68942,
     "name": "Cookie",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 7,
     "glide": 5,
     "turn": 0,
@@ -14051,7 +14135,7 @@
   {
     "id": 738,
     "name": "Cosmos",
-    "manufacturer": "Viking Discs",
+    "manufacturer": "Vikings",
     "speed": 7,
     "glide": 5,
     "turn": 0,
@@ -14093,7 +14177,7 @@
   {
     "id": 165226,
     "name": "Dream Weaver",
-    "manufacturer": "Jester Disc Golf",
+    "manufacturer": "Jester Golf",
     "speed": 7,
     "glide": 5,
     "turn": -1,
@@ -14177,7 +14261,7 @@
   {
     "id": 16102,
     "name": "Evader",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 7,
     "glide": 4,
     "turn": 0,
@@ -14198,7 +14282,7 @@
   {
     "id": 194,
     "name": "Exodus",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 7,
     "glide": 5,
     "turn": -0.5,
@@ -14366,7 +14450,7 @@
   {
     "id": 104813,
     "name": "Frio",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 7,
     "glide": 5,
     "turn": -1,
@@ -14387,7 +14471,7 @@
   {
     "id": 23127,
     "name": "Frontier",
-    "manufacturer": "Launch Disc Golf",
+    "manufacturer": "Launch Golf",
     "speed": 7,
     "glide": 5,
     "turn": -3,
@@ -14471,7 +14555,7 @@
   {
     "id": 76977,
     "name": "Grackle",
-    "manufacturer": "Mint Discs",
+    "manufacturer": "Mints",
     "speed": 7,
     "glide": 5,
     "turn": -1,
@@ -14492,7 +14576,7 @@
   {
     "id": 55041,
     "name": "Guadalupe",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 7,
     "glide": 6,
     "turn": -2,
@@ -14534,7 +14618,7 @@
   {
     "id": 699,
     "name": "Huia",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 7,
     "glide": 5,
     "turn": 0,
@@ -14639,7 +14723,7 @@
   {
     "id": 22064,
     "name": "Kraken",
-    "manufacturer": "Divergent Discs",
+    "manufacturer": "Divergents",
     "speed": 7,
     "glide": 5,
     "turn": -1,
@@ -14702,7 +14786,7 @@
   {
     "id": 130,
     "name": "Maverick",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 7,
     "glide": 4,
     "turn": -1.5,
@@ -14744,7 +14828,7 @@
   {
     "id": 17384,
     "name": "Mockingbird",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 7,
     "glide": 5,
     "turn": -2,
@@ -14765,7 +14849,7 @@
   {
     "id": 88080,
     "name": "Night Trooper",
-    "manufacturer": "Guru Disc Golf",
+    "manufacturer": "Guru Golf",
     "speed": 7,
     "glide": 6,
     "turn": -1,
@@ -14786,7 +14870,7 @@
   {
     "id": 87568,
     "name": "No1 Driver",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 7,
     "glide": 4,
     "turn": -2,
@@ -14807,7 +14891,7 @@
   {
     "id": 87572,
     "name": "No1 Hyzer",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 7,
     "glide": 3,
     "turn": 0,
@@ -14828,7 +14912,7 @@
   {
     "id": 87573,
     "name": "No1 Roller",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 7,
     "glide": 4,
     "turn": -1,
@@ -14849,7 +14933,7 @@
   {
     "id": 87574,
     "name": "No1 Slice",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 7,
     "glide": 4,
     "turn": -3,
@@ -14870,7 +14954,7 @@
   {
     "id": 87585,
     "name": "No3 Flyer",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 7,
     "glide": 4,
     "turn": -2,
@@ -14891,7 +14975,7 @@
   {
     "id": 87589,
     "name": "No4 Driver",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 7,
     "glide": 4,
     "turn": -1,
@@ -14933,7 +15017,7 @@
   {
     "id": 147549,
     "name": "Oracle",
-    "manufacturer": "Sacred Discs",
+    "manufacturer": "Sacreds",
     "speed": 7,
     "glide": 5,
     "turn": -2,
@@ -14954,7 +15038,7 @@
   {
     "id": 629,
     "name": "Patriot",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 7,
     "glide": 5,
     "turn": -2,
@@ -14996,7 +15080,7 @@
   {
     "id": 630,
     "name": "Phantom Warrior",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 7,
     "glide": 5,
     "turn": 0,
@@ -15017,7 +15101,7 @@
   {
     "id": 11090,
     "name": "Ptero",
-    "manufacturer": "Reptilian Disc Golf",
+    "manufacturer": "Reptilian Golf",
     "speed": 7,
     "glide": 5,
     "turn": -1,
@@ -15101,7 +15185,7 @@
   {
     "id": 632,
     "name": "Rival",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 7,
     "glide": 5,
     "turn": 0,
@@ -15185,7 +15269,7 @@
   {
     "id": 47013,
     "name": "Shard",
-    "manufacturer": "Obsidian Discs",
+    "manufacturer": "Obsidians",
     "speed": 7,
     "glide": 5,
     "turn": -1.5,
@@ -15206,7 +15290,7 @@
   {
     "id": 11095,
     "name": "Shooting Star",
-    "manufacturer": "Galaxy Disc Golf",
+    "manufacturer": "Galaxy Golf",
     "speed": 7,
     "glide": 5,
     "turn": -2,
@@ -15248,7 +15332,7 @@
   {
     "id": 51892,
     "name": "Soda",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 7,
     "glide": 5,
     "turn": -2,
@@ -15416,7 +15500,7 @@
   {
     "id": 169045,
     "name": "Titanium",
-    "manufacturer": "Loft Discs",
+    "manufacturer": "Lofts",
     "speed": 7,
     "glide": 5,
     "turn": -2,
@@ -15479,7 +15563,7 @@
   {
     "id": 11109,
     "name": "Tyrant",
-    "manufacturer": "Reptilian Disc Golf",
+    "manufacturer": "Reptilian Golf",
     "speed": 7,
     "glide": 3,
     "turn": 0,
@@ -15647,7 +15731,7 @@
   {
     "id": 104818,
     "name": "War Bear",
-    "manufacturer": "Premier Discs",
+    "manufacturer": "Premiers",
     "speed": 7,
     "glide": 5,
     "turn": -3,
@@ -15668,7 +15752,7 @@
   {
     "id": 88084,
     "name": "White Raven",
-    "manufacturer": "Guru Disc Golf",
+    "manufacturer": "Guru Golf",
     "speed": 7,
     "glide": 6,
     "turn": -3,
@@ -15752,7 +15836,7 @@
   {
     "id": 157745,
     "name": "Troll",
-    "manufacturer": "Remix Disc Golf",
+    "manufacturer": "Remix Golf",
     "speed": 7.5,
     "glide": 4.5,
     "turn": 0,
@@ -15773,7 +15857,7 @@
   {
     "id": 721,
     "name": "Abyss",
-    "manufacturer": "Storm Disc Golf",
+    "manufacturer": "Storm Golf",
     "speed": 8,
     "glide": 4,
     "turn": 0,
@@ -15794,7 +15878,7 @@
   {
     "id": 667,
     "name": "Alpha",
-    "manufacturer": "Mint Discs",
+    "manufacturer": "Mints",
     "speed": 8,
     "glide": 4,
     "turn": 0,
@@ -15962,7 +16046,7 @@
   {
     "id": 28354,
     "name": "Binx",
-    "manufacturer": "Elevation Disc Golf",
+    "manufacturer": "Elevation Golf",
     "speed": 8,
     "glide": 5,
     "turn": 0,
@@ -15983,7 +16067,7 @@
   {
     "id": 86036,
     "name": "Blackout",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 8,
     "glide": 5,
     "turn": -2,
@@ -16004,7 +16088,7 @@
   {
     "id": 125,
     "name": "Breakout",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 8,
     "glide": 5,
     "turn": -1,
@@ -16025,7 +16109,7 @@
   {
     "id": 11051,
     "name": "Cipher",
-    "manufacturer": "Launch Disc Golf",
+    "manufacturer": "Launch Golf",
     "speed": 8,
     "glide": 4,
     "turn": -1,
@@ -16046,7 +16130,7 @@
   {
     "id": 58163,
     "name": "Cosmic",
-    "manufacturer": "Alfa Discs",
+    "manufacturer": "Alfas",
     "speed": 8,
     "glide": 6,
     "turn": 0,
@@ -16088,7 +16172,7 @@
   {
     "id": 27631,
     "name": "Dos X",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 8,
     "glide": 4,
     "turn": -1,
@@ -16130,7 +16214,7 @@
   {
     "id": 161447,
     "name": "Enoch",
-    "manufacturer": "Goliath Discs",
+    "manufacturer": "Goliaths",
     "speed": 8,
     "glide": 5,
     "turn": 0,
@@ -16319,7 +16403,7 @@
   {
     "id": 11055,
     "name": "Firehawk",
-    "manufacturer": "Fourth Circle Discs",
+    "manufacturer": "Fourth Circles",
     "speed": 8,
     "glide": 5,
     "turn": -2,
@@ -16382,7 +16466,7 @@
   {
     "id": 17273,
     "name": "Jackalope",
-    "manufacturer": "Mint Discs",
+    "manufacturer": "Mints",
     "speed": 8,
     "glide": 5,
     "turn": -2,
@@ -16403,7 +16487,7 @@
   {
     "id": 119104,
     "name": "Lotus",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 8,
     "glide": 5,
     "turn": -1,
@@ -16445,7 +16529,7 @@
   {
     "id": 23782,
     "name": "Minotaur",
-    "manufacturer": "Divergent Discs",
+    "manufacturer": "Divergents",
     "speed": 8,
     "glide": 3,
     "turn": 0,
@@ -16466,7 +16550,7 @@
   {
     "id": 46964,
     "name": "Nice",
-    "manufacturer": "Momentum Discs",
+    "manufacturer": "Momentums",
     "speed": 8,
     "glide": 7,
     "turn": -2,
@@ -16487,7 +16571,7 @@
   {
     "id": 87569,
     "name": "No1 Flyer",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 8,
     "glide": 5,
     "turn": -2,
@@ -16508,7 +16592,7 @@
   {
     "id": 87570,
     "name": "No1 Helix",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 8,
     "glide": 4,
     "turn": -1,
@@ -16529,7 +16613,7 @@
   {
     "id": 87575,
     "name": "No2 Driver",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 8,
     "glide": 5,
     "turn": -2,
@@ -16550,7 +16634,7 @@
   {
     "id": 87576,
     "name": "No2 Flyer",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 8,
     "glide": 5,
     "turn": -1,
@@ -16571,7 +16655,7 @@
   {
     "id": 87577,
     "name": "No2 Helix",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 8,
     "glide": 5,
     "turn": -1,
@@ -16634,7 +16718,7 @@
   {
     "id": 172914,
     "name": "Paladin",
-    "manufacturer": "Northstar Discs",
+    "manufacturer": "Northstars",
     "speed": 8,
     "glide": 5,
     "turn": -1,
@@ -16655,7 +16739,7 @@
   {
     "id": 172909,
     "name": "Paladin OS",
-    "manufacturer": "Northstar Discs",
+    "manufacturer": "Northstars",
     "speed": 8,
     "glide": 4,
     "turn": 0,
@@ -16697,7 +16781,7 @@
   {
     "id": 631,
     "name": "Phenom",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 8,
     "glide": 5,
     "turn": -1,
@@ -16739,7 +16823,7 @@
   {
     "id": 158972,
     "name": "Rally",
-    "manufacturer": "Finish Line Discs",
+    "manufacturer": "Finish Lines",
     "speed": 8,
     "glide": 5,
     "turn": 0,
@@ -16823,7 +16907,7 @@
   {
     "id": 126393,
     "name": "Ronin",
-    "manufacturer": "Remix Disc Golf",
+    "manufacturer": "Remix Golf",
     "speed": 8,
     "glide": 4.5,
     "turn": 0,
@@ -17033,7 +17117,7 @@
   {
     "id": 55043,
     "name": "The Dome",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 8,
     "glide": 6,
     "turn": -3,
@@ -17054,7 +17138,7 @@
   {
     "id": 131,
     "name": "Thief",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 8,
     "glide": 5,
     "turn": -1.5,
@@ -17075,7 +17159,7 @@
   {
     "id": 23652,
     "name": "Tiyanak",
-    "manufacturer": "Divergent Discs",
+    "manufacturer": "Divergents",
     "speed": 8,
     "glide": 5,
     "turn": -5,
@@ -17117,7 +17201,7 @@
   {
     "id": 158973,
     "name": "Torque",
-    "manufacturer": "Finish Line Discs",
+    "manufacturer": "Finish Lines",
     "speed": 8,
     "glide": 4,
     "turn": 0,
@@ -17264,7 +17348,7 @@
   {
     "id": 133,
     "name": "Witness",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 8,
     "glide": 6,
     "turn": -3,
@@ -17327,7 +17411,7 @@
   {
     "id": 102553,
     "name": "Chameleon",
-    "manufacturer": "Reptilian Disc Golf",
+    "manufacturer": "Reptilian Golf",
     "speed": 8.5,
     "glide": 5,
     "turn": -1,
@@ -17411,7 +17495,7 @@
   {
     "id": 625,
     "name": "Bandit",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 9,
     "glide": 5,
     "turn": -2,
@@ -17579,7 +17663,7 @@
   {
     "id": 161442,
     "name": "Chainbreaker",
-    "manufacturer": "Goliath Discs",
+    "manufacturer": "Goliaths",
     "speed": 9,
     "glide": 3,
     "turn": 0,
@@ -17600,7 +17684,7 @@
   {
     "id": 11050,
     "name": "Chromium",
-    "manufacturer": "Element Discs",
+    "manufacturer": "Elements",
     "speed": 9,
     "glide": 5,
     "turn": -1,
@@ -17621,7 +17705,7 @@
   {
     "id": 55042,
     "name": "Chupacabra",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 9,
     "glide": 3,
     "turn": 0,
@@ -17642,7 +17726,7 @@
   {
     "id": 127901,
     "name": "Cinnamon",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 9,
     "glide": 5,
     "turn": -1,
@@ -17684,7 +17768,7 @@
   {
     "id": 126,
     "name": "Convict",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 9,
     "glide": 4,
     "turn": -0.5,
@@ -17747,7 +17831,7 @@
   {
     "id": 85146,
     "name": "Diamondback",
-    "manufacturer": "Mint Discs",
+    "manufacturer": "Mints",
     "speed": 9,
     "glide": 5,
     "turn": -2,
@@ -17810,7 +17894,7 @@
   {
     "id": 27637,
     "name": "Dynasty",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 9,
     "glide": 5,
     "turn": -1,
@@ -17831,7 +17915,7 @@
   {
     "id": 626,
     "name": "Enemy",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 9,
     "glide": 3,
     "turn": 0,
@@ -17852,7 +17936,7 @@
   {
     "id": 127,
     "name": "Escape",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 9,
     "glide": 5,
     "turn": -1,
@@ -17936,7 +18020,7 @@
   {
     "id": 128,
     "name": "Felon",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 9,
     "glide": 3,
     "turn": 0.5,
@@ -18146,7 +18230,7 @@
   {
     "id": 129,
     "name": "Getaway",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 9,
     "glide": 5,
     "turn": -0.5,
@@ -18167,7 +18251,7 @@
   {
     "id": 27720,
     "name": "Ginger",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 9,
     "glide": 4,
     "turn": 0,
@@ -18188,7 +18272,7 @@
   {
     "id": 104820,
     "name": "Grunt",
-    "manufacturer": "Pie Pan Discs",
+    "manufacturer": "Pie Pans",
     "speed": 9,
     "glide": 5,
     "turn": -1,
@@ -18251,7 +18335,7 @@
   {
     "id": 125969,
     "name": "Haymaker",
-    "manufacturer": "Remix Disc Golf",
+    "manufacturer": "Remix Golf",
     "speed": 9,
     "glide": 4,
     "turn": 0,
@@ -18335,7 +18419,7 @@
   {
     "id": 108650,
     "name": "Hyena",
-    "manufacturer": "Wild Discs",
+    "manufacturer": "Wilds",
     "speed": 9,
     "glide": 5,
     "turn": -2,
@@ -18356,7 +18440,7 @@
   {
     "id": 161439,
     "name": "Impetus",
-    "manufacturer": "Momentum Discs",
+    "manufacturer": "Momentums",
     "speed": 9,
     "glide": 6,
     "turn": -2,
@@ -18461,7 +18545,7 @@
   {
     "id": 102554,
     "name": "Komodo",
-    "manufacturer": "Reptilian Disc Golf",
+    "manufacturer": "Reptilian Golf",
     "speed": 9,
     "glide": 3,
     "turn": 0,
@@ -18482,7 +18566,7 @@
   {
     "id": 43829,
     "name": "Lariat",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 9,
     "glide": 5,
     "turn": -1,
@@ -18587,7 +18671,7 @@
   {
     "id": 17334,
     "name": "Mad Cat",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 9,
     "glide": 5,
     "turn": 0,
@@ -18692,7 +18776,7 @@
   {
     "id": 628,
     "name": "Mongoose",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 9,
     "glide": 5,
     "turn": -3,
@@ -18734,7 +18818,7 @@
   {
     "id": 91975,
     "name": "MX1",
-    "manufacturer": "Lightning Discs",
+    "manufacturer": "Lightnings",
     "speed": 9,
     "glide": 4,
     "turn": -2,
@@ -18755,7 +18839,7 @@
   {
     "id": 47011,
     "name": "Obsidian Tremor",
-    "manufacturer": "Obsidian Discs",
+    "manufacturer": "Obsidians",
     "speed": 9,
     "glide": 4,
     "turn": 0,
@@ -18860,7 +18944,7 @@
   {
     "id": 22614,
     "name": "Pekapeka",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 9,
     "glide": 5,
     "turn": -3,
@@ -18881,7 +18965,7 @@
   {
     "id": 87668,
     "name": "Phoenix",
-    "manufacturer": "Mint Discs",
+    "manufacturer": "Mints",
     "speed": 9,
     "glide": 3,
     "turn": 0,
@@ -18965,7 +19049,7 @@
   {
     "id": 46965,
     "name": "Pretty Fly",
-    "manufacturer": "Momentum Discs",
+    "manufacturer": "Momentums",
     "speed": 9,
     "glide": 6,
     "turn": -1,
@@ -19154,7 +19238,7 @@
   {
     "id": 195,
     "name": "Scepter",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 9,
     "glide": 4,
     "turn": 0,
@@ -19217,7 +19301,7 @@
   {
     "id": 126478,
     "name": "Spartan",
-    "manufacturer": "Remix Disc Golf",
+    "manufacturer": "Remix Golf",
     "speed": 9,
     "glide": 6,
     "turn": -2,
@@ -19259,7 +19343,7 @@
   {
     "id": 196,
     "name": "Sphinx",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 9,
     "glide": 6,
     "turn": -3,
@@ -19301,7 +19385,7 @@
   {
     "id": 170324,
     "name": "Spur",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 9,
     "glide": 4,
     "turn": 0,
@@ -19364,7 +19448,7 @@
   {
     "id": 33764,
     "name": "Stratosphere",
-    "manufacturer": "Wing It Disc Golf",
+    "manufacturer": "Wing It Golf",
     "speed": 9,
     "glide": 4,
     "turn": -2,
@@ -19385,7 +19469,7 @@
   {
     "id": 92502,
     "name": "Supreme Escape",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 9,
     "glide": 5,
     "turn": -1,
@@ -19427,7 +19511,7 @@
   {
     "id": 46280,
     "name": "Swift",
-    "manufacturer": "AquaFlight Discs",
+    "manufacturer": "AquaFlights",
     "speed": 9,
     "glide": 5,
     "turn": -3,
@@ -19469,7 +19553,7 @@
   {
     "id": 22146,
     "name": "Tasmanian Devil",
-    "manufacturer": "Wild Discs",
+    "manufacturer": "Wilds",
     "speed": 9,
     "glide": 4,
     "turn": 0,
@@ -19490,7 +19574,7 @@
   {
     "id": 109194,
     "name": "Tasmanian Devil V2",
-    "manufacturer": "Wild Discs",
+    "manufacturer": "Wilds",
     "speed": 9,
     "glide": 4,
     "turn": 0,
@@ -19553,7 +19637,7 @@
   {
     "id": 68943,
     "name": "Thread",
-    "manufacturer": "Hooligan Discs",
+    "manufacturer": "Hooligans",
     "speed": 9,
     "glide": 5,
     "turn": -1,
@@ -19721,7 +19805,7 @@
   {
     "id": 132,
     "name": "Vandal",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 9,
     "glide": 5,
     "turn": -1.5,
@@ -19763,7 +19847,7 @@
   {
     "id": 11113,
     "name": "Velociraptor",
-    "manufacturer": "Reptilian Disc Golf",
+    "manufacturer": "Reptilian Golf",
     "speed": 9,
     "glide": 4,
     "turn": 0,
@@ -19868,7 +19952,7 @@
   {
     "id": 161436,
     "name": "Wyrm",
-    "manufacturer": "Divergent Discs",
+    "manufacturer": "Divergents",
     "speed": 9,
     "glide": 2,
     "turn": 0,
@@ -19889,7 +19973,7 @@
   {
     "id": 116245,
     "name": "Xenon",
-    "manufacturer": "Loft Discs",
+    "manufacturer": "Lofts",
     "speed": 9,
     "glide": 3,
     "turn": 0,
@@ -20015,7 +20099,7 @@
   {
     "id": 188,
     "name": "Aztec",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 10,
     "glide": 5,
     "turn": -1,
@@ -20057,7 +20141,7 @@
   {
     "id": 733,
     "name": "Berserker",
-    "manufacturer": "Viking Discs",
+    "manufacturer": "Vikings",
     "speed": 10,
     "glide": 5,
     "turn": -3,
@@ -20099,7 +20183,7 @@
   {
     "id": 108365,
     "name": "Cervini",
-    "manufacturer": "Terminal Velocity Discs",
+    "manufacturer": "Terminal Velocitys",
     "speed": 10,
     "glide": 6,
     "turn": -3,
@@ -20141,7 +20225,7 @@
   {
     "id": 116,
     "name": "Criminal",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 10,
     "glide": 3,
     "turn": 1,
@@ -20162,7 +20246,7 @@
   {
     "id": 86185,
     "name": "Dystopia",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 10,
     "glide": 5,
     "turn": -2,
@@ -20183,7 +20267,7 @@
   {
     "id": 33219,
     "name": "Era",
-    "manufacturer": "Finish Line Discs",
+    "manufacturer": "Finish Lines",
     "speed": 10,
     "glide": 5,
     "turn": -1,
@@ -20267,7 +20351,7 @@
   {
     "id": 87271,
     "name": "Fenrir",
-    "manufacturer": "Viking Discs",
+    "manufacturer": "Vikings",
     "speed": 10,
     "glide": 4,
     "turn": 0,
@@ -20288,7 +20372,7 @@
   {
     "id": 627,
     "name": "Fighter",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 10,
     "glide": 3,
     "turn": 0,
@@ -20351,7 +20435,7 @@
   {
     "id": 666,
     "name": "Freetail",
-    "manufacturer": "Mint Discs",
+    "manufacturer": "Mints",
     "speed": 10,
     "glide": 5,
     "turn": -4,
@@ -20582,7 +20666,7 @@
   {
     "id": 697,
     "name": "Kiwi",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 10,
     "glide": 4,
     "turn": 0,
@@ -20729,7 +20813,7 @@
   {
     "id": 620,
     "name": "Nemesis",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 10,
     "glide": 6,
     "turn": -4,
@@ -20834,7 +20918,7 @@
   {
     "id": 172913,
     "name": "Pacific",
-    "manufacturer": "Northstar Discs",
+    "manufacturer": "Northstars",
     "speed": 10,
     "glide": 5,
     "turn": -1,
@@ -20855,7 +20939,7 @@
   {
     "id": 172908,
     "name": "Pacific OS",
-    "manufacturer": "Northstar Discs",
+    "manufacturer": "Northstars",
     "speed": 10,
     "glide": 4,
     "turn": 0,
@@ -20939,7 +21023,7 @@
   {
     "id": 117096,
     "name": "Roman",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 10,
     "glide": 4,
     "turn": 0,
@@ -20981,7 +21065,7 @@
   {
     "id": 126397,
     "name": "Rumble",
-    "manufacturer": "Remix Disc Golf",
+    "manufacturer": "Remix Golf",
     "speed": 10,
     "glide": 5,
     "turn": -1,
@@ -21065,7 +21149,7 @@
   {
     "id": 88083,
     "name": "Sleipner",
-    "manufacturer": "Guru Disc Golf",
+    "manufacturer": "Guru Golf",
     "speed": 10,
     "glide": 4,
     "turn": -1,
@@ -21086,7 +21170,7 @@
   {
     "id": 112577,
     "name": "Spice",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 10,
     "glide": 4,
     "turn": 0,
@@ -21128,7 +21212,7 @@
   {
     "id": 700,
     "name": "Taniwha",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 10,
     "glide": 5,
     "turn": -2,
@@ -21149,7 +21233,7 @@
   {
     "id": 116092,
     "name": "Tara Iti",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 10,
     "glide": 5,
     "turn": 0,
@@ -21233,7 +21317,7 @@
   {
     "id": 28259,
     "name": "Tumbleweed",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 10,
     "glide": 6,
     "turn": -3,
@@ -21275,7 +21359,7 @@
   {
     "id": 624,
     "name": "Vengeance",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 10,
     "glide": 5,
     "turn": 0,
@@ -21380,7 +21464,7 @@
   {
     "id": 125924,
     "name": "Goliath",
-    "manufacturer": "Remix Disc Golf",
+    "manufacturer": "Remix Golf",
     "speed": 10.5,
     "glide": 4.5,
     "turn": -1,
@@ -21527,7 +21611,7 @@
   {
     "id": 142201,
     "name": "Cataclysm",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 11,
     "glide": 5,
     "turn": -1,
@@ -21611,7 +21695,7 @@
   {
     "id": 22018,
     "name": "Curl",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 11,
     "glide": 6,
     "turn": -1,
@@ -21632,7 +21716,7 @@
   {
     "id": 86137,
     "name": "Czar",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 11,
     "glide": 5,
     "turn": -1,
@@ -21926,7 +22010,7 @@
   {
     "id": 1129,
     "name": "Longhorn",
-    "manufacturer": "Mint Discs",
+    "manufacturer": "Mints",
     "speed": 11,
     "glide": 4,
     "turn": -1,
@@ -21968,7 +22052,7 @@
   {
     "id": 720,
     "name": "Maelstrom",
-    "manufacturer": "Storm Disc Golf",
+    "manufacturer": "Storm Golf",
     "speed": 11,
     "glide": 5,
     "turn": -1,
@@ -22073,7 +22157,7 @@
   {
     "id": 11081,
     "name": "Meteorite",
-    "manufacturer": "Galaxy Disc Golf",
+    "manufacturer": "Galaxy Golf",
     "speed": 11,
     "glide": 3,
     "turn": -0.5,
@@ -22136,7 +22220,7 @@
   {
     "id": 104815,
     "name": "Nimitz",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 11,
     "glide": 5,
     "turn": -1,
@@ -22157,7 +22241,7 @@
   {
     "id": 47010,
     "name": "Obsidian Rift",
-    "manufacturer": "Obsidian Discs",
+    "manufacturer": "Obsidians",
     "speed": 11,
     "glide": 5,
     "turn": -3,
@@ -22241,7 +22325,7 @@
   {
     "id": 27998,
     "name": "Pepper",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 11,
     "glide": 5,
     "turn": 0,
@@ -22325,7 +22409,7 @@
   {
     "id": 734,
     "name": "Ragnarok",
-    "manufacturer": "Viking Discs",
+    "manufacturer": "Vikings",
     "speed": 11,
     "glide": 5,
     "turn": -1,
@@ -22346,7 +22430,7 @@
   {
     "id": 121,
     "name": "Renegade",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 11,
     "glide": 5,
     "turn": -1.5,
@@ -22472,7 +22556,7 @@
   {
     "id": 122,
     "name": "Sergeant",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 11,
     "glide": 4,
     "turn": 0,
@@ -22493,7 +22577,7 @@
   {
     "id": 88081,
     "name": "Short Slacker",
-    "manufacturer": "Guru Disc Golf",
+    "manufacturer": "Guru Golf",
     "speed": 11,
     "glide": 5,
     "turn": -1,
@@ -22514,7 +22598,7 @@
   {
     "id": 64950,
     "name": "Squid",
-    "manufacturer": "Neptune Discs",
+    "manufacturer": "Neptunes",
     "speed": 11,
     "glide": 5,
     "turn": -1,
@@ -22640,7 +22724,7 @@
   {
     "id": 143158,
     "name": "Vanilla",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 11,
     "glide": 6,
     "turn": -2,
@@ -22682,7 +22766,7 @@
   {
     "id": 46629,
     "name": "Vibe",
-    "manufacturer": "Hooligan Discs",
+    "manufacturer": "Hooligans",
     "speed": 11,
     "glide": 5,
     "turn": -2,
@@ -22808,7 +22892,7 @@
   {
     "id": 102557,
     "name": "Flame Thrower",
-    "manufacturer": "Black Zombie Disc Golf",
+    "manufacturer": "Black Zombie Golf",
     "speed": 11.5,
     "glide": 6,
     "turn": -2,
@@ -22850,7 +22934,7 @@
   {
     "id": 161446,
     "name": "Ambush",
-    "manufacturer": "Goliath Discs",
+    "manufacturer": "Goliaths",
     "speed": 12,
     "glide": 6,
     "turn": -3,
@@ -22934,7 +23018,7 @@
   {
     "id": 22926,
     "name": "Basilisk",
-    "manufacturer": "Divergent Discs",
+    "manufacturer": "Divergents",
     "speed": 12,
     "glide": 5,
     "turn": -4,
@@ -22955,7 +23039,7 @@
   {
     "id": 125639,
     "name": "Behemoth",
-    "manufacturer": "Remix Disc Golf",
+    "manufacturer": "Remix Golf",
     "speed": 12,
     "glide": 4.5,
     "turn": -1,
@@ -22976,7 +23060,7 @@
   {
     "id": 102558,
     "name": "Berzerker",
-    "manufacturer": "Black Zombie Disc Golf",
+    "manufacturer": "Black Zombie Golf",
     "speed": 12,
     "glide": 4,
     "turn": 0,
@@ -23018,7 +23102,7 @@
   {
     "id": 47009,
     "name": "Caldera",
-    "manufacturer": "Obsidian Discs",
+    "manufacturer": "Obsidians",
     "speed": 12,
     "glide": 5,
     "turn": -1,
@@ -23039,7 +23123,7 @@
   {
     "id": 161457,
     "name": "Carnivore",
-    "manufacturer": "Reptilian Disc Golf",
+    "manufacturer": "Reptilian Golf",
     "speed": 12,
     "glide": 5,
     "turn": -1,
@@ -23270,7 +23354,7 @@
   {
     "id": 158970,
     "name": "Daytona",
-    "manufacturer": "Finish Line Discs",
+    "manufacturer": "Finish Lines",
     "speed": 12,
     "glide": 4,
     "turn": 0,
@@ -23354,7 +23438,7 @@
   {
     "id": 91392,
     "name": "Elder",
-    "manufacturer": "Launch Disc Golf",
+    "manufacturer": "Launch Golf",
     "speed": 12,
     "glide": 6,
     "turn": -2,
@@ -23375,7 +23459,7 @@
   {
     "id": 189,
     "name": "Emperor",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 12,
     "glide": 5,
     "turn": -1,
@@ -23396,7 +23480,7 @@
   {
     "id": 118,
     "name": "Enforcer",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 12,
     "glide": 4,
     "turn": 0.5,
@@ -23459,7 +23543,7 @@
   {
     "id": 161454,
     "name": "Famine",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 12,
     "glide": 5,
     "turn": -2,
@@ -23522,7 +23606,7 @@
   {
     "id": 172906,
     "name": "General",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 12,
     "glide": 4,
     "turn": 0,
@@ -23543,7 +23627,7 @@
   {
     "id": 87322,
     "name": "Goat",
-    "manufacturer": "Mint Discs",
+    "manufacturer": "Mints",
     "speed": 12,
     "glide": 4,
     "turn": -1,
@@ -23564,7 +23648,7 @@
   {
     "id": 152885,
     "name": "Growler",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 12,
     "glide": 6,
     "turn": -3,
@@ -23627,7 +23711,7 @@
   {
     "id": 118985,
     "name": "Harrier",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 12,
     "glide": 6,
     "turn": -4,
@@ -23690,7 +23774,7 @@
   {
     "id": 158971,
     "name": "Interval",
-    "manufacturer": "Finish Line Discs",
+    "manufacturer": "Finish Lines",
     "speed": 12,
     "glide": 5,
     "turn": -1,
@@ -23732,7 +23816,7 @@
   {
     "id": 719,
     "name": "Jet Stream",
-    "manufacturer": "Storm Disc Golf",
+    "manufacturer": "Storm Golf",
     "speed": 12,
     "glide": 5,
     "turn": -1,
@@ -23774,7 +23858,7 @@
   {
     "id": 698,
     "name": "Kotare",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 12,
     "glide": 5,
     "turn": 0,
@@ -23816,7 +23900,7 @@
   {
     "id": 23254,
     "name": "Lawin",
-    "manufacturer": "Divergent Discs",
+    "manufacturer": "Divergents",
     "speed": 12,
     "glide": 5,
     "turn": -3,
@@ -23837,7 +23921,7 @@
   {
     "id": 190,
     "name": "Maya",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 12,
     "glide": 5,
     "turn": -3,
@@ -23858,7 +23942,7 @@
   {
     "id": 87604,
     "name": "Odin",
-    "manufacturer": "Viking Discs",
+    "manufacturer": "Vikings",
     "speed": 12,
     "glide": 5,
     "turn": -1,
@@ -23900,7 +23984,7 @@
   {
     "id": 17423,
     "name": "Orca",
-    "manufacturer": "Wild Discs",
+    "manufacturer": "Wilds",
     "speed": 12,
     "glide": 5,
     "turn": -1.5,
@@ -23921,7 +24005,7 @@
   {
     "id": 46278,
     "name": "Osprey",
-    "manufacturer": "AquaFlight Discs",
+    "manufacturer": "AquaFlights",
     "speed": 12,
     "glide": 4,
     "turn": -1,
@@ -23942,7 +24026,7 @@
   {
     "id": 621,
     "name": "Outlaw",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 12,
     "glide": 5,
     "turn": -1,
@@ -24005,7 +24089,7 @@
   {
     "id": 142807,
     "name": "Pestilence",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 12,
     "glide": 5,
     "turn": -4,
@@ -24026,7 +24110,7 @@
   {
     "id": 86600,
     "name": "Plague",
-    "manufacturer": "Doomsday Discs",
+    "manufacturer": "Doomsdays",
     "speed": 12,
     "glide": 5,
     "turn": -1,
@@ -24110,7 +24194,7 @@
   {
     "id": 161443,
     "name": "Rapture",
-    "manufacturer": "Goliath Discs",
+    "manufacturer": "Goliaths",
     "speed": 12,
     "glide": 5,
     "turn": 0,
@@ -24236,7 +24320,7 @@
   {
     "id": 131109,
     "name": "Sage",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 12,
     "glide": 6,
     "turn": -1,
@@ -24257,7 +24341,7 @@
   {
     "id": 61966,
     "name": "Salt",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 12,
     "glide": 5,
     "turn": -1,
@@ -24320,7 +24404,7 @@
   {
     "id": 192,
     "name": "Slab",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 12,
     "glide": 3,
     "turn": 0,
@@ -24446,7 +24530,7 @@
   {
     "id": 104819,
     "name": "Supreme Trespass",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 12,
     "glide": 5,
     "turn": -0.5,
@@ -24593,7 +24677,7 @@
   {
     "id": 124,
     "name": "Trespass",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 12,
     "glide": 5,
     "turn": -0.5,
@@ -24635,7 +24719,7 @@
   {
     "id": 736,
     "name": "Valhalla",
-    "manufacturer": "Viking Discs",
+    "manufacturer": "Vikings",
     "speed": 12,
     "glide": 5,
     "turn": 0,
@@ -24740,7 +24824,7 @@
   {
     "id": 28302,
     "name": "Warbird",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 12,
     "glide": 6,
     "turn": -1,
@@ -24761,7 +24845,7 @@
   {
     "id": 86938,
     "name": "Wild Honey",
-    "manufacturer": "Clash Discs",
+    "manufacturer": "Clash",
     "speed": 12,
     "glide": 5,
     "turn": -2,
@@ -24887,7 +24971,7 @@
   {
     "id": 46628,
     "name": "Yeet",
-    "manufacturer": "Hooligan Discs",
+    "manufacturer": "Hooligans",
     "speed": 12,
     "glide": 5,
     "turn": -1,
@@ -24950,7 +25034,7 @@
   {
     "id": 618,
     "name": "Aftermath",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 13,
     "glide": 5,
     "turn": -2,
@@ -24992,7 +25076,7 @@
   {
     "id": 104816,
     "name": "Bayonet",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 13,
     "glide": 5,
     "turn": -2,
@@ -25076,7 +25160,7 @@
   {
     "id": 21221,
     "name": "Bowie",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 13,
     "glide": 5,
     "turn": 0,
@@ -25097,7 +25181,7 @@
   {
     "id": 115,
     "name": "Captain",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 13,
     "glide": 5,
     "turn": -2,
@@ -25454,7 +25538,7 @@
   {
     "id": 117,
     "name": "Defender",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 13,
     "glide": 5,
     "turn": 0,
@@ -25580,7 +25664,7 @@
   {
     "id": 88082,
     "name": "Fenris",
-    "manufacturer": "Guru Disc Golf",
+    "manufacturer": "Guru Golf",
     "speed": 13,
     "glide": 5,
     "turn": -1,
@@ -25643,7 +25727,7 @@
   {
     "id": 33302,
     "name": "Great White",
-    "manufacturer": "Wild Discs",
+    "manufacturer": "Wilds",
     "speed": 13,
     "glide": 5,
     "turn": -1,
@@ -25790,7 +25874,7 @@
   {
     "id": 694,
     "name": "Kahu",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 13,
     "glide": 5,
     "turn": -1,
@@ -25811,7 +25895,7 @@
   {
     "id": 695,
     "name": "Kahu OS",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 13,
     "glide": 5,
     "turn": 0,
@@ -25832,7 +25916,7 @@
   {
     "id": 696,
     "name": "Kahu XG",
-    "manufacturer": "RPM Discs",
+    "manufacturer": "RPMs",
     "speed": 13,
     "glide": 5,
     "turn": -1.5,
@@ -25874,7 +25958,7 @@
   {
     "id": 172911,
     "name": "Launcher",
-    "manufacturer": "Northstar Discs",
+    "manufacturer": "Northstars",
     "speed": 13,
     "glide": 5,
     "turn": -1,
@@ -25895,7 +25979,7 @@
   {
     "id": 172910,
     "name": "Launcher OS",
-    "manufacturer": "Northstar Discs",
+    "manufacturer": "Northstars",
     "speed": 13,
     "glide": 5,
     "turn": 0,
@@ -25916,7 +26000,7 @@
   {
     "id": 172912,
     "name": "Launcher US",
-    "manufacturer": "Northstar Discs",
+    "manufacturer": "Northstars",
     "speed": 13,
     "glide": 6,
     "turn": -2,
@@ -26147,7 +26231,7 @@
   {
     "id": 191,
     "name": "Pharaoh",
-    "manufacturer": "Infinite Discs",
+    "manufacturer": "Infinite",
     "speed": 13,
     "glide": 6,
     "turn": -1,
@@ -26231,7 +26315,7 @@
   {
     "id": 120,
     "name": "Raider",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 13,
     "glide": 5,
     "turn": -0.5,
@@ -26252,7 +26336,7 @@
   {
     "id": 623,
     "name": "Recon",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 13,
     "glide": 5,
     "turn": -1,
@@ -26378,7 +26462,7 @@
   {
     "id": 104814,
     "name": "Seguin",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 13,
     "glide": 5,
     "turn": 0,
@@ -26399,7 +26483,7 @@
   {
     "id": 123,
     "name": "Sheriff",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 13,
     "glide": 5,
     "turn": -1,
@@ -26441,7 +26525,7 @@
   {
     "id": 166497,
     "name": "Silverback",
-    "manufacturer": "Gorilla Disc Golf",
+    "manufacturer": "Gorilla Golf",
     "speed": 13,
     "glide": 5,
     "turn": -1,
@@ -26504,7 +26588,7 @@
   {
     "id": 161441,
     "name": "Slingshot",
-    "manufacturer": "Goliath Discs",
+    "manufacturer": "Goliaths",
     "speed": 13,
     "glide": 5,
     "turn": -2,
@@ -26588,7 +26672,7 @@
   {
     "id": 147820,
     "name": "Starship",
-    "manufacturer": "Sacred Discs",
+    "manufacturer": "Sacreds",
     "speed": 13,
     "glide": 6,
     "turn": -1,
@@ -26651,7 +26735,7 @@
   {
     "id": 11102,
     "name": "Taipan",
-    "manufacturer": "Fourth Circle Discs",
+    "manufacturer": "Fourth Circles",
     "speed": 13,
     "glide": 5,
     "turn": 0,
@@ -26714,7 +26798,7 @@
   {
     "id": 85947,
     "name": "Tombstone",
-    "manufacturer": "Lone Star Disc",
+    "manufacturer": "Lone Star",
     "speed": 13,
     "glide": 4,
     "turn": 0,
@@ -26903,7 +26987,7 @@
   {
     "id": 22946,
     "name": "Bohrium",
-    "manufacturer": "Loft Discs",
+    "manufacturer": "Lofts",
     "speed": 14,
     "glide": 6,
     "turn": -1,
@@ -26924,7 +27008,7 @@
   {
     "id": 619,
     "name": "Cannon",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 14,
     "glide": 5,
     "turn": -3,
@@ -27050,7 +27134,7 @@
   {
     "id": 119,
     "name": "Freedom",
-    "manufacturer": "Dynamic Discs",
+    "manufacturer": "Dynamic",
     "speed": 14,
     "glide": 5,
     "turn": -3,
@@ -27239,7 +27323,7 @@
   {
     "id": 622,
     "name": "Rampage",
-    "manufacturer": "Legacy Discs",
+    "manufacturer": "Legacys",
     "speed": 14,
     "glide": 5,
     "turn": -1,
@@ -27281,7 +27365,7 @@
   {
     "id": 735,
     "name": "Thunder God Thor",
-    "manufacturer": "Viking Discs",
+    "manufacturer": "Vikings",
     "speed": 14,
     "glide": 5,
     "turn": 0,
@@ -27465,6 +27549,27 @@
     "rim_thickness": 2.5,
     "inside_rim_diameter": 16,
     "diameter": 21.1,
+    "show": 1
+  },
+  {
+    "id": 77992,
+    "name": "Trail",
+    "manufacturer": "MVP",
+    "speed": 10,
+    "glide": 5,
+    "turn": -1,
+    "fade": 1,
+    "primary_use": "Distance Driver",
+    "stability": "0",
+    "bead": "Beadless",
+    "border": "#8e1313",
+    "rim_diameter_ratio": 5.2,
+    "rim_configuration": 26.5,
+    "height": 1.6,
+    "rim_depth": 1.1,
+    "rim_thickness": 2.10,
+    "inside_rim_diameter": 17.0,
+    "diameter": 21.2,
     "show": 1
   },
   {

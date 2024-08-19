@@ -17,21 +17,19 @@ export type PartialListing = {
     listing: string,
     details_url: string,
     original_href: string,
+    disc_info_id: number,
     position: Position,
-    model: string,
     type: string,
-    manufacturer: string,
     retailer: string
 }
 
 export type Listing = {
     listing: string,
     details_url: string,
+    disc_info_id: number,
     img_src: string,
     price: number,
-    model: string,
     type: string,
-    manufacturer: string,
     retailer: string
 }
 
@@ -85,10 +83,10 @@ export default async function validateListings(page: Page, unfilteredListings: L
         // Other manufacturers cannot be present in listing. This is to prevent same model names being selected for the wrong manufacturer.
         if (manufacturers.some((m: string) => cleanedListingLower.includes(m) && m !== manufacturer.toLowerCase())) continue;
 
-        const listingModels: { name: string, type: string }[] = discs[manufacturer].filter((info: any) => {
+        const listingModels: { name: string, type: string, disc_info_id: number }[] = discs[manufacturer].filter((info: any) => {
             const regex = new RegExp(`(^|\\s)${info.name.toLowerCase()}(\\s|$)`);
             return regex.test(cleanedListingLower);
-        }).map((m: Model) => ({ name: m.name, type: m.primary_use }));
+        }).map((m: Model) => ({ name: m.name, type: m.primary_use, disc_info_id: m.id }));
 
         // Find the longest matching listing so we get the most complete possible mold name
         const listingModel = listingModels.reduce((longest, current) => {
@@ -101,9 +99,8 @@ export default async function validateListings(page: Page, unfilteredListings: L
                 details_url: url.href,
                 position: listingData.position,
                 original_href: listingData.href,
-                model: listingModel.name,
+                disc_info_id: listingModel.disc_info_id,
                 type: listingModel.type,
-                manufacturer,
                 retailer
             })
         } else {
@@ -152,9 +149,8 @@ function extractInfo(partialListings: PartialListing[], listingImgs: ListingImg[
             details_url: l.details_url,
             img_src: img.src,
             price: numPrice,
-            model: l.model,
+            disc_info_id: l.disc_info_id,
             type: l.type,
-            manufacturer: l.manufacturer,
             retailer: l.retailer
         })
     }

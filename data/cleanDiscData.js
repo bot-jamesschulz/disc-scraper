@@ -91,4 +91,4 @@ async function getMajorManufacturerMolds() {
   }
 }
 
-getMajorManufacturerMolds();
+processDiscs();

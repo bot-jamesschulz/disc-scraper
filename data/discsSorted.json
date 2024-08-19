@@ -6693,26 +6693,6 @@
   ],
   "MVP": [
     {
-      "id": 77992,
-      "name": "Trail",
-      "speed": 10,
-      "glide": 5,
-      "turn": -1,
-      "fade": 1,
-      "primary_use": "Distance Driver",
-      "stability": "0",
-      "bead": "Beadless",
-      "border": "#8e1313",
-      "rim_diameter_ratio": 5.2,
-      "rim_configuration": 26.5,
-      "height": 1.6,
-      "rim_depth": 1.1,
-      "rim_thickness": 2.10,
-      "inside_rim_diameter": 17.0,
-      "diameter": 21.2,
-      "show": 1
-    },
-    {
       "id": 77990,
       "name": "Glitch",
       "speed": 1,
@@ -6729,6 +6709,26 @@
       "rim_depth": 1.6,
       "rim_thickness": 0.8,
       "inside_rim_diameter": 19.5,
+      "diameter": 21.2,
+      "show": 1
+    },
+    {
+      "id": 149254,
+      "name": "Time-Lapse",
+      "speed": 12,
+      "glide": 5,
+      "turn": -1,
+      "fade": 3,
+      "primary_use": "Distance Driver",
+      "stability": "2",
+      "bead": "Beadless",
+      "border": "#8e1313",
+      "rim_diameter_ratio": 5.7,
+      "rim_configuration": 26.25,
+      "height": 1.7,
+      "rim_depth": 1.2,
+      "rim_thickness": 2.3,
+      "inside_rim_diameter": 16.5,
       "diameter": 21.2,
       "show": 1
     },
@@ -7053,6 +7053,26 @@
       "show": 1
     },
     {
+      "id": 149253,
+      "name": "Time Lapse",
+      "speed": 12,
+      "glide": 5,
+      "turn": -1,
+      "fade": 3,
+      "primary_use": "Distance Driver",
+      "stability": "2",
+      "bead": "Beadless",
+      "border": "#8e1313",
+      "rim_diameter_ratio": 5.7,
+      "rim_configuration": 26.25,
+      "height": 1.7,
+      "rim_depth": 1.2,
+      "rim_thickness": 2.3,
+      "inside_rim_diameter": 16.5,
+      "diameter": 21.2,
+      "show": 1
+    },
+    {
       "id": 433,
       "name": "Reactor",
       "speed": 5,
@@ -7150,46 +7170,6 @@
       "rim_thickness": 1.2,
       "inside_rim_diameter": 17.7,
       "diameter": 21.1,
-      "show": 1
-    },
-    {
-      "id": 149253,
-      "name": "Time Lapse",
-      "speed": 12,
-      "glide": 5,
-      "turn": -1,
-      "fade": 3,
-      "primary_use": "Distance Driver",
-      "stability": "2",
-      "bead": "Beadless",
-      "border": "#8e1313",
-      "rim_diameter_ratio": 5.7,
-      "rim_configuration": 26.25,
-      "height": 1.7,
-      "rim_depth": 1.2,
-      "rim_thickness": 2.3,
-      "inside_rim_diameter": 16.5,
-      "diameter": 21.2,
-      "show": 1
-    },
-    {
-      "id": 149254,
-      "name": "Time-Lapse",
-      "speed": 12,
-      "glide": 5,
-      "turn": -1,
-      "fade": 3,
-      "primary_use": "Distance Driver",
-      "stability": "2",
-      "bead": "Beadless",
-      "border": "#8e1313",
-      "rim_diameter_ratio": 5.7,
-      "rim_configuration": 26.25,
-      "height": 1.7,
-      "rim_depth": 1.2,
-      "rim_thickness": 2.3,
-      "inside_rim_diameter": 16.5,
-      "diameter": 21.2,
       "show": 1
     },
     {
@@ -7650,6 +7630,26 @@
       "rim_thickness": 2.5,
       "inside_rim_diameter": 16,
       "diameter": 21.1,
+      "show": 1
+    },
+    {
+      "id": 77992,
+      "name": "Trail",
+      "speed": 10,
+      "glide": 5,
+      "turn": -1,
+      "fade": 1,
+      "primary_use": "Distance Driver",
+      "stability": "0",
+      "bead": "Beadless",
+      "border": "#8e1313",
+      "rim_diameter_ratio": 5.2,
+      "rim_configuration": 26.5,
+      "height": 1.6,
+      "rim_depth": 1.1,
+      "rim_thickness": 2.1,
+      "inside_rim_diameter": 17,
+      "diameter": 21.2,
       "show": 1
     },
     {
@@ -8215,7 +8215,7 @@
       "show": 1
     }
   ],
-  "Loft": [
+  "Lofts": [
     {
       "id": 17258,
       "name": "Hydrogen",
@@ -8337,7 +8337,7 @@
       "show": 0
     }
   ],
-  "Lightning": [
+  "Lightnings": [
     {
       "id": 87580,
       "name": "No2 Putter",
@@ -8841,6 +8841,26 @@
   ],
   "Axiom": [
     {
+      "id": 149256,
+      "name": "Time-Lapse",
+      "speed": 12,
+      "glide": 5,
+      "turn": -1,
+      "fade": 3,
+      "primary_use": "Distance Driver",
+      "stability": "2",
+      "bead": "Beadless",
+      "border": "#8e1313",
+      "rim_diameter_ratio": 5.7,
+      "rim_configuration": 26.25,
+      "height": 1.7,
+      "rim_depth": 1.2,
+      "rim_thickness": 2.3,
+      "inside_rim_diameter": 16.5,
+      "diameter": 21.2,
+      "show": 1
+    },
+    {
       "id": 171613,
       "name": "Pitch",
       "speed": 1,
@@ -8998,6 +9018,26 @@
       "rim_thickness": 1.4,
       "inside_rim_diameter": 18.5,
       "diameter": 21.4,
+      "show": 1
+    },
+    {
+      "id": 149255,
+      "name": "Time Lapse",
+      "speed": 12,
+      "glide": 5,
+      "turn": -1,
+      "fade": 3,
+      "primary_use": "Distance Driver",
+      "stability": "2",
+      "bead": "Beadless",
+      "border": "#8e1313",
+      "rim_diameter_ratio": 5.7,
+      "rim_configuration": 26.25,
+      "height": 1.7,
+      "rim_depth": 1.2,
+      "rim_thickness": 2.3,
+      "inside_rim_diameter": 16.5,
+      "diameter": 21.2,
       "show": 1
     },
     {
@@ -9301,26 +9341,6 @@
       "show": 1
     },
     {
-      "id": 149256,
-      "name": "Time-Lapse",
-      "speed": 12,
-      "glide": 5,
-      "turn": -1,
-      "fade": 3,
-      "primary_use": "Distance Driver",
-      "stability": "2",
-      "bead": "Beadless",
-      "border": "#8e1313",
-      "rim_diameter_ratio": 5.7,
-      "rim_configuration": 26.25,
-      "height": 1.7,
-      "rim_depth": 1.2,
-      "rim_thickness": 2.3,
-      "inside_rim_diameter": 16.5,
-      "diameter": 21.2,
-      "show": 1
-    },
-    {
       "id": 553,
       "name": "Mayhem",
       "speed": 13,
@@ -9441,7 +9461,7 @@
       "show": 1
     }
   ],
-  "Doomsday": [
+  "Doomsdays": [
     {
       "id": 161448,
       "name": "Proximity Mine",
@@ -13789,7 +13809,7 @@
       "show": 1
     }
   ],
-  "Pie Pan": [
+  "Pie Pans": [
     {
       "id": 104821,
       "name": "Bagger",
@@ -14997,7 +15017,7 @@
       "show": 1
     }
   ],
-  "Mint": [
+  "Mints": [
     {
       "id": 847,
       "name": "Bullet",
@@ -15823,7 +15843,7 @@
       "show": 0
     }
   ],
-  "Legacy": [
+  "Legacys": [
     {
       "id": 638,
       "name": "Clozer",
@@ -16325,7 +16345,7 @@
       "show": 1
     }
   ],
-  "Guru Disc Golf": [
+  "Guru Golf": [
     {
       "id": 88075,
       "name": "Cumulus",
@@ -16627,7 +16647,7 @@
       "show": 0
     }
   ],
-  "Momentum": [
+  "Momentums": [
     {
       "id": 161438,
       "name": "Gain",
@@ -16729,7 +16749,7 @@
       "show": 0
     }
   ],
-  "Sacred": [
+  "Sacreds": [
     {
       "id": 147230,
       "name": "Gnome",
@@ -16811,7 +16831,7 @@
       "show": 0
     }
   ],
-  "Wild": [
+  "Wilds": [
     {
       "id": 17253,
       "name": "Hummingbird",
@@ -17013,7 +17033,7 @@
       "show": 1
     }
   ],
-  "Fourth Circle": [
+  "Fourth Circles": [
     {
       "id": 21461,
       "name": "Huntsman",
@@ -17157,7 +17177,7 @@
       "show": 1
     }
   ],
-  "Element": [
+  "Elements": [
     {
       "id": 11060,
       "name": "Iridium",
@@ -17279,7 +17299,7 @@
       "show": 0
     }
   ],
-  "Viking": [
+  "Vikings": [
     {
       "id": 742,
       "name": "Knife",
@@ -17541,7 +17561,7 @@
       "show": 1
     }
   ],
-  "Jester Disc Golf": [
+  "Jester Golf": [
     {
       "id": 165228,
       "name": "Love",
@@ -18365,7 +18385,7 @@
       "show": 1
     }
   ],
-  "Galaxy Disc Golf": [
+  "Galaxy Golf": [
     {
       "id": 11078,
       "name": "Magneton",
@@ -18529,7 +18549,7 @@
       "show": 1
     }
   ],
-  "ITC": [
+  "ITCs": [
     {
       "id": 157743,
       "name": "Mercury",
@@ -18551,7 +18571,7 @@
       "show": 0
     }
   ],
-  "Kraken": [
+  "Krakens": [
     {
       "id": 161458,
       "name": "Mimic",
@@ -19217,7 +19237,7 @@
       "show": 1
     }
   ],
-  "Finish Line": [
+  "Finish Lines": [
     {
       "id": 120441,
       "name": "Pace",
@@ -19843,7 +19863,7 @@
       "show": 1
     }
   ],
-  "Storm Disc Golf": [
+  "Storm Golf": [
     {
       "id": 724,
       "name": "Radar",
@@ -20367,7 +20387,7 @@
       "show": 0
     }
   ],
-  "Reptilian Disc Golf": [
+  "Reptilian Golf": [
     {
       "id": 11093,
       "name": "Scale",
@@ -20569,7 +20589,7 @@
       "show": 0
     }
   ],
-  "Alfa": [
+  "Alfas": [
     {
       "id": 58775,
       "name": "Snoopy",
@@ -20955,7 +20975,7 @@
       "show": 1
     }
   ],
-  "RPM": [
+  "RPMs": [
     {
       "id": 63953,
       "name": "Takapu",
@@ -21641,7 +21661,7 @@
       "show": 0
     }
   ],
-  "Meridian": [
+  "Meridians": [
     {
       "id": 170326,
       "name": "Tundra",
@@ -21683,7 +21703,7 @@
       "show": 0
     }
   ],
-  "Premier": [
+  "Premiers": [
     {
       "id": 88010,
       "name": "War Dove",
@@ -21787,7 +21807,7 @@
       "show": 0
     }
   ],
-  "Northstar": [
+  "Northstars": [
     {
       "id": 172916,
       "name": "Zoom",
@@ -22091,7 +22111,7 @@
       "show": 1
     }
   ],
-  "Hooligan": [
+  "Hooligans": [
     {
       "id": 156523,
       "name": "Cash",
@@ -22213,7 +22233,7 @@
       "show": 1
     }
   ],
-  "Black Zombie Disc Golf": [
+  "Black Zombie Golf": [
     {
       "id": 102560,
       "name": "Chainsaw",
@@ -23201,7 +23221,7 @@
       "show": 0
     }
   ],
-  "Remix Disc Golf": [
+  "Remix Golf": [
     {
       "id": 125821,
       "name": "Eldritch",
@@ -23443,7 +23463,7 @@
       "show": 0
     }
   ],
-  "Obsidian": [
+  "Obsidians": [
     {
       "id": 47016,
       "name": "Fragment",
@@ -23625,7 +23645,7 @@
       "show": 0
     }
   ],
-  "Goliath": [
+  "Goliaths": [
     {
       "id": 86270,
       "name": "Genesis",
@@ -23849,7 +23869,7 @@
       "show": 0
     }
   ],
-  "Elevation Disc Golf": [
+  "Elevation Golf": [
     {
       "id": 22063,
       "name": "Koi",
@@ -23911,7 +23931,7 @@
       "show": 0
     }
   ],
-  "Launch Disc Golf": [
+  "Launch Golf": [
     {
       "id": 11072,
       "name": "Lander",
@@ -24033,7 +24053,7 @@
       "show": 1
     }
   ],
-  "Divergent": [
+  "Divergents": [
     {
       "id": 17398,
       "name": "Narwhal",
@@ -25757,7 +25777,7 @@
       "show": 0
     }
   ],
-  "AquaFlight": [
+  "AquaFlights": [
     {
       "id": 46282,
       "name": "Peace Frog",
@@ -25859,7 +25879,7 @@
       "show": 0
     }
   ],
-  "3C": [
+  "3Cs": [
     {
       "id": 86736,
       "name": "ShoreBreak",
@@ -26005,7 +26025,7 @@
       "show": 0
     }
   ],
-  "Stokely": [
+  "Stokelys": [
     {
       "id": 171615,
       "name": "Wren",
@@ -26047,7 +26067,7 @@
       "show": 0
     }
   ],
-  "Uplay Disc Golf": [
+  "Uplay Golf": [
     {
       "id": 47155,
       "name": "Zeal",
@@ -26069,7 +26089,7 @@
       "show": 0
     }
   ],
-  "Exel": [
+  "Exels": [
     {
       "id": 87362,
       "name": "Havu",
@@ -26335,7 +26355,7 @@
       "show": 0
     }
   ],
-  "Yeet Street": [
+  "Yeet Streets": [
     {
       "id": 161434,
       "name": "Petra",
@@ -26357,7 +26377,7 @@
       "show": 0
     }
   ],
-  "Wing It Disc Golf": [
+  "Wing It Golf": [
     {
       "id": 150464,
       "name": "Pursue",
@@ -26399,7 +26419,7 @@
       "show": 0
     }
   ],
-  "Terminal Velocity": [
+  "Terminal Velocitys": [
     {
       "id": 47146,
       "name": "Ursus",
@@ -26441,7 +26461,7 @@
       "show": 0
     }
   ],
-  "Neptune": [
+  "Neptunes": [
     {
       "id": 64950,
       "name": "Squid",
@@ -26463,7 +26483,7 @@
       "show": 0
     }
   ],
-  "Gorilla Disc Golf": [
+  "Gorilla Golf": [
     {
       "id": 166497,
       "name": "Silverback",
