@@ -1,6 +1,7 @@
 import waitForStaticPage from './waitForStaticPage';
 import { Page } from "puppeteer";
 
+
 export default async function navigateTo(url: string, page: Page) {
     try {
         await page.setRequestInterception(true);

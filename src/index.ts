@@ -1,4 +1,5 @@
 import puppeteer from "puppeteer-extra";
+import getProxy from '../proxy/getProxy';
 import { 
   type Browser,
   type Page 
@@ -14,17 +15,37 @@ import extractInventory from "./extractInventory";
 import fs from 'fs';
 import searchInventory from "./searchInventory";
 import generateResponse from "../utils/inference";
+import 'dotenv/config';
+
+const proxyUsername = process.env.PROXY_USERNAME;
+const proxyPassword = process.env.PROXY_PASSWORD;
 
 const retailersJson = fs.readFileSync('./data/retailers.json', 'utf-8');
 const retailers = JSON.parse(retailersJson);
 // const retailers = ["https://www.marshallstreetdiscgolf.com/"];
 const manufacturersJson = fs.readFileSync('./data/majorManufacturers.json', 'utf-8');
 const manufacturers = JSON.parse(manufacturersJson);
-// const manufacturers = ["Discraft"];
+// const manufacturers = ["Clash", "Axiom"];
 
 puppeteer.use(StealthPlugin());
 
 async function scrape() {
+  if (!proxyPassword || !proxyUsername) {
+    console.log('Error retrieving proxy username/password');
+    return;
+  }
+
+  let proxyUrl;
+
+  try {
+     proxyUrl = await getProxy();
+     console.log('proxy url', proxyUrl)
+     if (!proxyUrl) return { statusCode: 500 }
+  } catch (e) {
+    console.log('error retrieving proxy', e)
+    return { statusCode: 500 }
+  }
+
   console.time()
   let browser: Browser | null = null;
   let page: Page;
@@ -36,9 +57,15 @@ async function scrape() {
       let searchQueryParam;
       browser = await puppeteer.launch({
 	      headless: true,
-	      args: [ ...chromium.args, "--disable-notifications" ]
+	      args: [ ...chromium.args, "--disable-notifications", `--proxy-server=${proxyUrl}` ]
       });
       page = await browser.newPage();
+
+      await page.authenticate({
+          username: proxyUsername,
+          password: proxyPassword
+      });
+
       // Remove old listings
       try {
         await dbDeleteListings("discs", retailerHostname);
