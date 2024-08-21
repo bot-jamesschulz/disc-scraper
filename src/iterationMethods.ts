@@ -12,6 +12,11 @@ import isNewListings from "../utils/isNewListings";
 import waitForStaticPage from "./waitForStaticPage";
 import generateResponse from '../utils/inference';
 import navigateTo from "./navigateTo";
+
+export type PageQueryParam = { 
+    key: string | null, 
+    checked: boolean 
+}
   
 // Extract listings by infinite scroll
 export async function infiniteScrollListings(
@@ -47,6 +52,7 @@ export async function infiniteScrollListings(
     // Only the last page is passed since each "page" has all the listings of the previous pages as well
     const listings = await validateListings(page, listingData[listingData.length - 1], manufacturer, retailer);
 
+
     if (listings.length) {
         validatedListings.push(...listings)   
     }
@@ -71,9 +77,9 @@ export async function paginationListings(
     page: Page,
     manufacturer: string,
     retailer: string,
-    pageQueryParam: string | undefined
+    pageQueryParam: PageQueryParam
 ): Promise<{ 
-    listings: Listing[], pageQueryParam: string | undefined 
+    listings: Listing[], pageQueryParam: PageQueryParam
 }> {
     // Keeps track of all the potential listings. This is important to keep track of as well as validated listings
     // Becasue we use this to decide when to stop paginating. We don't want to stop just because one page doesn't have any valid listings.
@@ -100,8 +106,19 @@ export async function paginationListings(
         }
         
         try {    
-            // First page we find the next page element and click it
-            if (!pageQueryParam) {
+            
+            // Once/if we have the key for the query param that sets the page, use that..
+            if (pageQueryParam.key) {
+                console.log('page query param:', pageQueryParam.key);
+
+                const url = new URL(page.url());
+                url.searchParams.set(pageQueryParam.key, (pageNum + 1).toString())
+
+                await navigateTo(url.toString(), page);
+                
+            
+            // Default to finding the next element
+            } else {
                 const nextElem = await getNextElem(page, terminatingString, pageNum);
 
                 if (!nextElem) {
@@ -115,17 +132,11 @@ export async function paginationListings(
 
                 const pageListings = await getPageListings(page);
                 newListings = isNewListings(listingData.map(data => data.listings).flat(), pageListings?.listings)
-                if (newListings) {
+
+                // Only look for the queryParam once
+                if (newListings && !pageQueryParam.checked) {
                     pageQueryParam = await getPageQueryParam(page);
                 }
-            // For the remainder of the pages, we try to increment the page query parameter, so we don't have to make LLM requests each page.
-            } else {
-                console.log('page query param:', pageQueryParam);
-
-                const url = new URL(page.url());
-                url.searchParams.set(pageQueryParam, (pageNum + 1).toString())
-
-                await navigateTo(url.toString(), page);
             }
 
         } catch(e) {
@@ -172,9 +183,15 @@ async function getNextElem(
     return nextElem;
 }
 
-async function getPageQueryParam(page: Page) {
+async function getPageQueryParam(page: Page): Promise<PageQueryParam> {
     const url = page.url();
-    return await generateResponse(`Identify which query param is responsible for setting the current page of inventory. Return only the name of the query param and no other information. If There is none, return 'None': ${url}`);
+    const urlParams = new URLSearchParams(url);
+    const result = await generateResponse(`Identify if there is a query param being used to set the page number. Do not create a key that doesn't already exist. Return only the param key if it is present in the url and no other information. If there is no key present used to set the page, return 'None': ${urlParams}`);
+    console.log('result', result);
+
+    // Verify Gemini isn't hallucinating
+    const hasParam = urlParams.has(result);
+    return hasParam ? { key: result, checked: true } : { key: null, checked: true };
 }
 
 

@@ -3,7 +3,8 @@ import {
 } from "./getPageListings";
 import { 
   infiniteScrollListings,
-  paginationListings
+  paginationListings,
+  type PageQueryParam
 } from "./iterationMethods";
 import {
   type ValidatedListings,
@@ -17,9 +18,9 @@ export type ValidatedListingsPage = {
   imgs: string[]
 }
 
-export default async function extractInventory(page: Page, manufacturer: string, retailer: string, pageQueryParam: string | undefined): Promise<{
+export default async function extractInventory(page: Page, manufacturer: string, retailer: string, pageQueryParam: PageQueryParam): Promise<{
   listings: Listing[],
-  pageQueryParam: string | undefined
+  pageQueryParam: PageQueryParam
 }> {
 
   try {

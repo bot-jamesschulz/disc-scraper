@@ -1,5 +1,5 @@
 import puppeteer from "puppeteer-extra";
-import getProxy from '../proxy/getProxy';
+import { type PageQueryParam } from "./iterationMethods";
 import { 
   type Browser,
   type Page 
@@ -15,10 +15,6 @@ import extractInventory from "./extractInventory";
 import fs from 'fs';
 import searchInventory from "./searchInventory";
 import generateResponse from "../utils/inference";
-import 'dotenv/config';
-
-const proxyUsername = process.env.PROXY_USERNAME;
-const proxyPassword = process.env.PROXY_PASSWORD;
 
 const retailersJson = fs.readFileSync('./data/retailers.json', 'utf-8');
 const retailers = JSON.parse(retailersJson);
@@ -30,41 +26,21 @@ const manufacturers = JSON.parse(manufacturersJson);
 puppeteer.use(StealthPlugin());
 
 async function scrape() {
-  if (!proxyPassword || !proxyUsername) {
-    console.log('Error retrieving proxy username/password');
-    return;
-  }
-
-  let proxyUrl;
-
-  try {
-     proxyUrl = await getProxy();
-     console.log('proxy url', proxyUrl)
-     if (!proxyUrl) return { statusCode: 500 }
-  } catch (e) {
-    console.log('error retrieving proxy', e)
-    return { statusCode: 500 }
-  }
 
   console.time()
   let browser: Browser | null = null;
   let page: Page;
   try {
-    for (const [ index, retailer ] of retailers.slice(4,5).entries()) {
+    for (const [ index, retailer ] of retailers.slice(41,42).entries()) {
       const retailerHostname = new URL(retailer).hostname;
-      let pageQueryParam;
+      let pageQueryParam: PageQueryParam = { key: null, checked: false };
       let inventoryStartUrl;
       let searchQueryParam;
       browser = await puppeteer.launch({
 	      headless: true,
-	      args: [ ...chromium.args, "--disable-notifications", `--proxy-server=${proxyUrl}` ]
+	      args: [ ...chromium.args, "--disable-notifications" ]
       });
       page = await browser.newPage();
-
-      await page.authenticate({
-          username: proxyUsername,
-          password: proxyPassword
-      });
 
       // Remove old listings
       try {
@@ -87,10 +63,15 @@ async function scrape() {
             await searchInventory(page, manufacturer);
             if (index == 0) {
               // Get url of the start of the inventory after search has been triggered
-              inventoryStartUrl = new URL(page.url());
-              const result = await generateResponse(`Identify the query param key that is used to set "${manufacturer}". Return only the key if it is present and no other information. They key has to already be present in the URL. Do not create a key. If there is no key present used to set "${manufacturer}", return 'None': ${inventoryStartUrl}`);
+              const url = page.url();
+              inventoryStartUrl = new URL(url);
+              const urlParams = inventoryStartUrl.searchParams;
+              const result = await generateResponse(`Identify the query param key that is used to set "${manufacturer}". Return only the key if it is present and no other information. The key has to already be present in the given params. Do not create a key. If there is no key present used to set "${manufacturer}", return 'None': ${urlParams}`);
               console.log('search query param:', result);
-              searchQueryParam = result === 'None' ? undefined : result;
+
+              // Verify Gemini isn't hallucinating
+              const hasParam = urlParams.has(result);
+              searchQueryParam = hasParam ? result : undefined;
               }
           }
 

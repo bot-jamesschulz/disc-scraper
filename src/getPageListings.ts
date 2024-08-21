@@ -48,6 +48,7 @@ export default async function getPageListings(page: Page): Promise<ListingData |
     console.log("error waiting for listings", err);
   }
 
+
   return listingData || undefined;
 }
 
